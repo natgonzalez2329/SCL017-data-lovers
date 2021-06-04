@@ -1,0 +1,46 @@
+
+.container-slider{
+    display: flex;
+    margin: auto;
+    position: relative;
+    max-width: 1000px;
+    width: 30%;
+    justify-content: center;
+    border: 25px;
+    overflow: hidden;
+    
+    
+}
+.my-slider img{
+    max-width: 100%;
+    display: flex;
+    transform: translate(0,0,0);
+    transition: all 600ms;
+    animation-name: autoplay;
+     animation-duration: 6.5s;
+     animation-direction: alternate;
+     animation-fill-mode: forwards;
+     animation-iteration-count: infinite;
+    
+}
+.my-slider{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ flex-shrink: 0;
+ flex-grow: 0;
+ max-width: 100%;
+ 
+}
+@keyframes autoplay{
+ 33%{
+     transform:translate3d(calc(-100% *0),0,0) ;
+ }
+ 66%{
+      transform:translate3d(calc(-100% *1),0,0) ;
+ }    
+ 100%{transform:translate3d(calc(-100% *2),0,0)
+
+ }
+}
+
