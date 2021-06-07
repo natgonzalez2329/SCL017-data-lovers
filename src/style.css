@@ -115,7 +115,7 @@ main {
     transition: all 600ms;
     animation-name: autoplay;
      animation-duration: 6.5s;
-     animation-direction:initial;
+     animation-direction: initial;
      animation-fill-mode: forwards;
      animation-iteration-count: infinite;    
 }
