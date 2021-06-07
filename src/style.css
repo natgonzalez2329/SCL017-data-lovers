@@ -100,28 +100,30 @@ main {
     left: 0;
     bottom: 0;
 }
-.container-slider{
+
+.container-slider-leading{
     display: flex;
     margin: auto;
     position: relative;
     max-width: 1000px;
     width: 50%;
-    justify-content: center;
-    border: 25px;
     overflow: hidden;
-    
-    
 }
-.my-slider img{
-    max-width: 100%;
+.container-slider{
     display: flex;
-    transform: translate(0,0,0);
+    transform: translate3d(0,0,0);
     transition: all 600ms;
     animation-name: autoplay;
      animation-duration: 6.5s;
      animation-direction:initial;
      animation-fill-mode: forwards;
-     animation-iteration-count: infinite;
+     animation-iteration-count: infinite;    
+}
+
+
+.my-slider img{
+    max-width: 100%;
+    
     
 }
 .my-slider{
