@@ -12,7 +12,7 @@ btnMenu.addEventListener("click", () => {
 const subMenuBtns = document.querySelectorAll(".submenu-btn");
 subMenuBtns.forEach((subMenuBtn) => {
     subMenuBtn.addEventListener("click", () => {
-        if(window.innerWidth < 1024){
+        if(window.innerWidth < 800){
            const subMenu = subMenuBtn.nextElementSibling;
            const height = subMenu.scrollHeight;
 

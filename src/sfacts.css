@@ -1,0 +1,76 @@
+.container__facts {/*add*/
+    max-width: 100%;
+    margin: 7%;
+    background: url("./images/bgFacts.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  #ricktastic {/*add*/
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    /*margin-top: 9%;*/
+    word-break: break-all;
+  }
+  .content__facts {
+    height: 55%;
+    margin: 8px -16px;
+  }
+  /*note: Add padding BETWEEN each column */
+  .content__facts,
+  .content__facts > .content__facts1 {
+    padding: 10px;
+  }
+  /*note: Create four equal columns that floats next to each other */
+  .content__facts1 {
+    float: left;
+    width: 20%;
+    height: 100%;/*?*/
+  }
+  /*note: Clear floats after rows*/
+  .content__facts:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /*note: Content */
+   .content__facts2 {
+       border: 2px solid black;
+       border-radius: 10px;
+       background-color: black;
+       box-shadow: 8px 8px 15px 0px violet;
+       font-size: 0.8em;
+       color: white;
+       height: 100%;/*?*/
+       padding: 10px;
+   }
+   .div__img {
+       width: 100%;
+       height: 55%;/*?*/
+   }
+   .imgFact {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+   #empty {
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+   /* note: Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .content__facts1 {
+    width: 50%;
+  }
+}
+
+/* note: Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .content__facts1 {
+    width: 100%;
+  }
+}
