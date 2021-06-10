@@ -169,7 +169,7 @@ body{
     box-shadow: 8px 8px  35px 0 rgb(222, 116, 218 );
     margin: 5% 10% 5% 5%;
     border-radius: 20px; 
-    
+    box-sizing: border-box;
 }
 
 
@@ -205,13 +205,14 @@ body{
 }
 
 .history{
-    flex-direction: row;
+    width: 70%;
+    box-sizing: border-box;
     padding: 20px;
     background: black;
     box-shadow: 8px 8px  35px 0 rgb(222, 116, 218);
     margin: 5% 5% 5% 5%;
     border-radius: 20px;
-    width: 60%;
+   
     
 }
 .history p{
@@ -230,32 +231,19 @@ body{
 
 }
 
-@media(max-width:660px) {
-   .promotion{
-       display: none;
-    width: 30%;
-    padding: 20px;
-    background: black;
-    box-shadow: 8px 8px  35px 0 yellow;
-    margin: 5% 10% 5% 5%;
-    border-radius: 20px; 
-    
-   }
-    .history{
-        flex-direction: row;
-        padding: 20px;
-        background: black;
-        box-shadow: 8px 8px  35px 0 yellow;
-        margin: 5% 5% 5% 5%;
-        border-radius: 20px;
-        width: 60%;
-    display: block;    
+@media screen and (max-width:800px){
+    .container-history{
+        display: block;
     }
-
-
+    .promotion{
+       width: 90%;
+       
+    }
+    .history{
+        width: 90%;
+    }
 }
-
-
+  
 .container__facts {
     background: url("./images/bgFacts.png"); /*change image, better resolution*/
     background-position: center;
