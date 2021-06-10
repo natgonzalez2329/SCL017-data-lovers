@@ -1,76 +1,83 @@
 .container__facts {/*add*/
     max-width: 100%;
-    margin: 7%;
-    background: url("./images/bgFacts.png");
+    background-image: url("./images/bgFacts.png");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    padding: 5% 7% 7% 7%;
+    
   }
   #ricktastic {/*add*/
     font-size: 50px;
     color: white;
     text-align: center;
-    /*margin-top: 9%;*/
-    word-break: break-all;
   }
-  .content__facts {
-    height: 55%;
-    margin: 8px -16px;
+.content__facts {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.content__facts1 {
+    border: none;
+    /* We first create a flex layout context */
+    display: flex;
+    
+    /* Then we define the flow direction 
+       and if we allow the items to wrap 
+     * Remember this is the same as:
+     * flex-direction: row;
+     * flex-wrap: wrap;
+     */
+    flex-flow: row wrap;
+    
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+    margin: 5% 0;
+    padding: 0;
   }
-  /*note: Add padding BETWEEN each column */
-  .content__facts,
-  .content__facts > .content__facts1 {
-    padding: 10px;
+  .content__facts2 {
+    background: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px 0px violet;
+    padding: 5px;
+    width: 18%;
+    margin-top: 10px;
   }
-  /*note: Create four equal columns that floats next to each other */
-  .content__facts1 {
-    float: left;
-    width: 20%;
+  .div__img {
     height: 100%;/*?*/
-  }
-  /*note: Clear floats after rows*/
-  .content__facts:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  /*note: Content */
-   .content__facts2 {
-       border: 2px solid black;
-       border-radius: 10px;
-       background-color: black;
-       box-shadow: 8px 8px 15px 0px violet;
-       font-size: 0.8em;
-       color: white;
-       height: 100%;/*?*/
-       padding: 10px;
-   }
-   .div__img {
-       width: 100%;
-       height: 55%;/*?*/
-   }
-   .imgFact {
+}
+  .imgFact {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
-   #empty {
+.hlFact {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1,1em;
+}
+  #empty {
     border: none;
     box-shadow: none;
     background: none;
-}
-
-   /* note: Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .content__facts1 {
-    width: 50%;
   }
-}
 
-/* note: Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .content__facts1 {
-    width: 100%;
+  @media screen and (max-width: 900px) {
+    .content__facts2 {
+      width: 50%;
+      flex-direction: column;
+    }
   }
-}
+  
+  /* note: Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .content__facts2 {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
