@@ -56,4 +56,34 @@ factsBtn.addEventListener("click", () => {
     facts.style.display = "block";
 });
 
+//data export
 
+/*"id": 
+"name": 
+"status": 
+"species": 
+"type":
+"gender":
+"origin": 
+"location": 
+"image":
+"episode":*/
+//console.log (data.results);
+
+const dataRickAndMorty = data.results.map(rickAndMorty => {
+    const { id, name, status, species, type, gender, origin, location, image, episode } = rickAndMorty;
+    const newDataRickAndMorty = {
+        id,
+        name,
+        status,
+        species,
+        type,
+        gender,
+        origin,
+        location,
+        image,
+        episode
+    };
+    console.log(newDataRickAndMorty);
+    return newDataRickAndMorty;
+});
