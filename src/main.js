@@ -126,7 +126,7 @@ dataRickAndMorty.forEach((card) => {
     contentCard.appendChild(locationCharacter);   
 });
 // Filtrado
-/*const filterDataFemale = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender === "Female");
+const filterDataFemale = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender === "Female");
 const filterDataMale = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender ===  "Male");
 const filterDataUnknown = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender === "unknown");
 console.log(filterDataFemale);
@@ -161,10 +161,14 @@ console.log(filterDataParasite);
 console.log(filterDataPoopybutthole);
 console.log(filterDataRobot);
 console.log(filterDataunknown);
-console.log(filterDataStatusVampire);*/
-
-// Metodo sourt
-const nameSortData = dataRickAndMorty.sort((nameSort) =>nameSort.name ===  );
-
-console.log(nameSortData);
+console.log(filterDataStatusVampire);
+//sortBy
+const sortByName = dataRickAndMorty.sort((a,b) => {
+    return (a.name > b.name) ? 1 : -1;
+});
+console.log(sortByName);
+const sortByLessPopular = dataRickAndMorty.sort((a,b) => {
+    return (a.id < b.id) ? 1 : -1;
+});
+console.log(sortByLessPopular);
 
