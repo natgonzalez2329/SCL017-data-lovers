@@ -71,7 +71,7 @@ factsBtn.addEventListener("click", () => {
 //console.log (data.results);
 
 const dataRickAndMorty = data.results.map(rickAndMorty => {
-    const { id, name, status, species, type, gender, origin, location, image, episode } = rickAndMorty;
+    const { id, name, status, species, type, gender, origin, location, image } = rickAndMorty;
     const newDataRickAndMorty = {
         id,
         name,
@@ -81,9 +81,60 @@ const dataRickAndMorty = data.results.map(rickAndMorty => {
         gender,
         origin,
         location,
-        image,
-        episode
+        image
     };
-    console.log(newDataRickAndMorty);
     return newDataRickAndMorty;
+});
+
+dataRickAndMorty.forEach((card) => {
+    const {id, name, status, species, type, gender, origin, location, image } = card;
+    const typeValue = type != "" ? type : "Unknown";
+    const originName = origin.name;
+    const locationName = location.name;
+    let containerCharacterCard = document.createElement("div");
+    containerCharacterCard.className = "container__character-card";
+    containerCharacterCard.id = `${name.replace(" ","").toLocaleLowerCase()}`;
+    containerCharacterCard.innerHTML;
+    let characterCard= document.createElement("article");
+    characterCard.className = "character-card"
+    characterCard.innerHTML;
+    let imgCharacter = document.createElement("img");
+    imgCharacter.className = "imgCharacter";
+    imgCharacter.src = image;
+    let contentCard = document.createElement("div");
+    contentCard.className = "content__card";
+    contentCard.innerHTML;
+    let idCharacter = document.createElement("h3");
+    idCharacter.className = "idCharacter";
+    idCharacter.innerHTML = id;
+    let nameStatusCharacter = document.createElement("h2");
+    nameStatusCharacter.className = "nameStatusCharacter";
+    nameStatusCharacter.innerHTML = name + "-" + status;
+    let speciesCharacter = document.createElement("p");
+    speciesCharacter.className = "speciesCharacter";
+    speciesCharacter.innerHTML = species;
+    let typeCharacter = document.createElement("p");
+    typeCharacter.className = "typeCharacter";
+    typeCharacter.innerHTML = typeValue;
+    let genderCharacter = document.createElement("p");
+    genderCharacter.className = "genderCharacter";
+    genderCharacter.innerHTML = gender;
+    let originCharacter = document.createElement("p");
+    originCharacter.className = "originCharacter";
+    originCharacter.innerHTML = originName;
+    let locationCharacter = document.createElement("p");
+    locationCharacter.className = "locationCharacter";
+    locationCharacter.innerHTML = locationName;
+    
+    characters.appendChild(containerCharacterCard);
+    containerCharacterCard.appendChild(characterCard);
+    characterCard.appendChild(imgCharacter);
+    characterCard.appendChild(contentCard);
+    contentCard.appendChild(idCharacter);
+    contentCard.appendChild(nameStatusCharacter);
+    contentCard.appendChild(speciesCharacter);
+    contentCard.appendChild(typeCharacter);
+    contentCard.appendChild(genderCharacter);
+    contentCard.appendChild(originCharacter);
+    contentCard.appendChild(locationCharacter);   
 });
