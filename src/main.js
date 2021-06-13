@@ -138,3 +138,13 @@ dataRickAndMorty.forEach((card) => {
     contentCard.appendChild(originCharacter);
     contentCard.appendChild(locationCharacter);   
 });
+
+//sortBy
+const sortByName = dataRickAndMorty.sort((a,b) => {
+    return (a.name > b.name) ? 1 : -1;
+});
+console.log(sortByName);
+const sortByLessPopular = dataRickAndMorty.sort((a,b) => {
+    return (a.id < b.id) ? 1 : -1;
+});
+console.log(sortByLessPopular);
