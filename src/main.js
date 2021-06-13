@@ -55,21 +55,7 @@ factsBtn.addEventListener("click", () => {
     characters.style.display = "none";
     facts.style.display = "block";
 });
-
-//data export
-
-/*"id": 
-"name": 
-"status": 
-"species": 
-"type":
-"gender":
-"origin": 
-"location": 
-"image":
-"episode":*/
-//console.log (data.results);
-
+// clasificarla
 const dataRickAndMorty = data.results.map(rickAndMorty => {
     const { id, name, status, species, type, gender, origin, location, image } = rickAndMorty;
     const newDataRickAndMorty = {
@@ -85,6 +71,7 @@ const dataRickAndMorty = data.results.map(rickAndMorty => {
     };
     return newDataRickAndMorty;
 });
+ // Leer la data 
 
 dataRickAndMorty.forEach((card) => {
     const {id, name, status, species, type, gender, origin, location, image } = card;
@@ -138,12 +125,8 @@ dataRickAndMorty.forEach((card) => {
     contentCard.appendChild(originCharacter);
     contentCard.appendChild(locationCharacter);   
 });
-
-
-
-
-
-const filterDataFemale = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender === "Female");
+// Filtrado
+/*const filterDataFemale = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender === "Female");
 const filterDataMale = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender ===  "Male");
 const filterDataUnknown = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender === "unknown");
 console.log(filterDataFemale);
@@ -178,5 +161,10 @@ console.log(filterDataParasite);
 console.log(filterDataPoopybutthole);
 console.log(filterDataRobot);
 console.log(filterDataunknown);
-console.log(filterDataStatusVampire);
+console.log(filterDataStatusVampire);*/
+
+// Metodo sourt
+const nameSortData = dataRickAndMorty.sort((nameSort) =>nameSort.name ===  );
+
+console.log(nameSortData);
 
