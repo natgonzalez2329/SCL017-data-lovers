@@ -138,3 +138,45 @@ dataRickAndMorty.forEach((card) => {
     contentCard.appendChild(originCharacter);
     contentCard.appendChild(locationCharacter);   
 });
+
+
+
+
+
+const filterDataFemale = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender === "Female");
+const filterDataMale = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender ===  "Male");
+const filterDataUnknown = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender === "unknown");
+console.log(filterDataFemale);
+console.log(filterDataMale);
+console.log(filterDataUnknown);
+const filterDataAlive = dataRickAndMorty.filter((statusFilter) =>  statusFilter.status === "Alive");
+const filterDataDead = dataRickAndMorty.filter((statusFilter) =>  statusFilter.status === "Dead");
+const filterDataStatusUnknown = dataRickAndMorty.filter((statusFilter) =>  statusFilter.status === "unknown");
+console.log(filterDataAlive);
+console.log(filterDataDead);
+console.log(filterDataStatusUnknown);
+const filterpecies = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Alien");
+const filterDataAnimal = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Animal");
+const filterDataCronenberg = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Cronenberg");
+const filterDataDisease = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Disease");
+const filterDataHuman = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Human");
+const filterDataHumanoid  = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Humanoid");
+const filterDataMytholog = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Mytholog");
+const filterDataParasite = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Parasite");
+const filterDataPoopybutthole = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Poopybutthole");
+const filterDataRobot = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Robot");
+const filterDataunknown = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "unknown");
+const filterDataStatusVampire = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Vampire");
+console.log(filterpecies);
+console.log(filterDataAnimal);
+console.log(filterDataCronenberg);
+console.log(filterDataDisease);
+console.log(filterDataHuman);
+console.log(filterDataHumanoid);
+console.log(filterDataMytholog);
+console.log(filterDataParasite);
+console.log(filterDataPoopybutthole);
+console.log(filterDataRobot);
+console.log(filterDataunknown);
+console.log(filterDataStatusVampire);
+
