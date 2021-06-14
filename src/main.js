@@ -39,21 +39,21 @@ characters.style.display = "none";
 facts.style.display = "none";
 
 homeBtn.addEventListener("click", () => {
-    home.style.display = "block";
+    home.style.display = "";
     characters.style.display = "none";
     facts.style.display = "none";
 });
 
 charactersBtn.addEventListener("click", () => {
     home.style.display = "none";
-    characters.style.display = "block";
+    characters.style.display = "";
     facts.style.display = "none";
 });
 
 factsBtn.addEventListener("click", () => {
     home.style.display = "none";
     characters.style.display = "none";
-    facts.style.display = "block";
+    facts.style.display = "";
 });
 
 const dataRickAndMorty = data.results.map(rickAndMorty => {
@@ -77,6 +77,9 @@ dataRickAndMorty.forEach((card) => {
     const typeValue = type != "" ? type : "Unknown";
     const originName = origin.name;
     const locationName = location.name;
+    let containerFlex= document.createElement("div");
+    containerFlex.className = "containerFlex";
+    containerFlex.innerHTML;
     let containerCharacterCard = document.createElement("div");
     containerCharacterCard.className = "container__character-card";
     containerCharacterCard.id = `${name.replace(" ","").toLocaleLowerCase()}`;
@@ -111,8 +114,9 @@ dataRickAndMorty.forEach((card) => {
     let locationCharacter = document.createElement("p");
     locationCharacter.className = "locationCharacter";
     locationCharacter.innerHTML = "Location: " + locationName;
-    
-    characters.appendChild(containerCharacterCard);
+   
+    characters.appendChild(containerFlex);
+    containerFlex.appendChild(containerCharacterCard);
     containerCharacterCard.appendChild(characterCard);
     characterCard.appendChild(imgCharacter);
     characterCard.appendChild(contentCard);

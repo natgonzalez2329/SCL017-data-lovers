@@ -1,18 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .container__characters {
     width: 100%;
     height: 100%;
     left: 0;
     bottom: 0;
     display: flex;
+    
 }
 #characterTitle {
     color: white;
     text-align: center;
     margin-top: 5%;
 }
-.container__character-card {
-    display: flex;
+
+.container__character-card { 
+    width: 25%;
+    padding: 20px;
+    
 }
 .character-card {
     background: black;
