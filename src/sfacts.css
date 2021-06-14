@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 .container__facts {/*add*/
     max-width: 100%;
     background-image: url("./images/bgFacts.png");
@@ -57,6 +58,7 @@
 }
 .hlFact {
     color: white;
+    font-family: 'Aldrich', sans-serif;
     font-weight: bold;
     text-align: center;
     font-size: 1,1em;
