@@ -39,21 +39,21 @@ characters.style.display = "none";
 facts.style.display = "none";
 
 homeBtn.addEventListener("click", () => {
-    home.style.display = "block";
+    home.style.display = "";
     characters.style.display = "none";
     facts.style.display = "none";
 });
 
 charactersBtn.addEventListener("click", () => {
     home.style.display = "none";
-    characters.style.display = "block";
+    characters.style.display = "";
     facts.style.display = "none";
 });
 
 factsBtn.addEventListener("click", () => {
     home.style.display = "none";
     characters.style.display = "none";
-    facts.style.display = "block";
+    facts.style.display = "";
 });
 
 const dataRickAndMorty = data.results.map(rickAndMorty => {
@@ -111,7 +111,7 @@ dataRickAndMorty.forEach((card) => {
     let locationCharacter = document.createElement("p");
     locationCharacter.className = "locationCharacter";
     locationCharacter.innerHTML = "Location: " + locationName;
-    
+   
     characters.appendChild(containerCharacterCard);
     containerCharacterCard.appendChild(characterCard);
     characterCard.appendChild(imgCharacter);
