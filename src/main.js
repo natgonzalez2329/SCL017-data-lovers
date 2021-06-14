@@ -33,6 +33,7 @@ const facts = document.querySelector("#facts");
 const homeBtn = document.querySelector("#homeBtn");
 const charactersBtn = document.querySelector("#charactersBtn");
 const factsBtn = document.querySelector("#factsBtn");
+const containerFlex = document.querySelector(".containerFlex");
 
 
 characters.style.display = "none";
@@ -112,7 +113,7 @@ dataRickAndMorty.forEach((card) => {
     locationCharacter.className = "locationCharacter";
     locationCharacter.innerHTML = "Location: " + locationName;
    
-    characters.appendChild(containerCharacterCard);
+    containerFlex.appendChild(containerCharacterCard);
     containerCharacterCard.appendChild(characterCard);
     characterCard.appendChild(imgCharacter);
     characterCard.appendChild(contentCard);

@@ -7,38 +7,26 @@
     background-attachment: fixed;
     background-size: cover;
     display: flex;
-    padding: 5% 7% 7% 7%;
-    
-  }
+    flex-direction: column;
+}
   #ricktastic {/*add*/
     font-size: 50px;
     color: white;
     text-align: center;
+    margin-top: 5%;
   }
-.content__facts {
-    border: none;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
 .content__facts1 {
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 13%;
+    padding: 15px;
     border: none;
-    /* We first create a flex layout context */
     display: flex;
-    
-    /* Then we define the flow direction 
-       and if we allow the items to wrap 
-     * Remember this is the same as:
-     * flex-direction: row;
-     * flex-wrap: wrap;
-     */
     flex-flow: row wrap;
-    
-    /* Then we define how is distributed the remaining space */
-    justify-content: space-around;
-    margin: 5% 0;
-    padding: 0;
-  }
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
   .content__facts2 {
     background: black;
     border: 2px solid black;
@@ -47,9 +35,7 @@
     padding: 5px;
     width: 18%;
     margin-top: 10px;
-  }
-  .div__img {
-    height: 100%;/*?*/
+    margin-bottom: 5%;
 }
   .imgFact {
     width: 100%;
@@ -61,18 +47,21 @@
     font-family: 'Aldrich', sans-serif;
     font-weight: bold;
     text-align: center;
-    font-size: 1,1em;
+    font-size: 1em;
 }
   #empty {
     border: none;
     box-shadow: none;
     background: none;
-  }
+}
 
   @media screen and (max-width: 900px) {
     .content__facts2 {
       width: 50%;
       flex-direction: column;
+    }
+    #empty {
+      display: none;
     }
   }
   
@@ -81,5 +70,8 @@
     .content__facts2 {
       width: 100%;
       flex-direction: column;
+    }
+    #empty {
+      display: none;
     }
   }
