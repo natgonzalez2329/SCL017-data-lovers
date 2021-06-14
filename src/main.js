@@ -77,9 +77,6 @@ dataRickAndMorty.forEach((card) => {
     const typeValue = type != "" ? type : "Unknown";
     const originName = origin.name;
     const locationName = location.name;
-    let containerFlex= document.createElement("div");
-    containerFlex.className = "containerFlex";
-    containerFlex.innerHTML;
     let containerCharacterCard = document.createElement("div");
     containerCharacterCard.className = "container__character-card";
     containerCharacterCard.id = `${name.replace(" ","").toLocaleLowerCase()}`;
@@ -115,8 +112,7 @@ dataRickAndMorty.forEach((card) => {
     locationCharacter.className = "locationCharacter";
     locationCharacter.innerHTML = "Location: " + locationName;
    
-    characters.appendChild(containerFlex);
-    containerFlex.appendChild(containerCharacterCard);
+    characters.appendChild(containerCharacterCard);
     containerCharacterCard.appendChild(characterCard);
     characterCard.appendChild(imgCharacter);
     characterCard.appendChild(contentCard);

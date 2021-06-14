@@ -6,18 +6,18 @@
     left: 0;
     bottom: 0;
     display: flex;
+    flex-wrap: wrap; 
     
 }
-#characterTitle {
+/*.characterTitle {
     color: white;
     text-align: center;
-    margin-top: 5%;
-}
-
+    margin-top: 5%;    
+}*/
 .container__character-card { 
-    width: 25%;
+    width: 20%;
     padding: 20px;
-    
+ 
 }
 .character-card {
     background: black;
@@ -27,6 +27,7 @@
     padding: 5px;
     margin-bottom: 5%;
     transition: transform .2s;
+    
 }
 .character-card:hover {
     -ms-transform: scale(1.2); /* IE 9 */
