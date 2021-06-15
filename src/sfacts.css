@@ -16,10 +16,10 @@
     margin-top: 5%;
   }
 .content__facts1 {
-    margin-top: 5%;
+    /*margin-top: 5%;*/
     margin-right: 5%;
     margin-left: 5%;
-    margin-bottom: 13%;
+    margin-bottom: 3%;
     padding: 15px;
     border: none;
     display: flex;
@@ -56,6 +56,9 @@
 }
 
   @media screen and (max-width: 900px) {
+    .content__facts1 {
+      margin-bottom: 5%;
+    }
     .content__facts2 {
       width: 50%;
       flex-direction: column;
@@ -67,6 +70,9 @@
   
   /* note: Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
+    .content__facts1 {
+      margin-bottom: 7%;
+    }
     .content__facts2 {
       width: 100%;
       flex-direction: column;

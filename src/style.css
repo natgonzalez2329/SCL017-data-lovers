@@ -84,7 +84,6 @@ body{
         top: 60px;
         width: 200px; /*modificar y ponerlo en el medio*/
         overflow: visible;
-        z-index: 1000;
         opacity: 0;
         visibility: hidden;
     }

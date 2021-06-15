@@ -6,14 +6,17 @@
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1"
     />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rick&Morty</title>
     <link
       rel="icon"
       href="https://the-rick-and-morty-api.herokuapp.com/static/media/react_logo.b37f0a4b.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="scharacters.css" />
+    <link rel="stylesheet" href="menuFilter.css" />
     <link rel="stylesheet" href="sfacts.css" />
   </head>
   <body>
@@ -103,6 +106,66 @@
           </div>
         </div>
       <div class="container__characters" id="characters">
+
+        <div class="wrapper">
+          <nav>
+            <input type="checkbox" id="show-search">
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <div class="content">
+            <div class="logo"><a href="#">Rick and Morty</a></div>
+              <ul class="links">
+                <li><a href="#" id="iconFilter">icono filtrar</a></li>
+                <li>
+                  <a href="#" class="desktop-link">Gender</a>
+                  <input type="checkbox" id="show-gender">
+                  <label for="show-gender">Gender</label>
+                  <ul>
+                    <li><a href="#" id="blank__button">Female</a></li>
+                    <li><a href="#">Male</a></li>
+                    <li><a href="#">Unknown</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="desktop-link">Species</a>
+                  <input type="checkbox" id="show-species">
+                  <label for="show-species">Species</label>
+                  <ul>
+                    <li><a href="#">Alien</a></li>
+                    <li><a href="#">Animal</a></li>
+                    <li><a href="#">Cronenberg</a></li>
+                    <li><a href="#">Disease</a></li>
+                    <li><a href="#">Human</a></li>
+                    <li><a href="#">Humanoid</a></li>
+                    <li><a href="#">Mytholog</a></li>
+                    <li><a href="#">Parasite</a></li>
+                    <li><a href="#">Poopybutthole</a></li>
+                    <li><a href="#">Robot</a></li>
+                    <li><a href="#">Unknown</a></li>
+                    <li><a href="#">Vampire</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="desktop-link">Status</a>
+                  <input type="checkbox" id="show-status">
+                  <label for="show-status">Status</label>
+                  <ul>
+                    <li><a href="#">Alive</a></li>
+                    <li><a href="#">Dead</a></li>
+                    <li><a href="#">Unknown</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+            <form action="#" class="search-box">
+              <input type="text" placeholder="Type Something to Search..." required>
+              <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+            </form>
+          </nav>
+        </div>
+
+
         <div class="characterTitle"><h1>Characters</h1></div>
         <div class="containerFlex"></div>
 
