@@ -35,7 +35,6 @@ const charactersBtn = document.querySelector("#charactersBtn");
 const factsBtn = document.querySelector("#factsBtn");
 const containerFlex = document.querySelector(".containerFlex");
 
-
 characters.style.display = "none";
 facts.style.display = "none";
 
@@ -129,15 +128,15 @@ dataRickAndMorty.forEach((card) => {
 const filterGenderFemale = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender === "Female");
 const filterGenderMale = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender ===  "Male");
 const filterGenderUnknown = dataRickAndMorty.filter((genderFilter) =>  genderFilter.gender === "unknown");
-//console.log(filterGenderFemale);
-//console.log(filterGenderMale);
-//console.log(filterGenderUnknown);
+console.log(filterGenderFemale);
+console.log(filterGenderMale);
+console.log(filterGenderUnknown);
 const filterStatusAlive = dataRickAndMorty.filter((statusFilter) =>  statusFilter.status === "Alive");
 const filterStatusDead = dataRickAndMorty.filter((statusFilter) =>  statusFilter.status === "Dead");
 const filterStatusUnknown = dataRickAndMorty.filter((statusFilter) =>  statusFilter.status === "unknown");
-//console.log(filterStatusAlive);
-//console.log(filterStatusDead);
-//console.log(filterStatusUnknown);
+console.log(filterStatusAlive);
+console.log(filterStatusDead);
+console.log(filterStatusUnknown);
 const filterSpeciesAlien = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Alien");
 const filterSpeciesAnimal = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Animal");
 const filterSpeciesCronenberg = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Cronenberg");
@@ -150,18 +149,18 @@ const filterSpeciesPoopybutthole = dataRickAndMorty.filter((speciesFilter) =>  s
 const filterSpeciesRobot = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Robot");
 const filterSpeciesUnknown = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "unknown");
 const filterSpeciesVampire = dataRickAndMorty.filter((speciesFilter) =>  speciesFilter.species === "Vampire");
-//console.log(filterSpeciesAlien);
-//console.log(filterSpeciesAnimal);
-//console.log(filterSpeciesCronenberg);
-//console.log(filterSpeciesDisease);
-//console.log(filterSpeciesHuman);
-//console.log(filterSpeciesHumanoid);
-//console.log(filterSpeciesMytholog);
-//console.log(filterSpeciesParasite);
-//console.log(filterSpeciesPoopybutthole);
-//console.log(filterSpeciesRobot);
-//console.log(filterSpeciesUnknown);
-//console.log(filterSpeciesVampire);
+console.log(filterSpeciesAlien);
+console.log(filterSpeciesAnimal);
+console.log(filterSpeciesCronenberg);
+console.log(filterSpeciesDisease);
+console.log(filterSpeciesHuman);
+console.log(filterSpeciesHumanoid);
+console.log(filterSpeciesMytholog);
+console.log(filterSpeciesParasite);
+console.log(filterSpeciesPoopybutthole);
+console.log(filterSpeciesRobot);
+console.log(filterSpeciesUnknown);
+console.log(filterSpeciesVampire);
 
 const dataSortByName = [...dataRickAndMorty];
 const dataSortByLessPopular = [...dataRickAndMorty];

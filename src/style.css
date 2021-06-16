@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,7 +16,6 @@ body{
     background-repeat: no-repeat;
     background-attachment:fixed;
 }
-
 .nav-bar {
     background-color: rgb(142, 220, 94) ;
     padding: 20px;
@@ -26,7 +26,7 @@ body{
     width: 100%;
 }
 .main-nav {
-    position: fixed;/* fix the header*/
+    position: fixed;
     z-index: 900;
     width: 100%;
 }
@@ -34,7 +34,7 @@ body{
     list-style: none;
     padding: 0;
     margin: 0;
-    cursor: pointer;/**/
+    cursor: pointer;
 }
 .menu {
     background-color: rgb(94, 202, 27);
@@ -50,7 +50,7 @@ body{
     text-decoration: none;
 }
 .menu__link:hover {
-    background: rgb(43, 175, 10);;
+    background: rgb(43, 175, 10);
 }
 .submenu .menu__link:hover {
     background: rgb(67, 228, 3);
@@ -93,6 +93,7 @@ body{
     }
 }
 .container__home {
+
     width: 100%;
     height: 100%;
     left: 0;
@@ -144,12 +145,15 @@ body{
     align-items: center;
     display: flex;    
     justify-content: space-between;
-    margin: 5%;
+    margin: 3% 5% 3% 5%;
     overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
 }
 .promotion{
     width: 30%;
     padding: 20px;
+    padding-top: 3%;
+    padding-bottom: 3%;
     background: black;
     box-shadow: 8px 8px  35px 0 rgb(222, 116, 218 );
     margin: 5% 10% 5% 5%;
@@ -168,7 +172,7 @@ body{
     border-radius: 20px;
 }
 .button:hover{
-    background-color: yellow;
+    background-color:rgba(82, 255, 38, .5);
 }
 .promotion p{
     color: wheat;
@@ -179,6 +183,7 @@ body{
     text-decoration: none;
 }
 .promotion, .history h3{
+    font-size: 1.5rem;
     color: yellow;
     text-align: center;
 }
@@ -189,11 +194,13 @@ body{
     background: black;
     box-shadow: 8px 8px  35px 0 rgb(222, 116, 218);
     margin: 5% 5% 5% 5%;
-    border-radius: 20px;   
+    border-radius: 20px; 
+    display: flex;  
+    flex-direction: column;
 }
-.history p{
+.history span {
     margin: 5%;
-    font-size: 20px;
+    font-size: 1.2rem;;
     color: white;
     text-align: center;
 }
