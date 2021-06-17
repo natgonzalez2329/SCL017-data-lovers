@@ -186,7 +186,7 @@ const filterSpeciesUnknown = dataRickAndMorty.filter(
 );
 const filterSpeciesVampire = dataRickAndMorty.filter(
   (speciesFilter) => speciesFilter.species === "Vampire"
-);
+);*/
 
 const dataSortByName = [...dataRickAndMorty];
 const dataSortByLessPopular = [...dataRickAndMorty];
@@ -195,8 +195,10 @@ const sortByName = dataSortByName.sort((a, b) => {
 });
 const sortByLessPopular = dataSortByLessPopular.sort((a, b) => {
   return a.id < b.id ? 1 : -1;
-}); */
+}); 
 
+//let dataReturnFilter = dataRickAndMorty;//cambia de valor segun resultado de cada select
+//console.log(dataReturnFilter.length);
 const filterSelect = (dataArray, property, value) => {
    return dataArray.filter(cardFilter => cardFilter[property] === value)
 }
@@ -209,9 +211,23 @@ genderSelect.addEventListener("change", () => {
     if (filtered.length > 0) {
       cardRickAndMorty(filtered);
     }
+});
+speciesSelect.addEventListener("change", () => {
+  const filtered = filterSelect(dataRickAndMorty, "species", speciesSelect.options[speciesSelect.selectedIndex].value);
+    if (filtered.length > 0) {
+      cardRickAndMorty(filtered);
+    }
+});
+
+statusSelect.addEventListener("change", () => {
+  const filtered = filterSelect(dataRickAndMorty, "status", statusSelect.options[statusSelect.selectedIndex].value);
+    if (filtered.length > 0) {
+      cardRickAndMorty(filtered);
+    }
+});
+//genderSelect.addEventListener("change", (select) => {
   // switch (select.target.value) {
   //   case "Female":
-  //     const filterGenderFemale = filterSelect(dataRickAndMorty, "gender", "Female");
   //     cardRickAndMorty(filterGenderFemale);
   //     break;
   //   case "Male":
@@ -224,8 +240,8 @@ genderSelect.addEventListener("change", () => {
   //   default:
   //     break;
   // }
-});
-speciesSelect.addEventListener("change", (select) => {
+//});
+/*speciesSelect.addEventListener("change", (select) => {
   switch (select.target.value) {
     case "Alien":
       cardRickAndMorty(filterSpeciesAlien);
@@ -267,8 +283,8 @@ speciesSelect.addEventListener("change", (select) => {
     default:
       break;
   }
-});
-statusSelect.addEventListener("change", (select) => {
+});*/
+/*statusSelect.addEventListener("change", (select) => {
   switch (select.target.value) {
     case "Alive":
       cardRickAndMorty(filterStatusAlive);
@@ -283,7 +299,7 @@ statusSelect.addEventListener("change", (select) => {
     default:
       break;
   }
-});
+});*/
 const sortBy = document.querySelector("#sortBy")
 sortBy.addEventListener("change", (select) => {
     switch (select.target.value) {
