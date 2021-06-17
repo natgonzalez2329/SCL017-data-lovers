@@ -74,7 +74,7 @@
         <div class="container-slider-leading">
           <div class="container-slider">
             <div class="my-slider">
-              <img src="1 (1).png" alt="" />
+              <img src="images/1 (1).png" alt="" />
             </div>
             <div class="my-slider">
               <img src="images/slider.png" alt="" />
@@ -105,7 +105,7 @@
         </div>
       <div class="container__characters" id="characters">
 
-      <div class="container__sort-filter  content__sort-filter">
+    <div class="container__sort-filter  content__sort-filter">
         <div class="search-box">
         <form action="">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-submenu" viewbox="0 0 16 16">
@@ -114,21 +114,25 @@
           <input type="text" id="search" placeholder="Type the name here">
         </form>
       </div>
-        <div>
-          <select name="" id="">
-            <option value="">Sort by: </option><!--definir value-->
-            <option value="">All</option>
-            <option value="">Alphabet</option>
-            <option value="">Less Popular</option>
+      <div>
+         <div id="sort"> Sort by
+          <select name="" id="sortBy">
+            <option value="all">All</option>
+            <option value="alphabet">Alphabet</option>
+            <option value="lessPopular">Less Popular</option>
           </select>
-          <select name="" id="">
-            <option value="">Gender</option>
+        </div>
+        <div id="filter">Filter
+          <label for="">Gender</label>
+          <select name="" id="genderSelect">
+            <option value="" active>Select</option>
             <option value="Female">Female</option>
             <option value="Male">Male</option>
             <option value="unknown">Unknown</option>
           </select>
-          <select name="" id="">
-            <option value="">Species</option>
+          <label for="">Species</label>
+          <select name="" id="speciesSelect">
+            <option value="" active>Select</option>
             <option value="Alien">Alien</option>
             <option value="Animal">Animal</option>
             <option value="Cronenberg">Cronenberg</option>
@@ -142,15 +146,16 @@
             <option value="unknown">Unknown</option>
             <option value="Vampire">Vampire</option>
           </select>
-          </select>
-          <select name="" id="">
-            <option value="">Status</option>
+          <label for="">Status</label>
+          <select name="" id="statusSelect">
+            <option value="" active>Select</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>
-            <option value="Unknown">Unknown</option>
+            <option value="unknown">Unknown</option>
           </select>
         </div>
       </div>
+    </div>
 
         <div class="characterTitle"><h1>Characters</h1></div>
         <div class="containerFlex"></div>
