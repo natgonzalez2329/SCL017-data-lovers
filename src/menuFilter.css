@@ -19,6 +19,12 @@
 .icon-submenu {
   color: white;
 }
+#sort {
+  color: white;
+}
+#filter {
+  color: white;
+}
 
 @media screen and (max-width: 900px) {
   .content__sort-filter { 
