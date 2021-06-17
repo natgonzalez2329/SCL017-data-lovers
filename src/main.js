@@ -131,7 +131,7 @@ const cardRickAndMorty = (cardArray) => {
 };
 cardRickAndMorty(dataRickAndMorty); //llenado inicial
 
-const filterGenderFemale = dataRickAndMorty.filter(
+/* const filterGenderFemale = dataRickAndMorty.filter(
   (genderFilter) => genderFilter.gender === "Female"
 );
 const filterGenderMale = dataRickAndMorty.filter(
@@ -195,26 +195,35 @@ const sortByName = dataSortByName.sort((a, b) => {
 });
 const sortByLessPopular = dataSortByLessPopular.sort((a, b) => {
   return a.id < b.id ? 1 : -1;
-});
+}); */
+
+const filterSelect = (dataArray, property, value) => {
+   return dataArray.filter(cardFilter => cardFilter[property] === value)
+}
 
 const genderSelect = document.querySelector("#genderSelect");
 const speciesSelect = document.querySelector("#speciesSelect");
 const statusSelect = document.querySelector("#statusSelect");
-genderSelect.addEventListener("change", (select) => {
-  switch (select.target.value) {
-    case "Female":
-      cardRickAndMorty(filterGenderFemale);
-      break;
-    case "Male":
-      cardRickAndMorty(filterGenderMale);
-      break;
-    case "unknown":
-      cardRickAndMorty(filterGenderUnknown);
-      break;
+genderSelect.addEventListener("change", () => {
+  const filtered = filterSelect(dataRickAndMorty, "gender", genderSelect.options[genderSelect.selectedIndex].value);
+    if (filtered.length > 0) {
+      cardRickAndMorty(filtered);
+    }
+  // switch (select.target.value) {
+  //   case "Female":
+  //     const filterGenderFemale = filterSelect(dataRickAndMorty, "gender", "Female");
+  //     cardRickAndMorty(filterGenderFemale);
+  //     break;
+  //   case "Male":
+  //     cardRickAndMorty(filterGenderMale);
+  //     break;
+  //   case "unknown":
+  //     cardRickAndMorty(filterGenderUnknown);
+  //     break;
 
-    default:
-      break;
-  }
+  //   default:
+  //     break;
+  // }
 });
 speciesSelect.addEventListener("change", (select) => {
   switch (select.target.value) {
