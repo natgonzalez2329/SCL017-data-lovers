@@ -200,8 +200,8 @@ const sortByLessPopular = dataSortByLessPopular.sort((a, b) => {
 //let dataReturnFilter = dataRickAndMorty;//cambia de valor segun resultado de cada select
 //console.log(dataReturnFilter.length);
 const filterSelect = (dataArray, property, value) => {
-   return dataArray.filter(cardFilter => cardFilter[property] === value)
-}
+   return dataArray.filter(cardFilter => cardFilter[property] === value);
+};
 
 const genderSelect = document.querySelector("#genderSelect");
 const speciesSelect = document.querySelector("#speciesSelect");
