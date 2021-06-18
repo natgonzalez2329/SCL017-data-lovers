@@ -19,8 +19,7 @@ select{
   padding: 0.3em 0.5em;
   background: #000000;
   color: white;
-  border:0;
-  appearance: none;
+  border-radius: .25em;
 
 }
 
