@@ -131,63 +131,6 @@ const cardRickAndMorty = (cardArray) => {
 };
 cardRickAndMorty(dataRickAndMorty); //llenado inicial
 
-/* const filterGenderFemale = dataRickAndMorty.filter(
-  (genderFilter) => genderFilter.gender === "Female"
-);
-const filterGenderMale = dataRickAndMorty.filter(
-  (genderFilter) => genderFilter.gender === "Male"
-);
-const filterGenderUnknown = dataRickAndMorty.filter(
-  (genderFilter) => genderFilter.gender === "unknown"
-);
-
-const filterStatusAlive = dataRickAndMorty.filter(
-  (statusFilter) => statusFilter.status === "Alive"
-);
-const filterStatusDead = dataRickAndMorty.filter(
-  (statusFilter) => statusFilter.status === "Dead"
-);
-const filterStatusUnknown = dataRickAndMorty.filter(
-  (statusFilter) => statusFilter.status === "unknown"
-);
-
-const filterSpeciesAlien = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Alien"
-);
-const filterSpeciesAnimal = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Animal"
-);
-const filterSpeciesCronenberg = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Cronenberg"
-);
-const filterSpeciesDisease = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Disease"
-);
-const filterSpeciesHuman = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Human"
-);
-const filterSpeciesHumanoid = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Humanoid"
-);
-const filterSpeciesMytholog = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Mytholog"
-);
-const filterSpeciesParasite = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Parasite"
-);
-const filterSpeciesPoopybutthole = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Poopybutthole"
-);
-const filterSpeciesRobot = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Robot"
-);
-const filterSpeciesUnknown = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "unknown"
-);
-const filterSpeciesVampire = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Vampire"
-);*/
-
 const dataSortByName = [...dataRickAndMorty];
 const dataSortByLessPopular = [...dataRickAndMorty];
 const sortByName = dataSortByName.sort((a, b) => {
@@ -196,9 +139,7 @@ const sortByName = dataSortByName.sort((a, b) => {
 const sortByLessPopular = dataSortByLessPopular.sort((a, b) => {
   return a.id < b.id ? 1 : -1;
 }); 
-
-//let dataReturnFilter = dataRickAndMorty;//cambia de valor segun resultado de cada select
-//console.log(dataReturnFilter.length);
+    
 const filterSelect = (dataArray, property, value) => {
    return dataArray.filter(cardFilter => cardFilter[property] === value)
 }
@@ -209,7 +150,7 @@ const statusSelect = document.querySelector("#statusSelect");
 genderSelect.addEventListener("change", () => {
   const filtered = filterSelect(dataRickAndMorty, "gender", genderSelect.options[genderSelect.selectedIndex].value);
     if (filtered.length > 0) {
-      cardRickAndMorty(filtered);
+       cardRickAndMorty(filtered);
     }
 });
 speciesSelect.addEventListener("change", () => {
@@ -218,13 +159,30 @@ speciesSelect.addEventListener("change", () => {
       cardRickAndMorty(filtered);
     }
 });
-
 statusSelect.addEventListener("change", () => {
   const filtered = filterSelect(dataRickAndMorty, "status", statusSelect.options[statusSelect.selectedIndex].value);
     if (filtered.length > 0) {
-      cardRickAndMorty(filtered);
+     cardRickAndMorty(filtered);
     }
 });
+/*
+const newFilter =  (dataFilter) => {
+   return cardRickAndMorty(filterGender, filterSpecies); 
+};*/
+
+
+//filtro del filtro
+//let dataReturnFilter = dataRickAndMorty;//cambia de valor segun resultado de cada select
+//console.log(dataReturnFilter.length);
+//const selectAll = document.querySelectorAll("select");
+//let dataSelectAll = [...dataRickAndMorty];
+
+
+
+
+
+
+
 //genderSelect.addEventListener("change", (select) => {
   // switch (select.target.value) {
   //   case "Female":
