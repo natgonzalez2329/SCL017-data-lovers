@@ -116,9 +116,11 @@
       </div>
       <div>
          <div  id="sort"> Sort by
-          <select name="" id="sortBy">
+          <select name="sortBy" id="sortBy">
+            <option value="" active>Select</option>
             <option value="all">All</option>
-            <option value="alphabet">Alphabet</option>
+            <option value="alphabet">A-Z</option>
+            <option value="alphabetReverse">Z-A</option>
             <option value="lessPopular">Less Popular</option>
           </select>
         </div>
@@ -132,7 +134,7 @@
           </select>
          
             <label for="">Species</label>
-          <select name="" id="speciesSelect">
+          <select name="speciesSelect" id="speciesSelect">
             <option value="" active>Select</option>
             <option value="Alien">Alien</option>
             <option value="Animal">Animal</option>
@@ -149,7 +151,7 @@
           </select>
          
           <label for="">Status</label>
-          <select name="" id="statusSelect">
+          <select name="statusSelect" id="statusSelect">
             <option value="" active>Select</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>
@@ -158,7 +160,7 @@
         </div>
       </div>
     </div>
-
+      <button id="buttonClear" >Clear</button>
         <div class="characterTitle"><h1>Characters</h1></div>
         <div class="containerFlex"></div>
 
