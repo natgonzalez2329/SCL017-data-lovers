@@ -139,8 +139,6 @@ const dataSortByAlphabetReverse = [...sortByAlphabet]; // se crea la data de rev
 const sortByAlphabetReverse = dataSortByAlphabetReverse.reverse((a,b)=> {
   return a. name > b.name ? 1 : -1 ;
 }); 
-
-
 const sortByLessPopular = dataSortByLessPopular.sort((a, b) => {
   return a.id < b.id ? 1 : -1;
 }); 
@@ -182,25 +180,56 @@ const newFilter =  (dataFilter) => {
 
 //filtro del filtro
 
-const selectAll = document.querySelectorAll("select");
-let dataSelectAll = [...dataRickAndMorty];
-selectAll.forEach((selector) => {
-  selector.addEventListener("change", (multiEvent) => {
-    if(multiEvent.target.value !== "" && multiEvent.target.name !== "sortBy") {
-      const filterSelectAll = dataSelectAll.filter((newFilter) => {
-        return newFilter[multiEvent.target.name] === multiEvent.target.value;
-      })
-    }
-  });
-});
-
 const buttonClear = document.querySelector("#buttonClear");
 buttonClear.addEventListener("click", () => {
   cardRickAndMorty(dataRickAndMorty);
   selectAll.forEach((selector) => {
     selector.value = "";
   });
-})
+});
+
+buttonClear.style.display = "none";
+
+const selectAll = document.querySelectorAll("select");
+let dataSelectAll = [...dataRickAndMorty];
+const filterSelectAll = () => {
+  let selected = [];
+  selectAll.forEach((selector) => {
+    selector.addEventListener("change", (multiEvent) => {
+    }
+    /*selector.addEventListener("change", (multiEvent) => {
+      if(multiEvent.target.value !== "" && multiEvent.target.name !== "sortBy") {
+        const filterSelectAll = dataSelectAll.filter((newFilter) => {
+          //return newFilter[multiEvent.target.name] === multiEvent.target.value;
+          console.log( multiEvent.target.name === multiEvent.target.value )
+        })
+        buttonClear.style.display = "";
+        dataSelectAll = [...filterSelectAll];
+        
+      } else if (multiEvent.target.value === "alphabet" && multiEvent.target.name === "sortBy") {
+        buttonClear.style.display = "";
+        dataSelectAll = sortByAlphabet(dataSelectAll);
+      } else if (multiEvent.target.value === "alphabetReverse" && multiEvent.target.name === "sortBy") {
+        buttonClear.style.display = "";
+        dataSelectAll = sortByAlphabetReverse(dataSelectAll);
+      } else if (multiEvent.target.value === "lessPopular" && multiEvent.target.name === "sortBy") {
+        buttonClear.style.display = "";
+        dataSelectAll = sortByLessPopular(dataSelectAll);
+      } else {
+        buttonClear.style.display = "";
+        dataCharacters = [...dataRickAndMorty];
+      }
+      
+      
+      if (dataSelectAll.length > 0) {
+        cardRickAndMorty(dataSelectAll);
+      } else {
+        containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere. Like what you looking for...Burp</span>";
+      }
+    });*/
+  });
+}
+  
 
 
 
