@@ -1,7 +1,6 @@
 import { example } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
-
-console.log(example, data);
+//console.log(example, data);
 
 const btnMenu = document.querySelector("#btnMenu");
 const menu = document.querySelector("#menu");
@@ -130,88 +129,36 @@ const cardRickAndMorty = (cardArray) => {
   });
 };
 cardRickAndMorty(dataRickAndMorty); //llenado inicial
-
-/* const filterGenderFemale = dataRickAndMorty.filter(
-  (genderFilter) => genderFilter.gender === "Female"
-);
-const filterGenderMale = dataRickAndMorty.filter(
-  (genderFilter) => genderFilter.gender === "Male"
-);
-const filterGenderUnknown = dataRickAndMorty.filter(
-  (genderFilter) => genderFilter.gender === "unknown"
-);
-
-const filterStatusAlive = dataRickAndMorty.filter(
-  (statusFilter) => statusFilter.status === "Alive"
-);
-const filterStatusDead = dataRickAndMorty.filter(
-  (statusFilter) => statusFilter.status === "Dead"
-);
-const filterStatusUnknown = dataRickAndMorty.filter(
-  (statusFilter) => statusFilter.status === "unknown"
-);
-
-const filterSpeciesAlien = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Alien"
-);
-const filterSpeciesAnimal = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Animal"
-);
-const filterSpeciesCronenberg = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Cronenberg"
-);
-const filterSpeciesDisease = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Disease"
-);
-const filterSpeciesHuman = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Human"
-);
-const filterSpeciesHumanoid = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Humanoid"
-);
-const filterSpeciesMytholog = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Mytholog"
-);
-const filterSpeciesParasite = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Parasite"
-);
-const filterSpeciesPoopybutthole = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Poopybutthole"
-);
-const filterSpeciesRobot = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Robot"
-);
-const filterSpeciesUnknown = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "unknown"
-);
-const filterSpeciesVampire = dataRickAndMorty.filter(
-  (speciesFilter) => speciesFilter.species === "Vampire"
-);*/
-
-const dataSortByName = [...dataRickAndMorty];
+//sort
+const dataSortByAlphabet = [...dataRickAndMorty];
 const dataSortByLessPopular = [...dataRickAndMorty];
-const sortByName = dataSortByName.sort((a, b) => {
+const sortByAlphabet = dataSortByAlphabet.sort((a, b) => {
   return a.name > b.name ? 1 : -1;
 });
+const dataSortByAlphabetReverse = [...sortByAlphabet]; // se crea la data de reverse en base al resultado de sort 
+const sortByAlphabetReverse = dataSortByAlphabetReverse.reverse((a,b)=> {
+  return a. name > b.name ? 1 : -1 ;
+}); 
 const sortByLessPopular = dataSortByLessPopular.sort((a, b) => {
   return a.id < b.id ? 1 : -1;
 }); 
-
-//let dataReturnFilter = dataRickAndMorty;//cambia de valor segun resultado de cada select
-//console.log(dataReturnFilter.length);
+    
+//filter
 const filterSelect = (dataArray, property, value) => {
    return dataArray.filter(cardFilter => cardFilter[property] === value)
 }
 
+//let kkk
 const genderSelect = document.querySelector("#genderSelect");
 const speciesSelect = document.querySelector("#speciesSelect");
 const statusSelect = document.querySelector("#statusSelect");
 genderSelect.addEventListener("change", () => {
   const filtered = filterSelect(dataRickAndMorty, "gender", genderSelect.options[genderSelect.selectedIndex].value);
     if (filtered.length > 0) {
-      cardRickAndMorty(filtered);
+       cardRickAndMorty(filtered);
     }
 });
+
 speciesSelect.addEventListener("change", () => {
   const filtered = filterSelect(dataRickAndMorty, "species", speciesSelect.options[speciesSelect.selectedIndex].value);
     if (filtered.length > 0) {
@@ -222,84 +169,73 @@ speciesSelect.addEventListener("change", () => {
 statusSelect.addEventListener("change", () => {
   const filtered = filterSelect(dataRickAndMorty, "status", statusSelect.options[statusSelect.selectedIndex].value);
     if (filtered.length > 0) {
-      cardRickAndMorty(filtered);
+     cardRickAndMorty(filtered);
     }
 });
-//genderSelect.addEventListener("change", (select) => {
-  // switch (select.target.value) {
-  //   case "Female":
-  //     cardRickAndMorty(filterGenderFemale);
-  //     break;
-  //   case "Male":
-  //     cardRickAndMorty(filterGenderMale);
-  //     break;
-  //   case "unknown":
-  //     cardRickAndMorty(filterGenderUnknown);
-  //     break;
+/*
+const newFilter =  (dataFilter) => {
+   return cardRickAndMorty(filterGender, filterSpecies); 
+};*/
 
-  //   default:
-  //     break;
-  // }
-//});
-/*speciesSelect.addEventListener("change", (select) => {
-  switch (select.target.value) {
-    case "Alien":
-      cardRickAndMorty(filterSpeciesAlien);
-      break;
-    case "Animal":
-      cardRickAndMorty(filterSpeciesAnimal);
-      break;
-    case "Cronenberg":
-      cardRickAndMorty(filterSpeciesCronenberg);
-      break;
-    case "Disease":
-      cardRickAndMorty(filterSpeciesDisease);
-      break;
-    case "Human":
-      cardRickAndMorty(filterSpeciesHuman);
-      break;
-    case "Humanoid":
-      cardRickAndMorty(filterSpeciesHumanoid);
-      break;
-    case "Mytholog":
-      cardRickAndMorty(filterSpeciesMytholog);
-      break;
-    case "Parasite":
-      cardRickAndMorty(filterSpeciesParasite);
-      break;
-    case "Poopybutthole":
-      cardRickAndMorty(filterSpeciesPoopybutthole);
-      break;
-    case "Robot":
-      cardRickAndMorty(filterSpeciesRobot);
-      break;
-    case "unknown":
-      cardRickAndMorty(filterSpeciesUnknown);
-      break;
-    case "Vampire":
-      cardRickAndMorty(filterSpeciesVampire);
-      break;
 
-    default:
-      break;
-  }
-});*/
-/*statusSelect.addEventListener("change", (select) => {
-  switch (select.target.value) {
-    case "Alive":
-      cardRickAndMorty(filterStatusAlive);
-      break;
-    case "Dead":
-      cardRickAndMorty(filterStatusDead);
-      break;
-    case "unknown":
-      cardRickAndMorty(filterStatusUnknown);
-      break;
+//filtro del filtro
 
-    default:
-      break;
-  }
-});*/
+const buttonClear = document.querySelector("#buttonClear");
+buttonClear.addEventListener("click", () => {
+  cardRickAndMorty(dataRickAndMorty);
+  selectAll.forEach((selector) => {
+    selector.value = "";
+  });
+});
+
+buttonClear.style.display = "none";
+
+const selectAll = document.querySelectorAll("select");
+let dataSelectAll = [...dataRickAndMorty];
+const filterSelectAll = () => {
+  let selected = [];
+  selectAll.forEach((selector) => {
+    selector.addEventListener("change", (multiEvent) => {
+    }
+    /*selector.addEventListener("change", (multiEvent) => {
+      if(multiEvent.target.value !== "" && multiEvent.target.name !== "sortBy") {
+        const filterSelectAll = dataSelectAll.filter((newFilter) => {
+          //return newFilter[multiEvent.target.name] === multiEvent.target.value;
+          console.log( multiEvent.target.name === multiEvent.target.value )
+        })
+        buttonClear.style.display = "";
+        dataSelectAll = [...filterSelectAll];
+        
+      } else if (multiEvent.target.value === "alphabet" && multiEvent.target.name === "sortBy") {
+        buttonClear.style.display = "";
+        dataSelectAll = sortByAlphabet(dataSelectAll);
+      } else if (multiEvent.target.value === "alphabetReverse" && multiEvent.target.name === "sortBy") {
+        buttonClear.style.display = "";
+        dataSelectAll = sortByAlphabetReverse(dataSelectAll);
+      } else if (multiEvent.target.value === "lessPopular" && multiEvent.target.name === "sortBy") {
+        buttonClear.style.display = "";
+        dataSelectAll = sortByLessPopular(dataSelectAll);
+      } else {
+        buttonClear.style.display = "";
+        dataCharacters = [...dataRickAndMorty];
+      }
+      
+      
+      if (dataSelectAll.length > 0) {
+        cardRickAndMorty(dataSelectAll);
+      } else {
+        containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere. Like what you looking for...Burp</span>";
+      }
+    });*/
+  });
+}
+  
+
+
+
+
+
+
 const sortBy = document.querySelector("#sortBy")
 sortBy.addEventListener("change", (select) => {
     switch (select.target.value) {
@@ -307,8 +243,11 @@ sortBy.addEventListener("change", (select) => {
         cardRickAndMorty(dataRickAndMorty);
         break;
       case "alphabet":
-        cardRickAndMorty(sortByName);
+        cardRickAndMorty(sortByAlphabet);
         break;
+        case "alphabetReverse":
+          cardRickAndMorty(sortByAlphabetReverse);
+          break;
       case "lessPopular":
         cardRickAndMorty(sortByLessPopular);
         break;
