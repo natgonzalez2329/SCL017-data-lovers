@@ -111,28 +111,30 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-submenu" viewbox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
           </svg>
-          <input type="text" id="search" placeholder="Type the name here">
+          <input type="text" id="search" placeholder="Type the name here" autocomplete="off">
         </form>
       </div>
       <div>
-         <div id="sort"> Sort by
-          <select name="" id="sortBy">
+         <div  id="sort"> Sort by
+          <select name="sortBy" id="sortBy">
             <option value="" active>Select</option>
             <option value="all">All</option>
-            <option value="alphabet">Alphabet</option>
+            <option value="alphabet">A-Z</option>
+            <option value="alphabetReverse">Z-A</option>
             <option value="lessPopular">Less Popular</option>
           </select>
         </div>
         <div id="filter">Filter
           <label for="">Gender</label>
-          <select name="genderSelect" id="genderSelect">
+          <select name="gender" id="genderSelect">
             <option value="" active>Select</option>
             <option value="Female">Female</option>
             <option value="Male">Male</option>
             <option value="unknown">Unknown</option>
           </select>
-          <label for="">Species</label>
-          <select name="" id="speciesSelect">
+         
+            <label for="">Species</label>
+          <select name="species" id="speciesSelect">
             <option value="" active>Select</option>
             <option value="Alien">Alien</option>
             <option value="Animal">Animal</option>
@@ -147,17 +149,18 @@
             <option value="unknown">Unknown</option>
             <option value="Vampire">Vampire</option>
           </select>
+         
           <label for="">Status</label>
-          <select name="" id="statusSelect">
+          <select name="status" id="statusSelect">
             <option value="" active>Select</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>
             <option value="unknown">Unknown</option>
-          </select>
+          </select>          
         </div>
       </div>
     </div>
-
+      <button id="buttonClear" >Clear</button>
         <div class="characterTitle"><h1>Characters</h1></div>
         <div class="containerFlex"></div>
 
