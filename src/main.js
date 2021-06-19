@@ -1,6 +1,5 @@
-import {example} from "./data.js";
+import { filterSelect, sortData } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
-console.log(example, data);
 
 const btnMenu = document.querySelector("#btnMenu");
 const menu = document.querySelector("#menu");
@@ -130,10 +129,11 @@ const cardRickAndMorty = (cardArray) => {
 };
 cardRickAndMorty(dataRickAndMorty); //llenado inicial
 
+
 //sort
 //const dataSortByAlphabet = [...dataRickAndMorty]; 
 //const dataSortByLessPopular = [...dataRickAndMorty];
-const sortByAlphabet = (dataSortByAlphabet) => dataSortByAlphabet.sort((a, b) => {
+/*const sortByAlphabet = (dataSortByAlphabet) => dataSortByAlphabet.sort((a, b) => {
   return a.name > b.name ? 1 : -1;
 });
 //const dataSortByAlphabetReverse = [...sortByAlphabet]; // se crea la data de reverse en base al resultado de sort 
@@ -142,7 +142,7 @@ const sortByAlphabetReverse = (dataSortByAlphabetReverse) => dataSortByAlphabetR
 }); 
 const sortByLessPopular = (dataSortByLessPopular) => dataSortByLessPopular.sort((a, b) => {
   return a.id < b.id ? 1 : -1;
-}); 
+});*/ 
 
 /*const sortBy = document.querySelector("#sortBy");
 sortBy.addEventListener("change", (select) => {
@@ -167,9 +167,9 @@ sortBy.addEventListener("change", (select) => {
 
 
 //filter
-const filterSelect = (dataArray, property, value) => {//refactorizacion funcion filter general-autobus de filter
+/*const filterSelect = (dataArray, property, value) => {//refactorizacion funcion filter general-autobus de filter
    return dataArray.filter(cardFilter => cardFilter[property] === value)
-};
+};*/ //Export
 
 /*const genderSelect = document.querySelector("#genderSelect");
 const speciesSelect = document.querySelector("#speciesSelect");
@@ -216,13 +216,13 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
         dataSelectAll = [...dataFilteredSelectAll];
       } else if (multiEvent.target.name === "sortBy" && multiEvent.target.value === "alphabet") {
         buttonClear.style.display = "";
-        dataSelectAll = sortByAlphabet(dataSelectAll);
+        dataSelectAll = sortData.sortByAlphabet(dataSelectAll);
       } else if (multiEvent.target.name === "sortBy" && multiEvent.target.value === "alphabetReverse") {
         buttonClear.style.display = "";
-        dataSelectAll = sortByAlphabetReverse(dataSelectAll);
+        dataSelectAll = sortData.sortByAlphabetReverse(dataSelectAll);
       } else if (multiEvent.target.name === "sortBy" && multiEvent.target.value === "lessPopular") {
         buttonClear.style.display = "";
-        dataSelectAll = sortByLessPopular(dataSelectAll);
+        dataSelectAll = sortData.sortByLessPopular(dataSelectAll);
       } else if (multiEvent.target.value !== "") {// ademas si el value o valo es diferente a string vacio que son los active , que tenga la accion de evocar la data original.
         buttonClear.style.display = "";
         dataCharacters = [...dataRickAndMorty];
@@ -244,3 +244,86 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
     buttonClear.style.display = "none";
     cardRickAndMorty(dataSelectAll);
   });
+
+  var ctx= document.getElementById("genderChart").getContext("2d");
+        var myChart= new Chart(ctx,{
+            type:"pie",
+            data:{
+                labels:['col1','col2','col3'],
+                datasets:[{
+                        label:'Num datos',
+                        data:[10,9,15],
+                        backgroundColor:[
+                            'rgb(66, 134, 244)',
+                            'rgb(74, 135, 72)',
+                            'rgb(229, 89, 50)'
+                        ]
+                }]
+            },
+            options:{
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                beginAtZero:true
+                            }
+                    }]
+                }
+            }
+          });
+          var ctx= document.getElementById("speciesChart").getContext("2d");
+          var myChart= new Chart(ctx,{
+              type:'polarArea',
+              data:{
+                  labels:['col1','col2','col3'], color:'rgb(66, 134, 244)', 
+                  datasets:[{
+                          label:'Num datos',
+                          data:[10,9,15],
+                          backgroundColor:[
+                              'rgb(66, 134, 244)',
+                              'rgb(74, 135, 72)',
+                              'rgb(229, 89, 50)'
+                          ]
+                  }]
+              },
+              options:{
+                plugins: {
+                  title: {
+                      display: true,
+                      text: 'Custom Chart Title',
+                      color: 'rgb(229, 89, 50)',
+                  }
+              },
+                  scales:{
+                      yAxes:[{
+                              ticks:{
+                                  beginAtZero:true
+                              }
+                      }]
+                  }
+              }
+            });
+            var ctx= document.getElementById("statusChart").getContext("2d");
+            var myChart= new Chart(ctx,{
+                type:"pie",
+                data:{
+                    labels:['col1','col2','col3'],
+                    datasets:[{
+                            label:'Num datos',
+                            data:[10,9,15],
+                            backgroundColor:[
+                                'rgb(66, 134, 244)',
+                                'rgb(74, 135, 72)',
+                                'rgb(229, 89, 50)'
+                            ]
+                    }]
+                },
+                options:{
+                    scales:{
+                        yAxes:[{
+                                ticks:{
+                                    beginAtZero:true
+                                }
+                        }]
+                    }
+                }
+              });

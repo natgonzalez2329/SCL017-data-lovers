@@ -12,6 +12,7 @@
       href="https://the-rick-and-morty-api.herokuapp.com/static/media/react_logo.b37f0a4b.png"
       type="image/x-icon"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="scharacters.css" />
@@ -102,6 +103,17 @@
               <img src="images/pngfind.com-rick-and-morty-portal-164411.png" width="35%">
             </div>
           </div>
+          <div class="container-compute">
+          <div class="computeGender">
+            <canvas id="genderChart" ></canvas>
+          </div>
+          <div class="computeSpecies">
+            <canvas id="speciesChart" ></canvas>
+          </div>
+          <div class="computeStatus">
+            <canvas id="statusChart" ></canvas>
+          </div>
+        </div>
         </div>
       <div class="container__characters" id="characters">
 
@@ -271,5 +283,6 @@
       </div>
     </footer>
     <script src="main.js" type="module"></script>
+    
   </body>
 </html>
