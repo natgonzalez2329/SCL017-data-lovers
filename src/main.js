@@ -1,4 +1,4 @@
-import { example } from "./data.js";
+import {example} from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
 console.log(example, data);
 
@@ -55,10 +55,10 @@ factsBtn.addEventListener("click", () => {
   facts.style.display = "";
 });
 //Data Lovers
-const dataRickAndMorty = data.results.map((rickAndMorty) => {
+const dataRickAndMorty = data.results.map((rickAndMorty) => { 
   const { id, name, status, species, type, gender, origin, location, image } =
-    rickAndMorty;
-  const newDataRickAndMorty = {
+    rickAndMorty; // saco grande
+  const newDataRickAndMorty = { // saco chiquito = nuevo objeto 
     id,
     name,
     status,
@@ -131,10 +131,10 @@ const cardRickAndMorty = (cardArray) => {
 cardRickAndMorty(dataRickAndMorty); //llenado inicial
 
 //sort
-//const dataSortByAlphabet = [...dataRickAndMorty];
+//const dataSortByAlphabet = [...dataRickAndMorty]; 
 //const dataSortByLessPopular = [...dataRickAndMorty];
 const sortByAlphabet = (dataSortByAlphabet) => dataSortByAlphabet.sort((a, b) => {
-  return  a.name > b.name ? 1 : -1;
+  return a.name > b.name ? 1 : -1;
 });
 //const dataSortByAlphabetReverse = [...sortByAlphabet]; // se crea la data de reverse en base al resultado de sort 
 const sortByAlphabetReverse = (dataSortByAlphabetReverse) => dataSortByAlphabetReverse.reverse((a,b)=> {
@@ -143,8 +143,8 @@ const sortByAlphabetReverse = (dataSortByAlphabetReverse) => dataSortByAlphabetR
 const sortByLessPopular = (dataSortByLessPopular) => dataSortByLessPopular.sort((a, b) => {
   return a.id < b.id ? 1 : -1;
 }); 
-    
-/*const sortBy = document.querySelector("#sortBy")
+
+/*const sortBy = document.querySelector("#sortBy");
 sortBy.addEventListener("change", (select) => {
     switch (select.target.value) {
       case "all":
@@ -167,15 +167,14 @@ sortBy.addEventListener("change", (select) => {
 
 
 //filter
-const filterSelect = (dataArray, property, value) => {
-   return dataArray.filter(cardFilter => cardFilter[property] === value);
-};
+const filterSelect = (dataArray, property, value) => {//refactorizacion funcion filter general-autobus de filter
+   return dataArray.filter(cardFilter => cardFilter[property] === value)
 
 /*const genderSelect = document.querySelector("#genderSelect");
 const speciesSelect = document.querySelector("#speciesSelect");
 const statusSelect = document.querySelector("#statusSelect");
 
-genderSelect.addEventListener("change", () => {
+ genderSelect.addEventListener("change", () => { // La data, la propiedad de cada objeto y la selecion de las opciones mediante el indice, y el valor.
   const filtered = filterSelect(dataRickAndMorty, "gender", genderSelect.options[genderSelect.selectedIndex].value);
     if (filtered.length > 0) {
        cardRickAndMorty(filtered);
@@ -199,17 +198,19 @@ statusSelect.addEventListener("change", () => {
 
 //filtro del filtro
 const buttonClear = document.querySelector("#buttonClear");
-buttonClear.style.display = "none";  
-  
-const selectAll = document.querySelectorAll("select"); 
-let dataSelectAll = [...dataRickAndMorty]; 
-selectAll.forEach((selector) => {
-    selector.addEventListener("change", (multiEvent) => {
-      if(multiEvent.target.value !== "" && multiEvent.target.name !== "sortBy") {
-        //const dataFilteredSelectAll = dataSelectAll.filter((newFilter) => {
-         //return newFilter[multiEvent.target.name] === multiEvent.target.value;}
-        const {name, value} = multiEvent.target;
-        const dataFilteredSelectAll = filterSelect(dataSelectAll, name, value);
+buttonClear.style.display = "none";
+
+const selectAll = document.querySelectorAll("select"); // Evocamos todos los elementos select (querySñectprAll se puede llamar todas las clases y elementos)
+let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spread operator-operador de propagacion)
+  selectAll.forEach((selector) => {    // va a recorrer los select
+    selector.addEventListener("change", (multiEvent) => {  // la funcion contiene, el evento y la propiedad del select que necesitamos
+      if(multiEvent.target.name !== "sortBy" && multiEvent.target.value !== "") { //van a entrar todos los select, excepto el de sort y los active.
+        /*const filterSelectAll = dataSelectAll.filter((newFilter) => {
+          //return newFilter[multiEvent.target.name] === multiEvent.target.value;
+          console.log( multiEvent.target.name === multiEvent.target.value )
+        })*/
+        const {name, value} = multiEvent.target; //  Obtenemos atributos de select que queremos usar
+        const dataFilteredSelectAll =  filterSelect(dataSelectAll, name, value); // Aplicamos el filtro general a la data y a las atributos de select
         buttonClear.style.display = "";
         dataSelectAll = [...dataFilteredSelectAll];
       } else if (multiEvent.target.name === "sortBy" && multiEvent.target.value === "alphabet") {
@@ -221,7 +222,7 @@ selectAll.forEach((selector) => {
       } else if (multiEvent.target.name === "sortBy" && multiEvent.target.value === "lessPopular") {
         buttonClear.style.display = "";
         dataSelectAll = sortByLessPopular(dataSelectAll);
-      } else if (multiEvent.target.value !== "") {
+      } else if (multiEvent.target.value !== "") {// ademas si el value o valo es diferente a string vacio que son los active , que tenga la accion de evocar la data original.
         buttonClear.style.display = "";
         dataSelectAll = [...dataRickAndMorty];
       }
@@ -232,19 +233,13 @@ selectAll.forEach((selector) => {
         containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere. Like what you looking for...Burp</span>";
       }
     });
-});
-
-buttonClear.addEventListener("click", () => {
-  dataSelectAll = [...dataRickAndMorty];
-  selectAll.forEach((selector) => {
-    selector.value = "";
   });
-  buttonClear.style.display = "none";
-  cardRickAndMorty(dataSelectAll);
-});
-  
 
-
-
-
-
+  buttonClear.addEventListener("click", () => {
+    dataSelectAll = [...dataRickAndMorty];
+    selectAll.forEach((selector) => {// reinicia el selector a select active
+      selector.value = "";
+    });
+    buttonClear.style.display = "none";
+    cardRickAndMorty(dataSelectAll);
+  });
