@@ -73,7 +73,7 @@ const dataRickAndMorty = data.results.map((rickAndMorty) => {
 });
 
 const cardRickAndMorty = (cardArray) => {
-  containerFlex.innerHTML = "";
+  containerFlex.innerHTML = "";//reemplaza el contenido del div con una cadena vacia.
   cardArray.forEach((card) => {
     const { id, name, status, species, type, gender, origin, location, image } =
       card;
@@ -169,7 +169,6 @@ sortBy.addEventListener("change", (select) => {
 //filter
 const filterSelect = (dataArray, property, value) => {//refactorizacion funcion filter general-autobus de filter
    return dataArray.filter(cardFilter => cardFilter[property] === value)
-};
 
 /*const genderSelect = document.querySelector("#genderSelect");
 const speciesSelect = document.querySelector("#speciesSelect");
@@ -225,9 +224,8 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
         dataSelectAll = sortByLessPopular(dataSelectAll);
       } else if (multiEvent.target.value !== "") {// ademas si el value o valo es diferente a string vacio que son los active , que tenga la accion de evocar la data original.
         buttonClear.style.display = "";
-        dataCharacters = [...dataRickAndMorty];
+        dataSelectAll = [...dataRickAndMorty];
       }
-      
       
       if (dataSelectAll.length > 0) {
         cardRickAndMorty(dataSelectAll);
