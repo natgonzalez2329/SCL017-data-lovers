@@ -228,7 +228,6 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
         dataCharacters = [...dataRickAndMorty];
       }
       
-      
       if (dataSelectAll.length > 0) {
         cardRickAndMorty(dataSelectAll);
       } else {
