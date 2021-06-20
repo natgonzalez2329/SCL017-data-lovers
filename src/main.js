@@ -247,20 +247,28 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
 
   var ctx= document.getElementById("genderChart").getContext("2d");
         var myChart= new Chart(ctx,{
-            type:"pie",
+            type:'doughnut',
             data:{
-                labels:['col1','col2','col3'],
+                labels:['Female','Male','Genderless','unknown'],
                 datasets:[{
                         label:'Num datos',
-                        data:[10,9,15],
+                        data:[73,372,6,42],
                         backgroundColor:[
-                            'rgb(66, 134, 244)',
-                            'rgb(74, 135, 72)',
-                            'rgb(229, 89, 50)'
+                            'rgb(222, 53, 222)',
+                            'rgb(53, 53, 222)',
+                            'rgb(53, 222, 53)',
+                            'rgb(245, 239, 239)'
                         ]
                 }]
             },
             options:{
+              plugins: {
+                title: {
+                    display: true,
+                    text: 'Gender',
+                    color: 'rgb(230, 230, 9)',
+                }
+            },
                 scales:{
                     yAxes:[{
                             ticks:{
@@ -272,16 +280,25 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
           });
           var ctx= document.getElementById("speciesChart").getContext("2d");
           var myChart= new Chart(ctx,{
-              type:'polarArea',
+              type:'doughnut',
               data:{
-                  labels:['col1','col2','col3'], color:'rgb(66, 134, 244)', 
+                  labels:['Alien','Animal','Cronenberg', 'Disiese','Human', 'Humanoid','Mytholog','Parasite','Poopybutthole','Robot','unknown','Vampire'], color:'rgb(66, 134, 244)', 
                   datasets:[{
-                          label:'Num datos',
-                          data:[10,9,15],
+                          label:'Datos',
+                          data:[132,17,8,6,244,53,7,1,6,11,5,3],
                           backgroundColor:[
-                              'rgb(66, 134, 244)',
-                              'rgb(74, 135, 72)',
-                              'rgb(229, 89, 50)'
+                              'rgb(100, 228, 62)',
+                              'rgb(184, 140, 64)',
+                              'rgb(235, 189, 25)',
+                              'rgb(237, 128, 124)',
+                              'rgb(126, 230, 190)',
+                              'rgb(112, 98, 243)',
+                              'rgb(121, 29, 164)',
+                              'rgb(247, 208, 12)',
+                              'rgb(206, 199, 165)',
+                              'rgb(135, 133, 125)',
+                              'rgb(245, 239, 239)',
+                              'rgb(230, 9, 9)',
                           ]
                   }]
               },
@@ -289,8 +306,8 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
                 plugins: {
                   title: {
                       display: true,
-                      text: 'Custom Chart Title',
-                      color: 'rgb(229, 89, 50)',
+                      text: 'Species',
+                      color: 'rgb(230, 230, 9)',
                   }
               },
                   scales:{
@@ -304,20 +321,27 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
             });
             var ctx= document.getElementById("statusChart").getContext("2d");
             var myChart= new Chart(ctx,{
-                type:"pie",
+                type:'doughnut',
                 data:{
-                    labels:['col1','col2','col3'],
+                    labels:['Alive','Dead','unknown'],
                     datasets:[{
                             label:'Num datos',
-                            data:[10,9,15],
+                            data:[281,147,65],
                             backgroundColor:[
-                                'rgb(66, 134, 244)',
-                                'rgb(74, 135, 72)',
-                                'rgb(229, 89, 50)'
+                                'rgb(142, 220, 94)',
+                                'rgb(0, 0, 0)',
+                                'rgb(245, 239, 239)'
                             ]
                     }]
                 },
                 options:{
+                  plugins: {
+                    title: {
+                        display: true,
+                        text: 'Status',
+                        color: 'rgb(230, 230, 9)',
+                    }
+                },
                     scales:{
                         yAxes:[{
                                 ticks:{

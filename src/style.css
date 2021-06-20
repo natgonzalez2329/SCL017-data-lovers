@@ -236,13 +236,14 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 5%;
 }
 .computeGender{
     width: 30%;
     color: white
 }
 .computeSpecies{
-    width: 30%;
+    width: 40%;
 }
 .computeStatus{
     width: 30%;
