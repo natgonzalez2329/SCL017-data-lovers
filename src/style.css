@@ -232,3 +232,40 @@ footer {
     color: white;
     box-sizing: border-box;
   }
+.container-compute{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    flex-wrap: wrap;
+
+}
+.contentCompute{
+    width: 90%;
+    justify-content: center;
+    padding: 20px;
+    color:white;
+    background: black;
+    box-shadow: 8px 8px  35px 0 rgb(222, 116, 218);
+    border-radius: 20px;
+    display: flex;
+}
+
+.computeGender{
+    
+    width: 30%;
+    color: white
+}
+.computeSpecies{
+    width: 40%;
+}
+.computeStatus{
+    width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+.computeGender,.computeSpecies,.computeStatus{
+    width: 100%;
+}
+}

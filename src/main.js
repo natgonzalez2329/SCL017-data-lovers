@@ -142,6 +142,7 @@ const cardRickAndMorty = (cardArray) => {
 };
 cardRickAndMorty(dataRickAndMorty); //llenado inicial
 
+
 //sort
 //const dataSortByAlphabet = [...dataRickAndMorty]; 
 //const dataSortByLessPopular = [...dataRickAndMorty];
@@ -154,7 +155,7 @@ cardRickAndMorty(dataRickAndMorty); //llenado inicial
 }); 
 const sortByLessPopular = (dataSortByLessPopular) => dataSortByLessPopular.sort((a, b) => {
   return a.id < b.id ? 1 : -1;
-});*/
+});*/ 
 
 /*const sortBy = document.querySelector("#sortBy");
 sortBy.addEventListener("change", (select) => {
@@ -181,7 +182,7 @@ sortBy.addEventListener("change", (select) => {
 //filter
 /*const filterSelect = (dataArray, property, value) => {//refactorizacion funcion filter general-autobus de filter
    return dataArray.filter(cardFilter => cardFilter[property] === value)
-};*/
+};*/ //Export
 
 /*const genderSelect = document.querySelector("#genderSelect");
 const speciesSelect = document.querySelector("#speciesSelect");
@@ -262,7 +263,116 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
     cardRickAndMorty(dataSelectAll);
   });
 
-//charts
-//const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
-//const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species");
-//const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
+  //charts
+const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
+const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species");
+const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
+
+
+  var ctx= document.getElementById("genderChart").getContext("2d");
+        var myChart= new Chart(ctx,{
+            type:'doughnut',
+            data:{
+                labels:genderDataChart.statusKeys,
+                datasets:[{
+                        label:'Num datos',
+                        data:genderDataChart.statusValues,
+                        backgroundColor:[
+                            'rgb(106, 211, 235)',
+                            'rgb(237, 69, 209)',
+                            'rgb(247, 247, 99)',
+                            'rgb(85, 212, 109)'
+                        ]
+                }]
+            },
+            options:{
+              plugins: {
+                title: {
+                    display: true,
+                    text: 'Gender',
+                    color: 'rgb(230, 230, 9)',
+                }
+            },
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                beginAtZero:true
+                            }
+                    }]
+                }
+            }
+          });
+          var ctx= document.getElementById("speciesChart").getContext("2d");
+          var myChart= new Chart(ctx,{
+              type:'doughnut',
+              data:{
+                  labels:speciesDataChart.statusKeys, color:'rgb(66, 134, 244)', 
+                  datasets:[{
+                          label:'Datos',
+                          data:speciesDataChart.statusValues, color:'rgb(66, 134, 244)', 
+                          backgroundColor:[
+                             'rgb(96, 79, 204)',
+                             'rgb(85, 212, 109)',
+                            'rgb(247, 247, 99)',
+                            'rgb(237, 69, 209)',
+                            'rgb(106, 211, 235)',
+                              'rgb(250, 115, 95)',
+                              'rgb(34, 18, 245)',
+                              'rgb(60, 250, 147)',
+                              'rgb(202, 252, 73)',
+                              'rgb(250, 60, 112)',
+                              'rgb(250, 85, 60)',
+                              'rgb(230, 20, 1)',
+                          ]
+                  }]
+              },
+              options:{
+                plugins: {
+                  title: {
+                      display: true,
+                      text: 'Species',
+                      color: 'rgb(230, 230, 9)',
+                  }
+              },
+                  scales:{
+                      yAxes:[{
+                              ticks:{
+                                  beginAtZero:true
+                              }
+                      }]
+                  }
+              }
+            });
+            var ctx= document.getElementById("statusChart").getContext("2d");
+            var myChart= new Chart(ctx,{
+                type:'doughnut',
+                data:{
+                    labels:statusDataChart.statusKeys,
+                    datasets:[{
+                            label:'Num datos',
+                            data:statusDataChart.statusValues,
+                            backgroundColor:[
+                                'rgb(0, 250, 141)',
+                                'rgb(245, 239, 239)',
+                                'rgb(0, 0, 0)'
+                            ]
+                    }]
+                },
+                options:{
+                  plugins: {
+                    title: {
+                        display: true,
+                        text: 'Status',
+                        color: 'rgb(230, 230, 9)',
+                        size: '50px'
+                    }
+                },
+                    scales:{
+                        yAxes:[{
+                                ticks:{
+                                    beginAtZero:true
+                                }
+                        }]
+                    }
+                }
+              });
