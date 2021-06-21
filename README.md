@@ -5,9 +5,9 @@
 ## Índice
 
 * [1. Descripción general](#1-descripción-general)
-* [2. Historias de Usuario](#2-historias-de-usuarios)
-* [3. Prototipo y diseño](#3-prototipo-y-diseño)
-* [4. Perfil de usuarios](#4-perfil-de-usuarios)
+* [2. Historias de Usuarios](#2-historias-de-usuarios)
+* [3. Perfil de usuarios](#4-perfil-de-usuarios)
+* [4. Prototipo y diseño](#3-prototipo-y-diseño)
 * [5. Modo de usuarios](#5-modo-usuarios)
 * [6. Tecnología](#6-tecnología)
 * [7. Objetivos planteados](#7-objetivos-planteados)
@@ -17,8 +17,69 @@
 
 ## 1. Descripción general
 Rick and Morty es una página wed cuyo contenido trata sobre una de las animaciones para adultos más famosas y entretenida con su característico humor negro que fascina a muchos; donde  un científico alcohólico, secuestra a su influenciable nieto, Morty, para vivir peligrosas aventuras a través de diversos cosmos y universos paralelos. El contenido de la página se centra en satisfacer las curiosidades más llamativas de esta grandiosa comedia animada, brindando información relevante de todos los personajes de la serie, curiosidades intrigantes e información actualizada de noticias de último momento. 
+## 2. Perfil de usuarios
+El contenido de Rick and Morty se encuentra dirigido a usuarios en edad adulta, desde los usuarios ya conocedores y fanáticos de esta comedia para que tengan al alcance información detallada de sus personajes favoritos, asi como las noticias con respecto a Rick and Morty de forma actualizada. También va dirigido a esos usuarios principiante u ocasional que les llama la atención y quieran saber información breve para entrar en contexto y asi decidirse de ver dicha animación.
+Usuario principiante: conoce superficialmente la serie, por recomendación o por descubrimiento propio, con interés de seguir obtener información.
+Usuario fiel: conoce y consume la serie continuamente, le interesa el contenido y lo relacionado con todo lo relacionado con la animación, la recomienda porque està satisfecho y está pendiente de las actualizaciones.
+Usuario curioso: conoce la serie, la ve regularmente, le gusta obtener información detallada, exacta pero a profundidad de todo.
+## 3. Historias de usuarios
 
-## 2. Prototipo y diseño
+- Historia de usuario 1
+Yo: Principiante.
+Quiero: "Saber información de interés general breve y detallada de la serie".
+Para: "Conocer de que se trata la serie y decidir si la continuo viendo o no".
+
+Criterios de aceptación:
+-yo como usuario quiero tener un menú donde pueda desplazarme por la información fácilmente.
+-encontrar en la página información concreta y directa.
+-ver en otra página mas detallada las curiosidades de la serie.
+-breve reseña de la serie.
+
+Tareas:
+* [ ] Definir prototipo.
+* [ ] Determinar contenido de sub-páginas(home-characters(cards-charts)-facts).
+* [ ] Menú interactivo, desplegable, de acceso a contenido detallado y de interés (header).
+* [ ] Slider automático con imágenes que representen momentos relevantes de la serie (main).
+* [ ] Redes sociales y marca de creación, copyright (footer).
+* [ ] Background de cada sub-página.
+* [ ] Determinar y plasmar diseño y contenido de contenedores de sub-páginas: página principal(home) y curiosidades(facts).
+
+- Historia de usuario 2
+Yo: Fanático(Usuario fiel).
+Quiero: "Encontrar información relevante de mis personajes favoritos y los anuncios nuevos de la serie, como noticias".
+Para: "Saber más sobre la serie y estar al día".
+
+Criterios de aceptación:
+-seccion de noticias.
+-seccion de personajes con informacion detallada y de interes de cada uno, en el que pueda acceder por orden y filtrar.
+
+
+Tareas:
+* [ ] Exportar y obtener la data de Rick and Morty.
+* [ ] Aplicar método map-Determinar las propiedades del objeto a trabajar y desestructurar.
+* [ ] Crear las cartas de los personajes a través de la creación de nodos por la manipulación dinámica del DOM.
+* [ ] Aplicar método filter y sort.
+* [ ] Hacer menú filtrar y ordenar.
+* [ ] Asignar eventos al menú de filtrar y ordenar.
+
+
+- Historia de usuario 3
+Yo: Curioso.
+Quiero: "Conseguir información de la serie".
+Para: "Analizar, comparar y tener una opinión a profundidad de la serie".
+
+Criterios de aceptación
+filtro multiseleccion
+estadisticas en base a los filtros.
+
+Tareas:
+* [ ] Filtrado multiselección.
+* [ ] Representación porcentual de los filtros.
+* [ ] Crear sub-página charts.
+* [ ] Determinar calculos estadísticos(computeStats).
+* [ ] Crear charts.
+
+## 4. Prototipo y diseño
  
 Prototipo inicial
 ![prototipo-inicial](./src/images/prototipo-inicial.jpeg)
@@ -60,8 +121,6 @@ Todas estas sugerencias las lleve a cabo, en el proyecto final, implemente como 
 ![proyecto-final3](./src/images/pcipher3.png)
 
 
-## 3. Perfil de usuarios
-El contenido de Rick and Morty se encuentra dirigido a grupo poblacional adulto, 
 
 ## 4. Modo de usuarios
 Una vez que se accede a la página Cryptocode, se tiene acceso a traves de tres botones a la página principal y las subpáginas.

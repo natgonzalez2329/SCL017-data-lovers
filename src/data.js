@@ -14,5 +14,28 @@ const sortData = {
   }) 
 };
 
-//const computeStats
-export { filterSelect, sortData };
+const computeStats = {
+  percentageFilter: (dataSelect) => {
+    const mathRule = ((dataSelect.length * 100) / 493).toFixed(0);
+    return mathRule;
+  },
+  getDataProperty: (dataArray, propertyParam) => {
+    let propertyDataChart = {};
+    //console.log(propertyDataChart)
+    dataArray.forEach((character) =>  {
+      const property = character[propertyParam];
+     //console.log(Object.entries(propertyDataChart[property]));
+      propertyDataChart[property] = (propertyDataChart[property] || 0) + 1;
+      //console.log(propertyDataChart);
+    });
+    //console.log(propertyDataChart);
+    const statusKeys = Object.keys(propertyDataChart); // array de las llaves
+    const statusValues = Object.values(propertyDataChart); // array de los valores
+    // console.log(statusKeys);
+    // console.log(statusValues);
+    return { statusKeys, statusValues };
+  } 
+ 
+}
+
+export { filterSelect, sortData, computeStats };

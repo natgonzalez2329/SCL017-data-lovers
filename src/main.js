@@ -1,4 +1,4 @@
-import { filterSelect, sortData } from "./data.js";
+import { filterSelect, sortData, computeStats } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
 
 const btnMenu = document.querySelector("#btnMenu");
@@ -243,7 +243,8 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
       }
       
       if (dataSelectAll.length > 0) {
-        percentage.innerHTML = `${((dataSelectAll.length * 100) / 493).toFixed(1)}` + "%";
+        const test = computeStats.percentageFilter(dataSelectAll);
+        percentage.innerHTML = test + "%";
         cardRickAndMorty(dataSelectAll);
       } else {
         containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere. Like what you looking for...Burp<br>Try something else!</span>";
@@ -261,15 +262,7 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
     cardRickAndMorty(dataSelectAll);
   });
 
-/*let dataCompute = [...dataRickAndMorty];
-  selectAll.forEach((selector) => {
-    selector.addEventListener("change", (selector) => { 
-      if(selector.target.name !== "sortBy" && selector.target.value !== "") { 
-        const {name, value} = selector.target; 
-        const dataFilteredSelectAll =  filterSelect(dataCompute, name, value);
-        const amountValue = dataFilteredSelectAll.length;
-        console.log(amountValue);
-        const percentage = (amount)
-      }
-    });
-  });*/
+//charts
+//const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
+//const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species");
+//const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
