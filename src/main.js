@@ -1,4 +1,4 @@
-import { filterSelect, sortData } from "./data.js";
+import { filterSelect, sortData, computeStats } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
 
 const btnMenu = document.querySelector("#btnMenu");
@@ -27,30 +27,43 @@ subMenuBtns.forEach((subMenuBtn) => {
 
 const home = document.getElementById("home");
 const characters = document.querySelector("#characters");
+const charts = document.querySelector("#charts");
 const facts = document.querySelector("#facts");
 const homeBtn = document.querySelector("#homeBtn");
-const charactersBtn = document.querySelector("#charactersBtn");
+const charactersCardsBtn = document.querySelector("#charactersCardsBtn");
+const charactersChartsBtn = document.querySelector("#charactersChartsBtn");
 const factsBtn = document.querySelector("#factsBtn");
 const containerFlex = document.querySelector(".containerFlex");
 
+charts.style.display = "none";
 characters.style.display = "none";
 facts.style.display = "none";
 
 homeBtn.addEventListener("click", () => {
   home.style.display = "";
   characters.style.display = "none";
+  charts.style.display = "none";
   facts.style.display = "none";
 });
 
-charactersBtn.addEventListener("click", () => {
+charactersCardsBtn.addEventListener("click", () => {
   home.style.display = "none";
   characters.style.display = "";
+  charts.style.display = "none";
+  facts.style.display = "none";
+});
+
+charactersChartsBtn.addEventListener("click", () => {
+  home.style.display = "none";
+  characters.style.display = "none";
+  charts.style.display = "";
   facts.style.display = "none";
 });
 
 factsBtn.addEventListener("click", () => {
   home.style.display = "none";
   characters.style.display = "none";
+  charts.style.display = "none";
   facts.style.display = "";
 });
 //Data Lovers
@@ -72,7 +85,7 @@ const dataRickAndMorty = data.results.map((rickAndMorty) => {
 });
 
 const cardRickAndMorty = (cardArray) => {
-  containerFlex.innerHTML = "";
+  containerFlex.innerHTML = "";//reemplaza el contenido del div con una cadena vacia.
   cardArray.forEach((card) => {
     const { id, name, status, species, type, gender, origin, location, image } =
       card;
@@ -135,9 +148,9 @@ cardRickAndMorty(dataRickAndMorty); //llenado inicial
 //const dataSortByLessPopular = [...dataRickAndMorty];
 /*const sortByAlphabet = (dataSortByAlphabet) => dataSortByAlphabet.sort((a, b) => {
   return a.name > b.name ? 1 : -1;
-});
+});*/
 //const dataSortByAlphabetReverse = [...sortByAlphabet]; // se crea la data de reverse en base al resultado de sort 
-const sortByAlphabetReverse = (dataSortByAlphabetReverse) => dataSortByAlphabetReverse.reverse((a,b)=> {
+/*const sortByAlphabetReverse = (dataSortByAlphabetReverse) => dataSortByAlphabetReverse.reverse((a,b)=> {
   return a. name > b.name ? 1 : -1 ;
 }); 
 const sortByLessPopular = (dataSortByLessPopular) => dataSortByLessPopular.sort((a, b) => {
@@ -199,6 +212,7 @@ statusSelect.addEventListener("change", () => {
 
 //filtro del filtro
 const buttonClear = document.querySelector("#buttonClear");
+const percentage = document.querySelector("#percentage");
 buttonClear.style.display = "none";
 
 const selectAll = document.querySelectorAll("select"); // Evocamos todos los elementos select (querySñectprAll se puede llamar todas las clases y elementos)
@@ -213,6 +227,7 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
         const {name, value} = multiEvent.target; //  Obtenemos atributos de select que queremos usar
         const dataFilteredSelectAll =  filterSelect(dataSelectAll, name, value); // Aplicamos el filtro general a la data y a las atributos de select
         buttonClear.style.display = "";
+        percentage.style.display = "";
         dataSelectAll = [...dataFilteredSelectAll];
       } else if (multiEvent.target.name === "sortBy" && multiEvent.target.value === "alphabet") {
         buttonClear.style.display = "";
@@ -225,13 +240,15 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
         dataSelectAll = sortData.sortByLessPopular(dataSelectAll);
       } else if (multiEvent.target.value !== "") {// ademas si el value o valo es diferente a string vacio que son los active , que tenga la accion de evocar la data original.
         buttonClear.style.display = "";
-        dataCharacters = [...dataRickAndMorty];
+        dataSelectAll = [...dataRickAndMorty];
       }
       
       if (dataSelectAll.length > 0) {
+        const test = computeStats.percentageFilter(dataSelectAll);
+        percentage.innerHTML = test + "%";
         cardRickAndMorty(dataSelectAll);
       } else {
-        containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere. Like what you looking for...Burp</span>";
+        containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere. Like what you looking for...Burp<br>Try something else!</span>";
       }
     });
   });
@@ -242,22 +259,29 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
       selector.value = "";
     });
     buttonClear.style.display = "none";
+    percentage.style.display = "none";
     cardRickAndMorty(dataSelectAll);
   });
+
+  //charts
+const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
+const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species");
+const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
+
 
   var ctx= document.getElementById("genderChart").getContext("2d");
         var myChart= new Chart(ctx,{
             type:'doughnut',
             data:{
-                labels:['Female','Male','Genderless','unknown'],
+                labels:genderDataChart.statusKeys,
                 datasets:[{
                         label:'Num datos',
-                        data:[73,372,6,42],
+                        data:genderDataChart.statusValues,
                         backgroundColor:[
-                            'rgb(222, 53, 222)',
-                            'rgb(53, 53, 222)',
-                            'rgb(53, 222, 53)',
-                            'rgb(245, 239, 239)'
+                            'rgb(106, 211, 235)',
+                            'rgb(237, 69, 209)',
+                            'rgb(247, 247, 99)',
+                            'rgb(85, 212, 109)'
                         ]
                 }]
             },
@@ -282,23 +306,23 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
           var myChart= new Chart(ctx,{
               type:'doughnut',
               data:{
-                  labels:['Alien','Animal','Cronenberg', 'Disiese','Human', 'Humanoid','Mytholog','Parasite','Poopybutthole','Robot','unknown','Vampire'], color:'rgb(66, 134, 244)', 
+                  labels:speciesDataChart.statusKeys, color:'rgb(66, 134, 244)', 
                   datasets:[{
                           label:'Datos',
-                          data:[132,17,8,6,244,53,7,1,6,11,5,3],
+                          data:speciesDataChart.statusValues, color:'rgb(66, 134, 244)', 
                           backgroundColor:[
-                              'rgb(100, 228, 62)',
-                              'rgb(184, 140, 64)',
-                              'rgb(235, 189, 25)',
-                              'rgb(237, 128, 124)',
-                              'rgb(126, 230, 190)',
-                              'rgb(112, 98, 243)',
-                              'rgb(121, 29, 164)',
-                              'rgb(247, 208, 12)',
-                              'rgb(206, 199, 165)',
-                              'rgb(135, 133, 125)',
-                              'rgb(245, 239, 239)',
-                              'rgb(230, 9, 9)',
+                             'rgb(96, 79, 204)',
+                             'rgb(85, 212, 109)',
+                            'rgb(247, 247, 99)',
+                            'rgb(237, 69, 209)',
+                            'rgb(106, 211, 235)',
+                              'rgb(250, 115, 95)',
+                              'rgb(34, 18, 245)',
+                              'rgb(60, 250, 147)',
+                              'rgb(202, 252, 73)',
+                              'rgb(250, 60, 112)',
+                              'rgb(250, 85, 60)',
+                              'rgb(230, 20, 1)',
                           ]
                   }]
               },
@@ -323,14 +347,14 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
             var myChart= new Chart(ctx,{
                 type:'doughnut',
                 data:{
-                    labels:['Alive','Dead','unknown'],
+                    labels:statusDataChart.statusKeys,
                     datasets:[{
                             label:'Num datos',
-                            data:[281,147,65],
+                            data:statusDataChart.statusValues,
                             backgroundColor:[
-                                'rgb(142, 220, 94)',
-                                'rgb(0, 0, 0)',
-                                'rgb(245, 239, 239)'
+                                'rgb(0, 250, 141)',
+                                'rgb(245, 239, 239)',
+                                'rgb(0, 0, 0)'
                             ]
                     }]
                 },
@@ -340,6 +364,7 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
                         display: true,
                         text: 'Status',
                         color: 'rgb(230, 230, 9)',
+                        size: '50px'
                     }
                 },
                     scales:{

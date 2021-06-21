@@ -1,5 +1,176 @@
 # Data Lovers
 
+# RICK AND MORTY
+
+## Índice
+
+* [1. Descripción general](#1-descripción-general)
+* [2. Historias de Usuarios](#2-historias-de-usuarios)
+* [3. Perfil de usuarios](#4-perfil-de-usuarios)
+* [4. Prototipo y diseño](#3-prototipo-y-diseño)
+* [5. Modo de usuarios](#5-modo-usuarios)
+* [6. Tecnología](#6-tecnología)
+* [7. Objetivos planteados](#7-objetivos-planteados)
+* [8. Enlace web](#8-enlace-web)
+
+***
+
+## 1. Descripción general
+Rick and Morty es una página wed cuyo contenido trata sobre una de las animaciones para adultos más famosas y entretenida con su característico humor negro que fascina a muchos; donde  un científico alcohólico, secuestra a su influenciable nieto, Morty, para vivir peligrosas aventuras a través de diversos cosmos y universos paralelos. El contenido de la página se centra en satisfacer las curiosidades más llamativas de esta grandiosa comedia animada, brindando información relevante de todos los personajes de la serie, curiosidades intrigantes e información actualizada de noticias de último momento. 
+## 2. Perfil de usuarios
+El contenido de Rick and Morty se encuentra dirigido a usuarios en edad adulta, desde los usuarios ya conocedores y fanáticos de esta comedia para que tengan al alcance información detallada de sus personajes favoritos, asi como las noticias con respecto a Rick and Morty de forma actualizada. También va dirigido a esos usuarios principiante u ocasional que les llama la atención y quieran saber información breve para entrar en contexto y asi decidirse de ver dicha animación.
+Usuario principiante: conoce superficialmente la serie, por recomendación o por descubrimiento propio, con interés de seguir obtener información.
+Usuario fiel: conoce y consume la serie continuamente, le interesa el contenido y lo relacionado con todo lo relacionado con la animación, la recomienda porque està satisfecho y está pendiente de las actualizaciones.
+Usuario curioso: conoce la serie, la ve regularmente, le gusta obtener información detallada, exacta pero a profundidad de todo.
+## 3. Historias de usuarios
+
+- Historia de usuario 1
+Yo: Principiante.
+Quiero: "Saber información de interés general breve y detallada de la serie".
+Para: "Conocer de que se trata la serie y decidir si la continuo viendo o no".
+
+Criterios de aceptación:
+-yo como usuario quiero tener un menú donde pueda desplazarme por la información fácilmente.
+-encontrar en la página información concreta y directa.
+-ver en otra página mas detallada las curiosidades de la serie.
+-breve reseña de la serie.
+
+Tareas:
+* [ ] Definir prototipo.
+* [ ] Determinar contenido de sub-páginas(home-characters(cards-charts)-facts).
+* [ ] Menú interactivo, desplegable, de acceso a contenido detallado y de interés (header).
+* [ ] Slider automático con imágenes que representen momentos relevantes de la serie (main).
+* [ ] Redes sociales y marca de creación, copyright (footer).
+* [ ] Background de cada sub-página.
+* [ ] Determinar y plasmar diseño y contenido de contenedores de sub-páginas: página principal(home) y curiosidades(facts).
+
+- Historia de usuario 2
+Yo: Fanático(Usuario fiel).
+Quiero: "Encontrar información relevante de mis personajes favoritos y los anuncios nuevos de la serie, como noticias".
+Para: "Saber más sobre la serie y estar al día".
+
+Criterios de aceptación:
+-seccion de noticias.
+-seccion de personajes con informacion detallada y de interes de cada uno, en el que pueda acceder por orden y filtrar.
+
+
+Tareas:
+* [ ] Exportar y obtener la data de Rick and Morty.
+* [ ] Aplicar método map-Determinar las propiedades del objeto a trabajar y desestructurar.
+* [ ] Crear las cartas de los personajes a través de la creación de nodos por la manipulación dinámica del DOM.
+* [ ] Aplicar método filter y sort.
+* [ ] Hacer menú filtrar y ordenar.
+* [ ] Asignar eventos al menú de filtrar y ordenar.
+
+
+- Historia de usuario 3
+Yo: Curioso.
+Quiero: "Conseguir información de la serie".
+Para: "Analizar, comparar y tener una opinión a profundidad de la serie".
+
+Criterios de aceptación
+filtro multiseleccion
+estadisticas en base a los filtros.
+
+Tareas:
+* [ ] Filtrado multiselección.
+* [ ] Representación porcentual de los filtros.
+* [ ] Crear sub-página charts.
+* [ ] Determinar calculos estadísticos(computeStats).
+* [ ] Crear charts.
+
+## 4. Prototipo y diseño
+ 
+Prototipo inicial
+![prototipo-inicial](./src/images/prototipo-inicial.jpeg)
+
+El diseño del prototipo se baso en el objetivo del proyecto, que es cifrar  y descifrar cualquier información. De esta manera me inspire en el diseño tipo traductor.
+
+Luego esta idea principal la plasme, en la plataforma Figma, haciendo un prototipo digital de baja fidelidad para tener mas claro la distribución de los elementos y que colores implementar en el proyecto. La paleta de colores predominante que escogí fue azul en diferentes tonalidades, gris, para el aspecto de la página en general.
+
+ Por lo tanto el layout o esquema de distribución de los elementos dentro de la página se desarrollo de la siguiente forma; se creo un Home como página principal el cual contiene el nombre de la página, eslogan y el cifrador. 
+
+ ![prototipo-final-cipher](./src/images/pt1-home-figma.png)
+
+En el cifrador se implementa dos cuadros de texto, para que el usuario pueda escribir el texto original que quiere encriptar y el otro para que se muestre el criptograma, dichos cuadros de textos simulan el estilo de una terminal con fondo negro, para darle un estilo de mensaje secreto o mensaje encryptado en códigos de computador. 
+
+Entre ambos cuadros de texto se situo los elementos para cifrar/descifrar, ubicandolos en esta parte para que el usuario lo tenga a la vista con alcance más rápido. Consta de un numerador para determinar la clave de cifrado(offset), y de dos botones para cifrar y descifrar.
+
+En la parte superior de la página se ubico tres botones, los cuales tienen acceso a Home como página principal, y sub-páginas como About (breve descripción) y Contact (redes de la página).
+
+![prototipo-final-about](./src/images/pt2-about-figma.png)
+![prototipo-final-contact](./src/images/pt3-contact-figma.png)
+
+Posterior al diseño del prototipo de baja fidelidad, solicite feedback a mis compañeras, con respecto al diseño e interacción, obtuve como resultado:
+- Mejorar el diseño a que sea mas llamativo, que no fuera tan plano.
+- Agregar colores mas vivos.
+- Estilizar diseño de botones y cuadros de texto.
+- Cambiar tipo de letra de los cuadros de texto a tipo terminal y aumentar tamaño.
+- Agregar favicon.
+- Agregar imagen referente al tema del proyecto.
+
+Todas estas sugerencias las lleve a cabo, en el proyecto final, implemente como objetivo principal mejorar el estilo y diseño de la página a mas minimalista y en ese sentido:
+
+* Elegí una imagen de un candado que me represento cifrar, encriptado, tecnología, actual. Manteniendo el color azul como referente pero esta vez de una forma más llamativa. Esta imagen decidí ponerla de fondo en cada sección, la cual estiliza y genera una sensación de profesionalismo, seguridad y actualidad, resaltando los elementos de interés y agradable a la vista.
+* Estilice los cuadros de texto redondeando los bordes, cambie el tipo de letra de aspecto fuente de Terminal, para darle más sentido y tenga concordancia a mi idea inicial. También el color y tipo de letra del cuadro de texto original es diferente al cuadro de texto del criptograma.
+* Estilice también los botones redondeando los botones, y puse iconos simbólicos de cifrar/descifrar a candados cerrado/abierto, respectivamente. Dichos iconos guardan concordancia con la imagen de fondo de la página, siguiendo la tematica principal de cifrado. 
+* Finalmente, para mayor interactividad, agregue botón de copiar, limpiar e informativo, con sus respectivos iconos simbólicos.
+
+![proyecto-final1](./src/images/pcipher1.png)
+![proyecto-final2](./src/images/pcipher2.png)
+![proyecto-final3](./src/images/pcipher3.png)
+
+
+
+## 4. Modo de usuarios
+Una vez que se accede a la página Cryptocode, se tiene acceso a traves de tres botones a la página principal y las subpáginas.
+1. Al acceder a página principal (_Home_), tendra acceso al cifrador.
+
+Para cifrar se le permite al usuario:
+* Escribir el mensaje (texto original) que quiere cifrar en el primer cuadro de texto.
+* En el numerador indicar clave de cifrado ((_offset_)) determinando cuántas posiciones quiere que
+  el cifrado desplace **cada letra** del mensaje.
+* Al hacer click en el boton de cifrar(_candado cerrado_), se verá el resultado del mensaje cifrado, en el segundo cuadro de texto, el cual tiene la propiedad de readonly, que no permite modificar el criptograma, solo copiarlo.
+
+Para descifrar se le permite al usuario:
+* Escribir o copiar el mensaje (texto cifrado) que quiere descifrar en el primer cuadro de texto.
+* En el numerador indicar clave de cifrado ((_offset_)) que se utilizó para cifrar el mensaje.
+* Al hacer click en el boton de descifrar (_candado abierto_), puede ver y obtener el resultado del mensaje descifrado en el segundo cuadro de texto.
+
+La información obtenida puede ser copiada automáticamente en su respectivo botón, ubicado en la parte superior derecha del segundo cuadro de texto. Si desea cifrar cualquier otra información, puede limpiar los cuadros de texto con el botón ubicado entre los cuadros de textos, inmediatamente en la parte inferior de los botones cifrar/descifrar, respectivamente.
+
+2. A través del botón (_About_), se accede a una sub-página que tendrá una breve descripción general del servicio que ofrece Cryptocode a sus usuarios.
+3. a través del botón (_Contact_), se accede a una sub-página que tendra toda la información a disposición de las redes sociales de Cryptocode, para un acceso más fácil y rápido.
+
+
+
+## 5. Tecnología
+El proyecto es creado con:
+ * HTML5
+ * CSS
+ * Javascript
+ * NodeJS
+
+## 6. Objetivos planteados
+
+- CSS:
+   * Uso de selectores de CSS.
+   * Posiciones.
+- Profundizar sobre el DOM.
+- Javascript:
+  * Crear y llamar funciones correctamente.
+  * Uso del bucle for
+  * Diferenciar correctamente cuando es const & let
+
+  ## 7. Enlace web
+  //gh-pages 
+
+
+***
+<details>
+
+# Data Lovers
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
@@ -464,3 +635,4 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [ ] UI: Permite filtrar data en base a una condición.
 * [ ] UI: Es _responsive_.
+</details>

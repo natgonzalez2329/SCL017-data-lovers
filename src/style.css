@@ -236,6 +236,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 5%;
     margin-bottom: 5%;
     flex-wrap: wrap;
 
@@ -261,4 +262,10 @@ footer {
 }
 .computeStatus{
     width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+.computeGender,.computeSpecies,.computeStatus{
+    width: 100%;
+}
 }
