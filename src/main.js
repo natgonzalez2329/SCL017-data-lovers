@@ -1,6 +1,5 @@
-import {example} from "./data.js";
+import { filterSelect, sortData } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
-console.log(example, data);
 
 const btnMenu = document.querySelector("#btnMenu");
 const menu = document.querySelector("#menu");
@@ -28,30 +27,43 @@ subMenuBtns.forEach((subMenuBtn) => {
 
 const home = document.getElementById("home");
 const characters = document.querySelector("#characters");
+const charts = document.querySelector("#charts");
 const facts = document.querySelector("#facts");
 const homeBtn = document.querySelector("#homeBtn");
-const charactersBtn = document.querySelector("#charactersBtn");
+const charactersCardsBtn = document.querySelector("#charactersCardsBtn");
+const charactersChartsBtn = document.querySelector("#charactersChartsBtn");
 const factsBtn = document.querySelector("#factsBtn");
 const containerFlex = document.querySelector(".containerFlex");
 
+charts.style.display = "none";
 characters.style.display = "none";
 facts.style.display = "none";
 
 homeBtn.addEventListener("click", () => {
   home.style.display = "";
   characters.style.display = "none";
+  charts.style.display = "none";
   facts.style.display = "none";
 });
 
-charactersBtn.addEventListener("click", () => {
+charactersCardsBtn.addEventListener("click", () => {
   home.style.display = "none";
   characters.style.display = "";
+  charts.style.display = "none";
+  facts.style.display = "none";
+});
+
+charactersChartsBtn.addEventListener("click", () => {
+  home.style.display = "none";
+  characters.style.display = "none";
+  charts.style.display = "";
   facts.style.display = "none";
 });
 
 factsBtn.addEventListener("click", () => {
   home.style.display = "none";
   characters.style.display = "none";
+  charts.style.display = "none";
   facts.style.display = "";
 });
 //Data Lovers
@@ -133,16 +145,16 @@ cardRickAndMorty(dataRickAndMorty); //llenado inicial
 //sort
 //const dataSortByAlphabet = [...dataRickAndMorty]; 
 //const dataSortByLessPopular = [...dataRickAndMorty];
-const sortByAlphabet = (dataSortByAlphabet) => dataSortByAlphabet.sort((a, b) => {
+/*const sortByAlphabet = (dataSortByAlphabet) => dataSortByAlphabet.sort((a, b) => {
   return a.name > b.name ? 1 : -1;
-});
+});*/
 //const dataSortByAlphabetReverse = [...sortByAlphabet]; // se crea la data de reverse en base al resultado de sort 
-const sortByAlphabetReverse = (dataSortByAlphabetReverse) => dataSortByAlphabetReverse.reverse((a,b)=> {
+/*const sortByAlphabetReverse = (dataSortByAlphabetReverse) => dataSortByAlphabetReverse.reverse((a,b)=> {
   return a. name > b.name ? 1 : -1 ;
 }); 
 const sortByLessPopular = (dataSortByLessPopular) => dataSortByLessPopular.sort((a, b) => {
   return a.id < b.id ? 1 : -1;
-}); 
+});*/
 
 /*const sortBy = document.querySelector("#sortBy");
 sortBy.addEventListener("change", (select) => {
@@ -167,9 +179,9 @@ sortBy.addEventListener("change", (select) => {
 
 
 //filter
-const filterSelect = (dataArray, property, value) => {//refactorizacion funcion filter general-autobus de filter
+/*const filterSelect = (dataArray, property, value) => {//refactorizacion funcion filter general-autobus de filter
    return dataArray.filter(cardFilter => cardFilter[property] === value)
-};
+};*/
 
 /*const genderSelect = document.querySelector("#genderSelect");
 const speciesSelect = document.querySelector("#speciesSelect");
@@ -199,6 +211,7 @@ statusSelect.addEventListener("change", () => {
 
 //filtro del filtro
 const buttonClear = document.querySelector("#buttonClear");
+const percentage = document.querySelector("#percentage");
 buttonClear.style.display = "none";
 
 const selectAll = document.querySelectorAll("select"); // Evocamos todos los elementos select (querySñectprAll se puede llamar todas las clases y elementos)
@@ -213,25 +226,27 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
         const {name, value} = multiEvent.target; //  Obtenemos atributos de select que queremos usar
         const dataFilteredSelectAll =  filterSelect(dataSelectAll, name, value); // Aplicamos el filtro general a la data y a las atributos de select
         buttonClear.style.display = "";
+        percentage.style.display = "";
         dataSelectAll = [...dataFilteredSelectAll];
       } else if (multiEvent.target.name === "sortBy" && multiEvent.target.value === "alphabet") {
         buttonClear.style.display = "";
-        dataSelectAll = sortByAlphabet(dataSelectAll);
+        dataSelectAll = sortData.sortByAlphabet(dataSelectAll);
       } else if (multiEvent.target.name === "sortBy" && multiEvent.target.value === "alphabetReverse") {
         buttonClear.style.display = "";
-        dataSelectAll = sortByAlphabetReverse(dataSelectAll);
+        dataSelectAll = sortData.sortByAlphabetReverse(dataSelectAll);
       } else if (multiEvent.target.name === "sortBy" && multiEvent.target.value === "lessPopular") {
         buttonClear.style.display = "";
-        dataSelectAll = sortByLessPopular(dataSelectAll);
+        dataSelectAll = sortData.sortByLessPopular(dataSelectAll);
       } else if (multiEvent.target.value !== "") {// ademas si el value o valo es diferente a string vacio que son los active , que tenga la accion de evocar la data original.
         buttonClear.style.display = "";
         dataSelectAll = [...dataRickAndMorty];
       }
       
       if (dataSelectAll.length > 0) {
+        percentage.innerHTML = `${((dataSelectAll.length * 100) / 493).toFixed(1)}` + "%";
         cardRickAndMorty(dataSelectAll);
       } else {
-        containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere. Like what you looking for...Burp</span>";
+        containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere. Like what you looking for...Burp<br>Try something else!</span>";
       }
     });
   });
@@ -242,5 +257,19 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
       selector.value = "";
     });
     buttonClear.style.display = "none";
+    percentage.style.display = "none";
     cardRickAndMorty(dataSelectAll);
   });
+
+/*let dataCompute = [...dataRickAndMorty];
+  selectAll.forEach((selector) => {
+    selector.addEventListener("change", (selector) => { 
+      if(selector.target.name !== "sortBy" && selector.target.value !== "") { 
+        const {name, value} = selector.target; 
+        const dataFilteredSelectAll =  filterSelect(dataCompute, name, value);
+        const amountValue = dataFilteredSelectAll.length;
+        console.log(amountValue);
+        const percentage = (amount)
+      }
+    });
+  });*/

@@ -39,8 +39,7 @@
             <span class="menu__link" id="homeBtn">Home</span>
           </li>
           <li class="menu__item container-submenu">
-            <span class="menu__link submenu-btn" id="charactersBtn">
-              <!--change the btn to other element-->
+            <span class="menu__link submenu-btn">
               Characters
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,9 +56,11 @@
               </svg>
             </span>
             <ul class="submenu">
-              <li class="menu__item"><span class="menu__link">Main</span></li>
               <li class="menu__item">
-                <span class="menu__link">Secondary</span>
+                <span class="menu__link" id="charactersCardsBtn">Cards</span>
+              </li>
+              <li class="menu__item">
+                <span class="menu__link" id="charactersChartsBtn">Charts</span>
               </li>
             </ul>
           </li>
@@ -108,13 +109,12 @@
     <div class="container__sort-filter  content__sort-filter">
         <div class="search-box">
         <form action="">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-submenu" viewbox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-search" viewbox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
           </svg>
           <input type="text" id="search" placeholder="Type the name here" autocomplete="off">
         </form>
       </div>
-      <div>
          <div  id="sort"> Sort by
           <select name="sortBy" id="sortBy">
             <option value="" active>Select</option>
@@ -128,6 +128,7 @@
           <label for="">Gender</label>
           <select name="gender" id="genderSelect">
             <option value="" active>Select</option>
+            <option value="Genderless">Genderless</option>
             <option value="Female">Female</option>
             <option value="Male">Male</option>
             <option value="unknown">Unknown</option>
@@ -157,19 +158,21 @@
             <option value="Dead">Dead</option>
             <option value="unknown">Unknown</option>
           </select>          
+          <button id="buttonClear" ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-clockwise" viewbox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+          </svg></button>
         </div>
-      </div>
     </div>
-      <button id="buttonClear" >Clear</button>
-        <div class="characterTitle"><h1>Characters</h1></div>
-        <div class="containerFlex"></div>
-
-        
-
-
-
-
+    <h2 id="percentage"></h2>
+    <div class="characterTitle">
+      <h1>Characters</h1>
+    </div>
+    <div class="containerFlex"></div>
+      
       </div>
+<div class="container__charts" id="charts"></div>
+
       <div class="container__facts" id="facts">
         <h1 id="ricktastic">Ricktastic facts</h1>
         <div class="content__facts1">
