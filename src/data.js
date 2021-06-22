@@ -1,5 +1,5 @@
 const filterSelect = (dataArray, property, value) => {
-  return dataArray.filter(cardFilter => cardFilter[property] === value)
+   return dataArray.filter(cardFilter => cardFilter[property] === value);
 };
 const sortData = {
   sortByAlphabet: (dataSortByAlphabet) => dataSortByAlphabet.sort((a, b) => {
@@ -27,11 +27,11 @@ const computeStats = {
       //console.log(propertyDataChart);
     });
     //console.log(propertyDataChart);
-    const statusKeys = Object.keys(propertyDataChart); // array de las llaves
-    const statusValues = Object.values(propertyDataChart); // array de los valores
+    const propertyKeys = Object.keys(propertyDataChart); // array de las llaves
+    const propertyValues = Object.values(propertyDataChart); // array de los valores
     // console.log(statusKeys);
     // console.log(statusValues);
-    return { statusKeys, statusValues };
+    return { propertyKeys, propertyValues };
   } 
  
 }

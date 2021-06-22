@@ -286,7 +286,7 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
   });
 
   //charts
-const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
+/*const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
 const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species");
 const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
 
@@ -295,10 +295,10 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
         new Chart(genderChart,{
             type:'doughnut',
             data:{
-                labels:genderDataChart.statusKeys,
+                labels:genderDataChart.propertyKeys,
                 datasets:[{
                         label:'Num datos',
-                        data:genderDataChart.statusValues,
+                        data:genderDataChart.propertyValues,
                         backgroundColor:[
                             'rgb(106, 211, 235)',
                             'rgb(237, 69, 209)',
@@ -328,10 +328,10 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
           new Chart(speciesChart,{
               type:'doughnut',
               data:{
-                  labels:speciesDataChart.statusKeys, color:'rgb(66, 134, 244)', 
+                  labels:speciesDataChart.propertyKeys, color:'rgb(66, 134, 244)', 
                   datasets:[{
                           label:'Datos',
-                          data:speciesDataChart.statusValues, color:'rgb(66, 134, 244)', 
+                          data:speciesDataChart.propertyValues, color:'rgb(66, 134, 244)', 
                           backgroundColor:[
                              'rgb(96, 79, 204)',
                              'rgb(85, 212, 109)',
@@ -369,10 +369,10 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
             new Chart(statusChart,{
                 type:'doughnut',
                 data:{
-                    labels:statusDataChart.statusKeys,
+                    labels:statusDataChart.propertyKeys,
                     datasets:[{
                             label:'Num datos',
-                            data:statusDataChart.statusValues,
+                            data:statusDataChart.propertyValues,
                             backgroundColor:[
                                 'rgb(0, 250, 141)',
                                 'rgb(245, 239, 239)',
@@ -397,4 +397,4 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
                         }]
                     }
                 }
-              });
+              });*/
