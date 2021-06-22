@@ -286,8 +286,8 @@ const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species
 const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
 
 
-  var ctx= document.getElementById("genderChart").getContext("2d");
-        var myChart= new Chart(ctx,{
+  const genderChart= document.getElementById("genderChart").getContext("2d");
+       new Chart(genderChart,{
             type:'doughnut',
             data:{
                 labels:genderDataChart.statusKeys,
@@ -319,8 +319,8 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
                 }
             }
           });
-          var ctx= document.getElementById("speciesChart").getContext("2d");
-          var myChart= new Chart(ctx,{
+          const speciesChart= document.getElementById("speciesChart").getContext("2d");
+           new Chart(speciesChart,{
               type:'doughnut',
               data:{
                   labels:speciesDataChart.statusKeys, color:'rgb(66, 134, 244)', 
@@ -360,8 +360,8 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
                   }
               }
             });
-            var ctx= document.getElementById("statusChart").getContext("2d");
-            var myChart= new Chart(ctx,{
+            var statusChart= document.getElementById("statusChart").getContext("2d");
+             new Chart(statusChart,{
                 type:'doughnut',
                 data:{
                     labels:statusDataChart.statusKeys,
