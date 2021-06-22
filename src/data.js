@@ -1,6 +1,7 @@
 const filterSelect = (dataArray, property, value) => {
   return dataArray.filter(cardFilter => cardFilter[property] === value)
 };
+
 const sortData = {
   sortByAlphabet: (dataSortByAlphabet) => dataSortByAlphabet.sort((a, b) => {
     return a.name > b.name ? 1 : -1;

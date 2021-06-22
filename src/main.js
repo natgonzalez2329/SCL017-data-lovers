@@ -280,7 +280,7 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
     cardRickAndMorty(dataSelectAll);
   });
 
-  //charts
+/*  //charts
 const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
 const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species");
 const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
@@ -393,3 +393,4 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
                     }
                 }
               });
+*/
