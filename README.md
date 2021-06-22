@@ -10,8 +10,7 @@
 * [4. Prototipo y diseño](#3-prototipo-y-diseño)
 * [5. Modo de usuarios](#5-modo-usuarios)
 * [6. Tecnología](#6-tecnología)
-* [7. Objetivos planteados](#7-objetivos-planteados)
-* [8. Enlace web](#8-enlace-web)
+* [7. Enlace web](#8-enlace-web)
 
 ***
 
@@ -122,7 +121,7 @@ Todas estas sugerencias las lleve a cabo, en el proyecto final, implemente como 
 
 
 
-## 4. Modo de usuarios
+## 5. Modo de usuarios
 Una vez que se accede a la página Cryptocode, se tiene acceso a traves de tres botones a la página principal y las subpáginas.
 1. Al acceder a página principal (_Home_), tendra acceso al cifrador.
 
@@ -142,25 +141,12 @@ La información obtenida puede ser copiada automáticamente en su respectivo bot
 2. A través del botón (_About_), se accede a una sub-página que tendrá una breve descripción general del servicio que ofrece Cryptocode a sus usuarios.
 3. a través del botón (_Contact_), se accede a una sub-página que tendra toda la información a disposición de las redes sociales de Cryptocode, para un acceso más fácil y rápido.
 
-
-
-## 5. Tecnología
+## 6. Tecnología
 El proyecto es creado con:
  * HTML5
  * CSS
  * Javascript
  * NodeJS
-
-## 6. Objetivos planteados
-
-- CSS:
-   * Uso de selectores de CSS.
-   * Posiciones.
-- Profundizar sobre el DOM.
-- Javascript:
-  * Crear y llamar funciones correctamente.
-  * Uso del bucle for
-  * Diferenciar correctamente cuando es const & let
 
   ## 7. Enlace web
   //gh-pages 

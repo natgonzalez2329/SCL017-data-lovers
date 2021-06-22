@@ -74,13 +74,18 @@ factsBtn.addEventListener("click", () => {
 });
 
 //scrollToTop
-const rootElement = document.documentElement;
+window.onscroll = () => {scrollFunction()};
+const scrollFunction = () => {
+  if (document.body.scrollTop > 1700 || document.documentElement.scrollTop > 1700) {
+    scrollToTopBtn.style.display = "";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
 const scrollToTop = () => {
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-};
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 scrollToTopBtn.addEventListener("click", scrollToTop);
 
 //Data Lovers
@@ -280,8 +285,9 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
     cardRickAndMorty(dataSelectAll);
   });
 
-/*  //charts
-const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
+
+  //charts
+/*const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
 const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species");
 const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
 
@@ -320,7 +326,7 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
             }
           });
           const speciesChart= document.getElementById("speciesChart").getContext("2d");
-           new Chart(speciesChart,{
+          new Chart(speciesChart,{
               type:'doughnut',
               data:{
                   labels:speciesDataChart.propertyKeys, color:'rgb(66, 134, 244)', 
@@ -360,8 +366,8 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
                   }
               }
             });
-            var statusChart= document.getElementById("statusChart").getContext("2d");
-             new Chart(statusChart,{
+const statusChart= document.getElementById("statusChart").getContext("2d");
+            new Chart(statusChart,{
                 type:'doughnut',
                 data:{
                     labels:statusDataChart.propertyKeys,
@@ -392,5 +398,4 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
                         }]
                     }
                 }
-              });
-*/
+              });*/

@@ -24,7 +24,6 @@ const computeStats = {
     //console.log(propertyDataChart)
     dataArray.forEach((character) =>  {
       const property = character[propertyParam];
-     //console.log(Object.entries(propertyDataChart[property]));
       propertyDataChart[property] = (propertyDataChart[property] || 0) + 1;
       //console.log(propertyDataChart);
     });

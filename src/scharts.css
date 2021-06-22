@@ -15,7 +15,8 @@
     background: black;
     box-shadow: 8px 8px  35px 0 rgb(222, 116, 218);
     border-radius: 20px;
-  */
+    display: flex;
+}*/
 .computeGender{
     
     width: 30%;
