@@ -26,6 +26,7 @@ select {
   background: #000000;
   color: white;
   border-radius: .25em;
+  cursor: pointer;
 }
 #sort {
   color: white;
@@ -37,6 +38,7 @@ select {
   border: none;
   background: none;
   color: yellow;
+  cursor: pointer;
 }
 #percentage {
   border: none;

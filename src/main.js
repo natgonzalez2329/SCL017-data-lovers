@@ -33,15 +33,18 @@ const homeBtn = document.querySelector("#homeBtn");
 const charactersCardsBtn = document.querySelector("#charactersCardsBtn");
 const charactersChartsBtn = document.querySelector("#charactersChartsBtn");
 const factsBtn = document.querySelector("#factsBtn");
+const scrollToTopBtn = document.querySelector("#scrollToTopBtn");
 const containerFlex = document.querySelector(".containerFlex");
 
 charts.style.display = "none";
 characters.style.display = "none";
+scrollToTopBtn.style.display = "none";
 facts.style.display = "none";
 
 homeBtn.addEventListener("click", () => {
   home.style.display = "";
   characters.style.display = "none";
+  scrollToTopBtn.style.display = "none";
   charts.style.display = "none";
   facts.style.display = "none";
 });
@@ -49,6 +52,7 @@ homeBtn.addEventListener("click", () => {
 charactersCardsBtn.addEventListener("click", () => {
   home.style.display = "none";
   characters.style.display = "";
+  scrollToTopBtn.style.display = "";
   charts.style.display = "none";
   facts.style.display = "none";
 });
@@ -56,6 +60,7 @@ charactersCardsBtn.addEventListener("click", () => {
 charactersChartsBtn.addEventListener("click", () => {
   home.style.display = "none";
   characters.style.display = "none";
+  scrollToTopBtn.style.display = "none";
   charts.style.display = "";
   facts.style.display = "none";
 });
@@ -63,9 +68,21 @@ charactersChartsBtn.addEventListener("click", () => {
 factsBtn.addEventListener("click", () => {
   home.style.display = "none";
   characters.style.display = "none";
+  scrollToTopBtn.style.display = "none";
   charts.style.display = "none";
   facts.style.display = "";
 });
+
+//scrollToTop
+const rootElement = document.documentElement;
+const scrollToTop = () => {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
 //Data Lovers
 const dataRickAndMorty = data.results.map((rickAndMorty) => { 
   const { id, name, status, species, type, gender, origin, location, image } =
