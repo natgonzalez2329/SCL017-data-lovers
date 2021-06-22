@@ -74,13 +74,18 @@ factsBtn.addEventListener("click", () => {
 });
 
 //scrollToTop
-const rootElement = document.documentElement;
+window.onscroll = () => {scrollFunction()};
+const scrollFunction = () => {
+  if (document.body.scrollTop > 1700 || document.documentElement.scrollTop > 1700) {
+    scrollToTopBtn.style.display = "";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
 const scrollToTop = () => {
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-};
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 scrollToTopBtn.addEventListener("click", scrollToTop);
 
 //Data Lovers
@@ -286,8 +291,8 @@ const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species
 const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
 
 
-  var ctx= document.getElementById("genderChart").getContext("2d");
-        var myChart= new Chart(ctx,{
+  const genderChart= document.getElementById("genderChart").getContext("2d");
+        new Chart(genderChart,{
             type:'doughnut',
             data:{
                 labels:genderDataChart.statusKeys,
@@ -319,8 +324,8 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
                 }
             }
           });
-          var ctx= document.getElementById("speciesChart").getContext("2d");
-          var myChart= new Chart(ctx,{
+          const speciesChart= document.getElementById("speciesChart").getContext("2d");
+          new Chart(speciesChart,{
               type:'doughnut',
               data:{
                   labels:speciesDataChart.statusKeys, color:'rgb(66, 134, 244)', 
@@ -360,8 +365,8 @@ const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status")
                   }
               }
             });
-            var ctx= document.getElementById("statusChart").getContext("2d");
-            var myChart= new Chart(ctx,{
+            const statusChart= document.getElementById("statusChart").getContext("2d");
+            new Chart(statusChart,{
                 type:'doughnut',
                 data:{
                     labels:statusDataChart.statusKeys,

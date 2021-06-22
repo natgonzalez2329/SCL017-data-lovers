@@ -15,7 +15,7 @@ const sortData = {
 
 const computeStats = {
   percentageFilter: (dataSelect) => {
-    const mathRule = ((dataSelect.length * 100) / 493).toFixed(0);
+    const mathRule = ((dataSelect.length * 100) / 493).toFixed(2);
     return mathRule;
   },
   getDataProperty: (dataArray, propertyParam) => {
@@ -23,7 +23,6 @@ const computeStats = {
     //console.log(propertyDataChart)
     dataArray.forEach((character) =>  {
       const property = character[propertyParam];
-     //console.log(Object.entries(propertyDataChart[property]));
       propertyDataChart[property] = (propertyDataChart[property] || 0) + 1;
       //console.log(propertyDataChart);
     });
