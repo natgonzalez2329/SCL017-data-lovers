@@ -29,8 +29,17 @@
     width: 30%;
 }
 
-@media screen and (max-width: 600px) {
-.computeGender,.computeSpecies,.computeStatus{
+@media screen and (max-width: 800px) {
+    .computeGender,.computeSpecies,.computeStatus{
+        width: 85%;
+    }
+    }
+
+@media screen and (max-width: 425px) {
+.computeGender,.computeStatus{
+    width: 85%;
+}
+.computeSpecies{
     width: 100%;
 }
 }
