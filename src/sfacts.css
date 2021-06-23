@@ -57,12 +57,25 @@
     background: none;
 }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 800px) {
     .content__facts1 {
       margin-bottom: 5%;
     }
     .content__facts2 {
-      width: 50%;
+      width: 40%;
+      flex-direction: column;
+    }
+    #empty {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    .content__facts1 {
+      margin-bottom: 5%;
+      justify-content: center;
+    }
+    .content__facts2 {
+      width: 70%;
       flex-direction: column;
     }
     #empty {
@@ -70,16 +83,3 @@
     }
   }
   
-  /* note: Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .content__facts1 {
-      margin-bottom: 7%;
-    }
-    .content__facts2 {
-      width: 100%;
-      flex-direction: column;
-    }
-    #empty {
-      display: none;
-    }
-  }

@@ -80,7 +80,7 @@
         font-size: 0.7rem;
     }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
     .container__character-card { 
         max-width: 50%;
     }
@@ -89,7 +89,7 @@
     }
   }
 
-@media screen and (max-width : 375px) {
+@media screen and (max-width : 425px) {
     .container__character-card { 
         max-width: 90%;
     }

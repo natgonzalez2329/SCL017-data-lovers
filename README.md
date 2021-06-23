@@ -98,25 +98,65 @@ Tareas:
 
 ## 4. Prototipo y diseño
  
-Prototipo inicial
-![prototipo-inicial](./src/images/prototipo-inicial.jpeg)
+### -Prototipo inicial
 
-El diseño del prototipo se baso en el objetivo del proyecto, que es cifrar  y descifrar cualquier información. De esta manera me inspire en el diseño tipo traductor.
+El diseño del prototipo se baso en las historias de nuetros usuarios, en nuestra primera historia, entregamos informacion relevante de la serie, para ello creamos:
 
-Luego esta idea principal la plasme, en la plataforma Figma, haciendo un prototipo digital de baja fidelidad para tener mas claro la distribución de los elementos y que colores implementar en el proyecto. La paleta de colores predominante que escogí fue azul en diferentes tonalidades, gris, para el aspecto de la página en general.
+![Figma](src\images\prototipo1.jpeg)
 
- Por lo tanto el layout o esquema de distribución de los elementos dentro de la página se desarrollo de la siguiente forma; se creo un Home como página principal el cual contiene el nombre de la página, eslogan y el cifrador. 
+Una pagina inicial donde muestra, novedades, lanzamientos y un pequeño resumen de la serie. Con un menu en la parte lateral siendo de facil desplazamiento para las otras sub-paginas. 
 
- ![prototipo-final-cipher](./src/images/pt1-home-figma.png)
+Una de nuestras primeras sub paginas fue crear una seccion de curiosidades donde el usuario encuentre documentacion mas alla de lo que se observa en la serie
+![Figma](src\images\prototipo3.jpeg) 
 
-En el cifrador se implementa dos cuadros de texto, para que el usuario pueda escribir el texto original que quiere encriptar y el otro para que se muestre el criptograma, dichos cuadros de textos simulan el estilo de una terminal con fondo negro, para darle un estilo de mensaje secreto o mensaje encryptado en códigos de computador. 
+Lo visualizamos en forma de tarjeta donde los personajes principales estan de fondo visualizando la informacion (Ricktastick). 
 
-Entre ambos cuadros de texto se situo los elementos para cifrar/descifrar, ubicandolos en esta parte para que el usuario lo tenga a la vista con alcance más rápido. Consta de un numerador para determinar la clave de cifrado(offset), y de dos botones para cifrar y descifrar.
+Luego adentrandonos mas a nuestras siguentes historias, creamos una sub-pagina donde se encuentran todos los personajes de la serie. Dando importancia a que el usuario pueda visualizar personajes especificos y estadisticas de ellos 
 
-En la parte superior de la página se ubico tres botones, los cuales tienen acceso a Home como página principal, y sub-páginas como About (breve descripción) y Contact (redes de la página).
+![Figma](src\images\prototipo2.jpeg) 
 
-![prototipo-final-about](./src/images/pt2-about-figma.png)
-![prototipo-final-contact](./src/images/pt3-contact-figma.png)
+### -Diseño final
+
+* Paleta de colores.
+
+Basados en nuestros scketh y historias, creamos una paleta de colores de acuerdo a la tematica del usario .
+
+Nuestro color principal es el negro ⚫️. Refleja el universo y lo desconocido que es, al mismo tiempo la profundidad y el conocimiento. En la aunsencia del color permitimos resaltar la informacion y crear un contraste con la realidad. 
+
+Como secundario es el verde 🟢.  Conocemos por asociacion a los alienigenas por este color pero tambien la tierra,  así que la perfecta combinacion para el tema que estamos representando. 
+
+Y el tercero es el amarillo🟡. Nos refleja poder e iluminacion, y es una parte importante de nuestros usarios al consumir este .... 
+
+Rosado y blanco son nuestros colores complementarios💗🤍, donde deicidimos guiarnos mas por la paleta de colores de la serie. Creando en consecuencia una paleta de colores en sincronia.
+
+Se puede visualizar de esta manera 
+
+![Figma](src\images\Desktop.png) 
+
+* Animacion 
+
+Estamos viajando a travez de muchas dimensiones y universos. Exactamente fue lo que quisimos reflejar, unos detalles de sombras ue asemejan que la informacion esta flotando.
+
+Una secuencia en cada pagina que permite al usuario sentir afinidad y curiosidad por el contenido 
+
+Sub-Pagina de Characteres
+ ![Figma](src\images\DesktopTwo.png)
+
+ Sub-Pagina Ricktastick
+ ![Figma](src\images\DesktopThree.png)
+
+Sub-Pagina Estadisticas
+ ![Figma](src\images\DesktopFord.png)
+Visualizacion de todas las pantallas
+![Desktop todas las pantallas](src/images/PrototipoRickandMortyDesktop.png)
+
+Visualizacion de los prototipos en desktop
+ (https://www.figma.com/proto/jQpY3xVMseb1vcHocvU1MC/Prototipo-Rick-and-Morty?node-id=10%3A4&scaling=min-zoom&page-id=0%3A1)
+
+
+### Diseño para Smartphone 
+![Smartphone todos](src\images\PrototipoRickandMortySmartphone.png)
+[Link](https://www.figma.com/proto/jQpY3xVMseb1vcHocvU1MC/Prototipo-Rick-and-Morty?node-id=18%3A824&scaling=min-zoom&page-id=1%3A2)
 
 Posterior al diseño del prototipo de baja fidelidad, solicite feedback a mis compañeras, con respecto al diseño e interacción, obtuve como resultado:
 - Mejorar el diseño a que sea mas llamativo, que no fuera tan plano.
@@ -133,9 +173,6 @@ Todas estas sugerencias las lleve a cabo, en el proyecto final, implemente como 
 * Estilice también los botones redondeando los botones, y puse iconos simbólicos de cifrar/descifrar a candados cerrado/abierto, respectivamente. Dichos iconos guardan concordancia con la imagen de fondo de la página, siguiendo la tematica principal de cifrado. 
 * Finalmente, para mayor interactividad, agregue botón de copiar, limpiar e informativo, con sus respectivos iconos simbólicos.
 
-![proyecto-final1](./src/images/pcipher1.png)
-![proyecto-final2](./src/images/pcipher2.png)
-![proyecto-final3](./src/images/pcipher3.png)
 
 
 
