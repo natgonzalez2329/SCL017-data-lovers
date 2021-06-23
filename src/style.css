@@ -221,6 +221,23 @@ body{
         width: 90%;
     }
 }
+
+@media screen and (max-width:480px){
+    .container-history{
+        display: block;
+        width: 90%;
+        margin: 10%;
+    }
+    .promotion{
+        margin-top: 25%;
+       width: 80%;      
+    }
+    .history{
+        width: 80%;
+        margin-bottom: 25%;
+    }
+   
+}
 footer {
     background:  #000000;
     position: fixed;
