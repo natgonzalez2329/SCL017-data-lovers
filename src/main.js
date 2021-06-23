@@ -91,8 +91,8 @@ scrollToTopBtn.addEventListener("click", scrollToTop);
 //Data Lovers
 const dataRickAndMorty = data.results.map((rickAndMorty) => { 
   const { id, name, status, species, type, gender, origin, location, image } =
-    rickAndMorty; // saco grande
-  const newDataRickAndMorty = { // saco chiquito = nuevo objeto 
+    rickAndMorty;
+  const newDataRickAndMorty = {
     id,
     name,
     status,
@@ -107,7 +107,7 @@ const dataRickAndMorty = data.results.map((rickAndMorty) => {
 });
 
 const cardRickAndMorty = (cardArray) => {
-  containerFlex.innerHTML = "";//reemplaza el contenido del div con una cadena vacia.
+  containerFlex.innerHTML = "";
   cardArray.forEach((card) => {
     const { id, name, status, species, type, gender, origin, location, image } =
       card;
@@ -162,92 +162,20 @@ const cardRickAndMorty = (cardArray) => {
     contentCard.appendChild(locationCharacter);
   });
 };
-cardRickAndMorty(dataRickAndMorty); //llenado inicial
+cardRickAndMorty(dataRickAndMorty);
 
-
-//sort
-//const dataSortByAlphabet = [...dataRickAndMorty]; 
-//const dataSortByLessPopular = [...dataRickAndMorty];
-/*const sortByAlphabet = (dataSortByAlphabet) => dataSortByAlphabet.sort((a, b) => {
-  return a.name > b.name ? 1 : -1;
-});*/
-//const dataSortByAlphabetReverse = [...sortByAlphabet]; // se crea la data de reverse en base al resultado de sort 
-/*const sortByAlphabetReverse = (dataSortByAlphabetReverse) => dataSortByAlphabetReverse.reverse((a,b)=> {
-  return a. name > b.name ? 1 : -1 ;
-}); 
-const sortByLessPopular = (dataSortByLessPopular) => dataSortByLessPopular.sort((a, b) => {
-  return a.id < b.id ? 1 : -1;
-});*/ 
-
-/*const sortBy = document.querySelector("#sortBy");
-sortBy.addEventListener("change", (select) => {
-    switch (select.target.value) {
-      case "all":
-        cardRickAndMorty(dataRickAndMorty);
-        break;
-      case "alphabet":
-        cardRickAndMorty(sortByAlphabet);
-        break;
-        case "alphabetReverse":
-          cardRickAndMorty(sortByAlphabetReverse);
-          break;
-      case "lessPopular":
-        cardRickAndMorty(sortByLessPopular);
-        break;
-  
-      default:
-        break;
-    }
-  });*/
-
-
-//filter
-/*const filterSelect = (dataArray, property, value) => {//refactorizacion funcion filter general-autobus de filter
-   return dataArray.filter(cardFilter => cardFilter[property] === value)
-};*/ //Export
-
-/*const genderSelect = document.querySelector("#genderSelect");
-const speciesSelect = document.querySelector("#speciesSelect");
-const statusSelect = document.querySelector("#statusSelect");
-
- genderSelect.addEventListener("change", () => { // La data, la propiedad de cada objeto y la selecion de las opciones mediante el indice, y el valor.
-  const filtered = filterSelect(dataRickAndMorty, "gender", genderSelect.options[genderSelect.selectedIndex].value);
-    if (filtered.length > 0) {
-       cardRickAndMorty(filtered);
-    }
-});
-
-speciesSelect.addEventListener("change", () => {
-  const filtered = filterSelect(dataRickAndMorty, "species", speciesSelect.options[speciesSelect.selectedIndex].value);
-    if (filtered.length > 0) {
-      cardRickAndMorty(filtered);
-    }
-});
-
-statusSelect.addEventListener("change", () => {
-  const filtered = filterSelect(dataRickAndMorty, "status", statusSelect.options[statusSelect.selectedIndex].value);
-    if (filtered.length > 0) {
-     cardRickAndMorty(filtered);
-    }
-});*/
-
-
-//filtro del filtro
+//filter multiselect
 const buttonClear = document.querySelector("#buttonClear");
 const percentage = document.querySelector("#percentage");
 buttonClear.style.display = "none";
 
-const selectAll = document.querySelectorAll("select"); // Evocamos todos los elementos select (querySñectprAll se puede llamar todas las clases y elementos)
-let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spread operator-operador de propagacion)
-  selectAll.forEach((selector) => {    // va a recorrer los select
-    selector.addEventListener("change", (multiEvent) => {  // la funcion contiene, el evento y la propiedad del select que necesitamos
-      if(multiEvent.target.name !== "sortBy" && multiEvent.target.value !== "") { //van a entrar todos los select, excepto el de sort y los active.
-        /*const filterSelectAll = dataSelectAll.filter((newFilter) => {
-          //return newFilter[multiEvent.target.name] === multiEvent.target.value;
-          console.log( multiEvent.target.name === multiEvent.target.value )
-        })*/
-        const {name, value} = multiEvent.target; //  Obtenemos atributos de select que queremos usar
-        const dataFilteredSelectAll =  filterSelect(dataSelectAll, name, value); // Aplicamos el filtro general a la data y a las atributos de select
+const selectAll = document.querySelectorAll("select"); 
+let dataSelectAll = [...dataRickAndMorty];
+  selectAll.forEach((selector) => {
+    selector.addEventListener("change", (multiEvent) => {
+      if(multiEvent.target.name !== "sortBy" && multiEvent.target.value !== "") {
+        const {name, value} = multiEvent.target; 
+        const dataFilteredSelectAll =  filterSelect(dataSelectAll, name, value);
         buttonClear.style.display = "";
         percentage.style.display = "";
         dataSelectAll = [...dataFilteredSelectAll];
@@ -260,7 +188,7 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
       } else if (multiEvent.target.name === "sortBy" && multiEvent.target.value === "lessPopular") {
         buttonClear.style.display = "";
         dataSelectAll = sortData.sortByLessPopular(dataSelectAll);
-      } else if (multiEvent.target.value !== "") {// ademas si el value o valo es diferente a string vacio que son los active , que tenga la accion de evocar la data original.
+      } else if (multiEvent.target.value !== "") {
         buttonClear.style.display = "";
         dataSelectAll = [...dataRickAndMorty];
       }
@@ -276,7 +204,7 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
 
   buttonClear.addEventListener("click", () => {
     dataSelectAll = [...dataRickAndMorty];
-    selectAll.forEach((selector) => {// reinicia el selector a select active
+    selectAll.forEach((selector) => {
       selector.value = "";
     });
     buttonClear.style.display = "none";
@@ -284,9 +212,8 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
     cardRickAndMorty(dataSelectAll);
   });
 
-
-  //charts
-const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
+//charts
+/*const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
 const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species");
 const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
 
@@ -397,4 +324,4 @@ const statusChart= document.getElementById("statusChart").getContext("2d");
                         }]
                     }
                 }
-              });
+              });*/

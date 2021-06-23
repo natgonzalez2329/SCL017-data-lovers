@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+
 .container__facts {
     max-width: 100%;
     background-image: url("./images/bgFacts.png");
@@ -18,7 +19,6 @@
     margin-top: 5%;
   }
 .content__facts1 {
-    /*margin-top: 5%;*/
     margin-right: 5%;
     margin-left: 5%;
     margin-bottom: 3%;
@@ -58,6 +58,9 @@
 }
 
   @media screen and (max-width: 800px) {
+    #ricktastic {
+      font-size: 2rem;
+    }
     .content__facts1 {
       margin-bottom: 5%;
     }

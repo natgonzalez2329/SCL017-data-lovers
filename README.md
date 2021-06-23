@@ -20,7 +20,7 @@ Rick and Morty Land es una página wed cuyo contenido trata sobre una de las ani
 El contenido de Rick and Morty Land se encuentra dirigido a usuarios en edad adulta, desde los usuarios ya conocedores y fanáticos de esta comedia para que tengan al alcance información detallada de sus personajes favoritos, asi como las noticias con respecto a Rick and Morty de forma actualizada. También va dirigido a esos usuarios principiante u ocasional que les llama la atención y quieran saber información breve para entrar en contexto y asi decidir ver dicha animación. Entre los perfiles, destacan 3 tipos de usuarios:
 
  - Usuario principiante: conoce superficialmente la serie, por recomendación o por descubrimiento propio, con interés de seguir obteniendo información.
- - Usuario fiel: conoce y consume la serie continuamente, le interesa el contenido y lo relacionado con todo lo que tenga que ver con la animación, la recomienda porque está satisfecho y está pendiente de las actualizaciones.
+ - Usuario fiel: conoce y consume la serie continuamente, le interesa el contenido y lo relacionado con todo lo que tenga que ver con la animación, la recomienda porque está satisfecho y a la espera de las actualizaciones.
  - Usuario curioso: conoce la serie, la ve regularmente, le gusta obtener información detallada, exacta pero a profundidad de todo.
 ## 3. Historias de usuarios
 
@@ -61,7 +61,6 @@ Criterios de aceptación:
 -El usuario puede acceder a sus personajes favoritos en la seccion de personajes(_Characters-Cards_), con informacion detallada y de interes de cada uno, en formato de cartas.
 -El usuario puede ordenar a los personajes, por: orden alfabetico(_A-Z_), por orden inverso del alfabeto(_Z-A_), por el menos popular(_Less Popular_).
 -El usuario puede filtrar a los personajes, por: Género(_Gender_), Especie(_Species_) y Estatus(_Status_).
--El usuario puede filtrar por multiselección.
 -El usuario para volver a filtrar debe limpiar los campos de selección, a través del boton limpiar(_Clear_).
 -El usuario al explorar las cartas de los personajes puede volver al inicio de la página por un boton que le regresara al comienzo(_scroll to top_).
 -El usuario al seleccionar opciones que no concuerda con ninguna propiedad de algun personaje, no mostrandose ningun resultado coincidente, se le notificara por un texto informativo invitandolo a que intente otra busqueda a través del filtro.
@@ -69,7 +68,7 @@ Criterios de aceptación:
 
 Tareas:
 * [ ] Crear sección de noticias en página principal.
-* [ ] Exportar y obtener la data de Rick and Morty.
+* [ ] Obtener la data de Rick and Morty.
 * [ ] Aplicar método map-Determinar las propiedades del objeto a trabajar y desestructurar.
 * [ ] Crear las cartas de los personajes a través de la creación de nodos por la manipulación dinámica del DOM.
 * [ ] Aplicar método filter y sort.
@@ -87,33 +86,35 @@ Para: "Analizar, comparar e informarme a profundidad de la serie".
 Criterios de aceptación
 -El usuario puede filtrar por multiseleccion de propiedades, para así ver cuales personajes poseen ciertas propiedades especificas.
 -El usuario al filtrar podrá ver de forma interactiva la representación porcentual de los personajes en base a las propiedades seleccionadas del filtrado.
--El usuario puede tener acceso a estadísticas globales de los personajes en base a las propiedades del filtro.
+-El usuario puede tener acceso a estadísticas globales de los personajes en base a las propiedades del filtro(_Characters-Charts_).
 
 Tareas:
 * [ ] Filtrado multiselección.
 * [ ] Representación porcentual de los filtros.
 * [ ] Crear sub-página charts.
 * [ ] Determinar calculos estadísticos(computeStats).
-* [ ] Crear charts.
+* [ ] Crear graficos.
 
 ## 4. Prototipo y diseño
- 
-### -Prototipo inicial
+### Prototipo inicial
 
-El diseño del prototipo se baso en las historias de nuetros usuarios, en nuestra primera historia, entregamos informacion relevante de la serie, para ello creamos:
+El diseño del prototipo se baso en lo recopilado en las historias de usuarios, inspiradas en la tematica de la animación. En base a la primera historia, se plasmo información relevante de la serie, la cual esta constituida por:
 
-![Figma](src\images\prototipo1.jpeg)
+Una pagina inicial donde muestra, novedades, lanzamientos y un pequeño resumen de la serie. Con un menú en la parte superior siendo de fácil desplazamiento para las otras sub-paginas. 
 
-Una pagina inicial donde muestra, novedades, lanzamientos y un pequeño resumen de la serie. Con un menu en la parte lateral siendo de facil desplazamiento para las otras sub-paginas. 
+![Prototipo-inicial](./src/images/prototipo-inicial1.jpeg)
+
+Una pagina inicial donde muestra, novedades, lanzamientos y un pequeño resumen de la serie. Con un menú en la parte superior siendo de fácil desplazamiento para las otras sub-paginas. 
 
 Una de nuestras primeras sub paginas fue crear una seccion de curiosidades donde el usuario encuentre documentacion mas alla de lo que se observa en la serie
-![Figma](src\images\prototipo3.jpeg) 
+![Prototipo-inicial](./src/images/prototipo-inicial2.jpeg) 
 
 Lo visualizamos en forma de tarjeta donde los personajes principales estan de fondo visualizando la informacion (Ricktastick). 
 
 Luego adentrandonos mas a nuestras siguentes historias, creamos una sub-pagina donde se encuentran todos los personajes de la serie. Dando importancia a que el usuario pueda visualizar personajes especificos y estadisticas de ellos 
 
-![Figma](src\images\prototipo2.jpeg) 
+![Prototipo-inicial](./src/images/prototipo-inicial3.jpeg) 
+![Prototipo-inicial](./src/images/prototipo-inicial4.jpeg)
 
 ### -Diseño final
 

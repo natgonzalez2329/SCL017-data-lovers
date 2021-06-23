@@ -49,8 +49,8 @@ select {
   }
  /* select{
     padding: 50%;
-  }
-}*/
+  }*/
+}
 @media screen and (max-width: 425px) {
   .content__sort-filter { 
       flex-direction: column;
