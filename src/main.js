@@ -266,8 +266,7 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
       }
       
       if (dataSelectAll.length > 0) {
-        const test = computeStats.percentageFilter(dataSelectAll);
-        percentage.innerHTML = test + "%";
+        percentage.innerHTML = computeStats.percentageFilter(dataSelectAll) + "%";
         cardRickAndMorty(dataSelectAll);
       } else {
         containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere. Like what you looking for...Burp<br>Try something else!</span>";
@@ -287,7 +286,7 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
 
 
   //charts
-/*const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
+const genderDataChart = computeStats.getDataProperty(dataRickAndMorty, "gender");
 const speciesDataChart = computeStats.getDataProperty(dataRickAndMorty, "species");
 const statusDataChart = computeStats.getDataProperty(dataRickAndMorty, "status");
 
@@ -398,4 +397,4 @@ const statusChart= document.getElementById("statusChart").getContext("2d");
                         }]
                     }
                 }
-              });*/
+              });
