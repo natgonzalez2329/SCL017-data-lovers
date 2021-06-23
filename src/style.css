@@ -222,7 +222,7 @@ body{
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:425px){
     .container-history{
         display: block;
         width: 90%;

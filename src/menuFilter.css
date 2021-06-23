@@ -50,9 +50,16 @@ select {
   margin-right: 12%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .content__sort-filter { 
       flex-direction: column;
       align-items: flex-start;
   }
 }
+@media screen and (max-width: 425px) {
+  .content__sort-filter { 
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+
