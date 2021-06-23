@@ -5,8 +5,8 @@
 ## Índice
 
 * [1. Descripción general](#1-descripción-general)
-* [2. Historias de Usuarios](#2-historias-de-usuarios)
-* [3. Perfil de usuarios](#4-perfil-de-usuarios)
+* [2. Perfil de usuarios](#4-perfil-de-usuarios)
+* [3. Historias de Usuarios](#2-historias-de-usuarios)
 * [4. Prototipo y diseño](#3-prototipo-y-diseño)
 * [5. Modo de usuarios](#5-modo-usuarios)
 * [6. Tecnología](#6-tecnología)
@@ -15,33 +15,39 @@
 ***
 
 ## 1. Descripción general
-Rick and Morty es una página wed cuyo contenido trata sobre una de las animaciones para adultos más famosas y entretenida con su característico humor negro que fascina a muchos; donde  un científico alcohólico, secuestra a su influenciable nieto, Morty, para vivir peligrosas aventuras a través de diversos cosmos y universos paralelos. El contenido de la página se centra en satisfacer las curiosidades más llamativas de esta grandiosa comedia animada, brindando información relevante de todos los personajes de la serie, curiosidades intrigantes e información actualizada de noticias de último momento. 
+Rick and Morty Land es una página wed cuyo contenido trata sobre una de las animaciones para adultos más famosas y entretenida con su característico humor negro que fascina a muchos; donde  un científico alcohólico, secuestra a su influenciable nieto, Morty, para vivir peligrosas aventuras a través de diversos cosmos y universos paralelos. El contenido de la página se centra en satisfacer las curiosidades más llamativas de esta grandiosa comedia animada, brindando información relevante de todos los personajes de la serie, curiosidades intrigantes e información actualizada de noticias de último momento. 
 ## 2. Perfil de usuarios
-El contenido de Rick and Morty se encuentra dirigido a usuarios en edad adulta, desde los usuarios ya conocedores y fanáticos de esta comedia para que tengan al alcance información detallada de sus personajes favoritos, asi como las noticias con respecto a Rick and Morty de forma actualizada. También va dirigido a esos usuarios principiante u ocasional que les llama la atención y quieran saber información breve para entrar en contexto y asi decidirse de ver dicha animación.
-Usuario principiante: conoce superficialmente la serie, por recomendación o por descubrimiento propio, con interés de seguir obtener información.
-Usuario fiel: conoce y consume la serie continuamente, le interesa el contenido y lo relacionado con todo lo relacionado con la animación, la recomienda porque està satisfecho y está pendiente de las actualizaciones.
-Usuario curioso: conoce la serie, la ve regularmente, le gusta obtener información detallada, exacta pero a profundidad de todo.
+El contenido de Rick and Morty Land se encuentra dirigido a usuarios en edad adulta, desde los usuarios ya conocedores y fanáticos de esta comedia para que tengan al alcance información detallada de sus personajes favoritos, asi como las noticias con respecto a Rick and Morty de forma actualizada. También va dirigido a esos usuarios principiante u ocasional que les llama la atención y quieran saber información breve para entrar en contexto y asi decidir ver dicha animación. Entre los perfiles, destacan 3 tipos de usuarios:
+
+ - Usuario principiante: conoce superficialmente la serie, por recomendación o por descubrimiento propio, con interés de seguir obteniendo información.
+ - Usuario fiel: conoce y consume la serie continuamente, le interesa el contenido y lo relacionado con todo lo que tenga que ver con la animación, la recomienda porque está satisfecho y está pendiente de las actualizaciones.
+ - Usuario curioso: conoce la serie, la ve regularmente, le gusta obtener información detallada, exacta pero a profundidad de todo.
 ## 3. Historias de usuarios
 
 - Historia de usuario 1
+
 Yo: Principiante.
+
 Quiero: "Saber información de interés general breve y detallada de la serie".
-Para: "Conocer de que se trata la serie y decidir si la continuo viendo o no".
+
+Para: "Conocer de que se trata y decidir si la continuo viendo o no".
 
 Criterios de aceptación:
--Yo como usuario quiero tener un menú donde pueda desplazarme por la información fácilmente.
--Encontrar en la página información concreta y directa.
--ver en otra página mas detallada las curiosidades de la serie.
--breve reseña de la serie.
+-El usuario puede explorar la página a través de un menu desplegable, que tendrá especificado las diferentes sub-páginas de interes del usuario, por el cuál podrá desplazarse fácilmente.
+-El usuario podrá encontrar un slider automático, con imágenes de momentos relevantes de la serie.
+-El usuario al acceder a la página principal encontrará información detallada que dará a conocer una breve reseña de la serie.
+-El usuario puede informarse de las curiosidades mas relevantes y particulares de la serie animada(sub-página _Facts_).
+-El usuario podra acceder a las redes sociales de la página.
 
 Tareas:
 * [ ] Definir prototipo.
-* [ ] Determinar contenido de sub-páginas(home-characters(cards-charts)-facts).
+* [ ] Definir y plasmar diseño interactivo.
+* [ ] Determinar contenido de sub-páginas(Home, Characters(Cards-Charts), Facts).
 * [ ] Menú interactivo, desplegable, de acceso a contenido detallado y de interés (header).
-* [ ] Slider automático con imágenes que representen momentos relevantes de la serie (main).
+* [ ] Slider automático con imágenes que representen momentos relevantes de la serie.
 * [ ] Redes sociales y marca de creación, copyright (footer).
 * [ ] Background de cada sub-página.
-* [ ] Determinar y plasmar diseño y contenido de contenedores de sub-páginas: página principal(home) y curiosidades(facts).
+* [ ] Determinar y plasmar diseño y contenido de contenedores de sub-páginas: página principal(Home) y curiosidades(Facts).
 
 - Historia de usuario 2
 Yo: Fanático(Usuario fiel).
@@ -49,27 +55,39 @@ Quiero: "Encontrar información relevante de mis personajes favoritos y los anun
 Para: "Saber más sobre la serie y estar al día".
 
 Criterios de aceptación:
--seccion de noticias.
--seccion de personajes con informacion detallada y de interes de cada uno, en el que pueda acceder por orden y filtrar.
+
+-El usuario puede informarse sobre los ultimos acontecimientos de la serie animada en la seccion de noticias, situada en la página principal(_Home_).
+-El usuario en cada noticia tendra acceso para ampliar la información.
+-El usuario puede acceder a sus personajes favoritos en la seccion de personajes(_Characters-Cards_), con informacion detallada y de interes de cada uno, en formato de cartas.
+-El usuario puede ordenar a los personajes, por: orden alfabetico(_A-Z_), por orden inverso del alfabeto(_Z-A_), por el menos popular(_Less Popular_).
+-El usuario puede filtrar a los personajes, por: Género(_Gender_), Especie(_Species_) y Estatus(_Status_).
+-El usuario puede filtrar por multiselección.
+-El usuario para volver a filtrar debe limpiar los campos de selección, a través del boton limpiar(_Clear_).
+-El usuario al explorar las cartas de los personajes puede volver al inicio de la página por un boton que le regresara al comienzo(_scroll to top_).
+-El usuario al seleccionar opciones que no concuerda con ninguna propiedad de algun personaje, no mostrandose ningun resultado coincidente, se le notificara por un texto informativo invitandolo a que intente otra busqueda a través del filtro.
 
 
 Tareas:
+* [ ] Crear sección de noticias en página principal.
 * [ ] Exportar y obtener la data de Rick and Morty.
 * [ ] Aplicar método map-Determinar las propiedades del objeto a trabajar y desestructurar.
 * [ ] Crear las cartas de los personajes a través de la creación de nodos por la manipulación dinámica del DOM.
 * [ ] Aplicar método filter y sort.
 * [ ] Hacer menú filtrar y ordenar.
 * [ ] Asignar eventos al menú de filtrar y ordenar.
+* [ ] Crear boton para limpiar los cambios de selección.
+* [ ] Crear boton de desplazamiento hacia el inicio de la página(_scroll to top_).
 
 
 - Historia de usuario 3
 Yo: Curioso.
 Quiero: "Conseguir información de la serie".
-Para: "Analizar, comparar y tener una opinión a profundidad de la serie".
+Para: "Analizar, comparar e informarme a profundidad de la serie".
 
 Criterios de aceptación
-filtro multiseleccion
-estadisticas en base a los filtros.
+-El usuario puede filtrar por multiseleccion de propiedades, para así ver cuales personajes poseen ciertas propiedades especificas.
+-El usuario al filtrar podrá ver de forma interactiva la representación porcentual de los personajes en base a las propiedades seleccionadas del filtrado.
+-El usuario puede tener acceso a estadísticas globales de los personajes en base a las propiedades del filtro.
 
 Tareas:
 * [ ] Filtrado multiselección.
@@ -159,24 +177,27 @@ Todas estas sugerencias las lleve a cabo, en el proyecto final, implemente como 
 
 
 ## 5. Modo de usuarios
-Una vez que se accede a la página Cryptocode, se tiene acceso a traves de tres botones a la página principal y las subpáginas.
-1. Al acceder a página principal (_Home_), tendra acceso al cifrador.
+La página web Rick and Morty Land consta de 3 sub-páginas, denominadas: _Home_(página de inicio), _Characters_(Personajes) y _Facts_(Curiosidades).
 
-Para cifrar se le permite al usuario:
-* Escribir el mensaje (texto original) que quiere cifrar en el primer cuadro de texto.
-* En el numerador indicar clave de cifrado ((_offset_)) determinando cuántas posiciones quiere que
-  el cifrado desplace **cada letra** del mensaje.
-* Al hacer click en el boton de cifrar(_candado cerrado_), se verá el resultado del mensaje cifrado, en el segundo cuadro de texto, el cual tiene la propiedad de readonly, que no permite modificar el criptograma, solo copiarlo.
+Una vez que se tiene acceso a la página se encuentra a disposición, en la parte superior, un menú desplegable, el cual consta de botones claramente identificados para el fácil acceso a las sub-páginas previamente específicadas; _Home_, _Characters_ y _Facts_, respectivamente.
 
-Para descifrar se le permite al usuario:
-* Escribir o copiar el mensaje (texto cifrado) que quiere descifrar en el primer cuadro de texto.
-* En el numerador indicar clave de cifrado ((_offset_)) que se utilizó para cifrar el mensaje.
-* Al hacer click en el boton de descifrar (_candado abierto_), puede ver y obtener el resultado del mensaje descifrado en el segundo cuadro de texto.
+Inmediatamente que se accede a la página el usuario tendra a disposición contenido informativo y de interés de esta fabulosa comedia animada, que consta de una breve reseña de la seria y un apartado de noticias de último avance de la animación, dicho contenido constituye la página de inicio; de la cual se tiene acceso a través del boton _Home_.
 
-La información obtenida puede ser copiada automáticamente en su respectivo botón, ubicado en la parte superior derecha del segundo cuadro de texto. Si desea cifrar cualquier otra información, puede limpiar los cuadros de texto con el botón ubicado entre los cuadros de textos, inmediatamente en la parte inferior de los botones cifrar/descifrar, respectivamente.
+A través del boton _Characters_, el usuario tendra para elegir en un submenu desplegable dos opciones: 
+- Boton _Cards_: En este apartado el usuario podra tener acceso a todos los personajes de la serie. Para ello, tendra un menú con opciones de:
+    Ordenar por: _All_, _A-Z_(alfabeticamente), _Z-A_(alfabeto inverso), _Less Popular_(menos popular).
+    Filtrar, en base a tres características de interés de los personajes:
+     * Gender: _Genderless_, _Female_, _Male_, _Unknown_.
+     * Species: _Alien_, _Animal_, _Cronenberg_, _Disease_, _Human_, _Humanoid_, _Mytholog_, _Parasite_, _Poopybutthole_, _Robot_, _Unknown_, _Vampire_.
+     * Status: _Alive_, _Dead_, _Unknown_.
+   Cada vez que el usuario seleccione una de las opciones, aparecera su representación porcentual en base al total de los personajes, siendo estos 493. Ésta se encuentra por debajo y a la derecha del filtrado.
+   Una vez que el usuario haya elegido las opciones de orden y filtrado de acuerdo a su interes, se le mostrara las cartas(_Cards_) de los personajes que coinciden con las características pre-seleccionadas.
+   Al desplazarse hacia abajo explorando y viendo los personajes correspondientes, el usuario tendra a su disposición en la parte inferior y a la derecha de la página un boton para desplazar hacia arriba (_Scroll to top_), determinado por una flecha en dirección hacia arriba, la cual al hacer click sobre la misma, se desplazara al inicio de la página.
+   Si el usuario desea volver a filtrar, debe reiniciar los select para poder volver a elegir otras opciones, a través del boton de Limpiar, que se encuentra inmediatamente al lado derecho de la sección de filtrado en el menú.
 
-2. A través del botón (_About_), se accede a una sub-página que tendrá una breve descripción general del servicio que ofrece Cryptocode a sus usuarios.
-3. a través del botón (_Contact_), se accede a una sub-página que tendra toda la información a disposición de las redes sociales de Cryptocode, para un acceso más fácil y rápido.
+- Boton _Charts_: En este apartado el usuario podra acceder a graficos del cálculo estadístico global de los personajes, basado en las tres propiedades de filtrado, siendo estos Gender, Species y Status, respectivamente.
+
+A través del  boton _Facts_, el usuario podra acceder a un número de curiosidades inesperadas de la serie.
 
 ## 6. Tecnología
 El proyecto es creado con:
@@ -184,7 +205,7 @@ El proyecto es creado con:
  * CSS
  * Javascript
  * NodeJS
- * Charts.JS
+ * Chart.js
 
   ## 7. Enlace web
   //gh-pages 

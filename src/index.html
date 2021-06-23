@@ -5,7 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1"/>
-    <title>Rick&Morty</title>
+    <title>Rick and Morty Land</title>
     <link
       rel="icon"
       href="https://the-rick-and-morty-api.herokuapp.com/static/media/react_logo.b37f0a4b.png"
@@ -47,7 +47,7 @@
                 <path
                   fill-rule="evenodd"
                   d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                 </svg>
+                </svg>
             </span>
             <ul class="submenu">
               <li class="menu__item">
@@ -103,7 +103,9 @@
         </div>
       <div class="container__characters" id="characters">
     <div class="container__sort-filter  content__sort-filter">
-         <div  id="sort"> Sort by
+        <div class="search-box">
+      </div>
+         <div  id="sort"> Sort by: 
           <select name="sortBy" id="sortBy">
             <option value="" active>Select</option>
             <option value="all">All</option>
@@ -112,7 +114,9 @@
             <option value="lessPopular">Less Popular</option>
           </select>
         </div>
-        <div id="filter">Filter
+        <div id="filter"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="filterIcon" viewbox="0 0 16 16">
+          <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+        </svg>
           <label for="">Gender</label>
           <select name="gender" id="genderSelect">
             <option value="" active>Select</option>
@@ -160,14 +164,10 @@
       </div>
 
 <div class="container__charts" id="charts">
+  <div class="contentCompute">
+    <h3>Chartland</h3>
+  </div>
   <div class="container-compute">
-   <!-- <div class="contentCompute">
-      <h3>Statistics</h3>
-      <span>
-        In addition to the main characters, the series has a roster of supporting characters, each one more elaborate and interesting. And they all play their part in the plot and add something to Rick and Morty's multiverse, multiscientific existential odyssey. There is an exorbitant number of more or less important characters, secondary or that simply appear fleetingly, that demonstrate the richness of the imagination of the series and its unlimited capacity to continue offering us the wildest creations with each chapter.
-      </span>
-      <img src="images/statics.png" alt="" width="20%">
-    </div>-->
   <div class="computeGender">
     <canvas id="genderChart" ></canvas>
   </div>
@@ -280,7 +280,7 @@
         </svg>
       </div>
       <div class="rights">
-        &copy;2021 Copyright: Rickandmorty.com - All Rights Reserved
+        &copy;2021 Copyright: Rickandmortyland.com - All Rights Reserved
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>

@@ -266,8 +266,7 @@ let dataSelectAll = [...dataRickAndMorty]; // creamos una copia de la data (spre
       }
       
       if (dataSelectAll.length > 0) {
-        const test = computeStats.percentageFilter(dataSelectAll);
-        percentage.innerHTML = test + "%";
+        percentage.innerHTML = computeStats.percentageFilter(dataSelectAll) + "%";
         cardRickAndMorty(dataSelectAll);
       } else {
         containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere. Like what you looking for...Burp<br>Try something else!</span>";
