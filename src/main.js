@@ -398,4 +398,5 @@ const statusChart= document.getElementById("statusChart").getContext("2d");
                         }]
                     }
                 }
-              });*/
+              });
+*/
