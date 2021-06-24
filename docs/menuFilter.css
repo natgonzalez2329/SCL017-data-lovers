@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+.container__sort-filter {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.content__sort-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-search {
+  color: white;
+}
+.filterItems{
+  display: flex;
+  
+}
+select{
+  background: #000000;
+  color: white;
+  box-shadow:2px 2px  10px 0 rgb(253, 253, 253);
+  font-size: 1rem;
+  padding: 0.3em 0.5em;
+  background: #000000;
+  color: white;
+  border-radius: .25em;
+  cursor: pointer;
+}
+label{
+  font-family:'Staatliches', cursive;
+  color: white;
+  margin: 3%;
+}
+#sort {
+  color: white;
+  font-family:'Staatliches', cursive;
+  margin-right: 5%;
+}
+#filter {
+  color: white;
+}
+.filterIcon {
+  color: violet;
+}
+#buttonClear {
+  border: none;
+  background: none;
+  color: yellow;
+  cursor: pointer;
+}
+#percentage {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 2rem;
+  text-align: end;
+  margin-top: 2%;
+  margin-right: 12%;
+}
+@media screen and (max-width: 800px) {
+  .content__sort-filter { 
+      flex-direction: column;
+      align-items: flex-start;
+  }
+.filterItems{
+  width: 100%;
+  flex-wrap: wrap;
+  display: block;
+}
+label{
+  width: 100%;
+  flex-wrap: wrap;
+  display: block;
+}
+  }
+
+@media screen and (max-width: 425px) {
+  .content__sort-filter { 
+      flex-direction: column;
+      align-items: flex-start;
+  }
+.filterItems{
+  width: 100%;
+  flex-wrap: wrap;
+  display: block;
+  
+}
+label{
+  width: 100%;
+  flex-wrap: wrap;
+  display: block;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+  }

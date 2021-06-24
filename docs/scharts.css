@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+.contentCompute h3 {
+    margin-top: 5%;
+    font-family: 'Bungee Inline', cursive;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+.container-compute{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    flex-wrap: wrap;
+}
+.computeGender{
+    width: 30%;
+    color: white
+}
+.computeSpecies{
+    width: 40%;
+}
+.computeStatus{
+    width: 30%;
+}
+
+@media screen and (max-width: 800px) {
+    .computeGender,.computeSpecies,.computeStatus{
+        width: 85%;
+    }
+    }
+
+@media screen and (max-width: 425px) {
+.computeGender,.computeStatus{
+    width: 85%;
+}
+.computeSpecies{
+    width: 100%;
+}
+}

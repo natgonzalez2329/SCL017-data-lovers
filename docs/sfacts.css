@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+
+.container__facts {
+    max-width: 100%;
+    background-image: url("./images/bgFacts.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+  #ricktastic {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+  }
+.content__facts1 {
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    padding: 15px;
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  .content__facts2 {
+    background: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px 0px violet;
+    padding: 5px;
+    width: 18%;
+    margin-top: 10px;
+    margin-bottom: 5%;
+}
+  .imgFact {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.hlFact {
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1em;
+}
+  #empty {
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+  @media screen and (max-width: 800px) {
+    #ricktastic {
+      font-size: 2rem;
+    }
+    .content__facts1 {
+      margin-bottom: 5%;
+    }
+    .content__facts2 {
+      width: 40%;
+      flex-direction: column;
+    }
+    #empty {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    .content__facts1 {
+      margin-bottom: 5%;
+      justify-content: center;
+    }
+    .content__facts2 {
+      width: 70%;
+      flex-direction: column;
+    }
+    #empty {
+      display: none;
+    }
+  }
+  
