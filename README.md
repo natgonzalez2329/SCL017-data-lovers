@@ -5,17 +5,19 @@
 ## Índice
 
 * [1. Descripción general](#1-descripción-general)
-* [2. Perfil de usuarios](#4-perfil-de-usuarios)
-* [3. Historias de Usuarios](#2-historias-de-usuarios)
-* [4. Prototipo y diseño](#3-prototipo-y-diseño)
-* [5. Modo de usuarios](#5-modo-usuarios)
-* [6. Tecnología](#6-tecnología)
-* [7. Enlace web](#8-enlace-web)
+* [2. Perfil de usuarios](#2-perfil-de-usuarios)
+* [3. Historias de Usuarios](#3-historias-de-usuarios)
+* [4. Prototipo y diseño](#4-prototipo-y-diseño)
+* [5. Interfaz](#5-interfaz)
+* [6. Modo de usuarios](#6-modo-de-usuarios)
+* [7. Tecnología](#7-tecnología)
+* [8. Enlace web](#8-enlace-web)
 
 ***
 
 ## 1. Descripción general
 Rick and Morty Land es una página web cuyo contenido trata sobre una de las animaciones para adultos más famosas y entretenida con su característico humor negro que fascina a muchos; donde  un científico alcohólico, secuestra a su influenciable nieto, Morty, para vivir peligrosas aventuras a través de diversos cosmos y universos paralelos. El contenido de la página se centra en satisfacer las curiosidades más llamativas de esta grandiosa comedia animada, brindando información relevante de todos los personajes de la serie, curiosidades intrigantes e información actualizada de noticias de último momento. 
+
 ## 2. Perfil de usuarios
 El contenido de Rick and Morty Land se encuentra dirigido a usuarios en edad adulta, desde los usuarios ya conocedores y fanáticos de esta comedia para que tengan al alcance información detallada de sus personajes favoritos, asi como las noticias con respecto a Rick and Morty de forma actualizada. También va dirigido a esos usuarios principiantes u ocasionales que les llama la atención y quieran saber información breve para entrar en contexto y asi decidir ver dicha animación. Entre los perfiles, destacan 3 tipos de usuarios:
 
@@ -242,8 +244,7 @@ El proyecto es creado con:
  * Javascript
  * NodeJS
  * Chart.js
-
-  ## 8. Enlace web
+## 8. Enlace web
   
 
 
