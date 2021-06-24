@@ -149,9 +149,9 @@ Una vez definido el prototipo inicial, se define la paleta de colores y se dise�
 
 Basados en el sketh e historias, se utiliza una paleta de colores de acuerdo a la temática del usuario.
 
-El color principal es el negro ⚫️: Refleja el universo y lo desconocido que es, al mismo tiempo la profundidad y el conocimiento. En la aunsencia del color permite resaltar la informacion y crear un contraste con la realidad. Los fondos son de este color, alusivo al vacio del espacio.
+El color principal es el negro ⚫️: Refleja el universo y lo desconocido que es, al mismo tiempo la profundidad y el conocimiento. En la aunsencia del color permite resaltar la información y crear un contraste con la realidad. Los fondos son de este color, alusivo al vacio del espacio.
 
-Color secundario es el verde 🟢: como representación y asociacion a los alienígenas por este color pero tambien la tierra,  así que es la perfecta combinación que le hace alusión a esta serie. Este color predomina en el menú y en los botones que te permiten acceder a otras sub-páginas, haciendo alusion al portal verde de Rick and Morty.
+Color secundario es el verde 🟢: como representación y asociación a los alienígenas por este color pero tambien la tierra,  así que es la perfecta combinación que le hace alusión a esta serie. Este color predomina en el menú y en los botones que te permiten acceder a otras sub-páginas, haciendo alusion al portal verde de Rick and Morty.
 
 Colores complementarios:
 
@@ -193,8 +193,26 @@ Visualizacion de prototipo en desktop en Figma
 Visualización de prototipo en smartphone en Figma
 [Link](https://www.figma.com/proto/jQpY3xVMseb1vcHocvU1MC/Prototipo-Rick-and-Morty?node-id=18%3A824&scaling=min-zoom&page-id=1%3A2)
 
+## 5. Interfaz
 
-## 5. Modo de usuarios
+### Desktop
+![Desktop](./src/images/DesktopHome.png)
+![Desktop](./src/images/DesktopCharacters.png)
+![Desktop](./src/images/DesktopCharts.png)
+![Desktop](./src/images/DesktopFacts.png)
+
+### Tablet
+![Tablet](./src/images/TabletHome.png)
+![Tablet](./src/images/TabletCharacters.png)
+![Tablet](./src/images/TabletCharts.png)
+![Tablet](./src/images/TabletFacts.png)
+
+### Smartphone
+![Smartphone](./src/images/PhoneHome.png)
+![Smartphone](./src/images/PhoneCharacters.png)
+![Smartphone](./src/images/PhoneCharts.png)
+![Smartphone](./src/images/PhoneFacts.png)
+## 6. Modo de usuarios
 La página web Rick and Morty Land consta de 3 sub-páginas, denominadas: _Home_(página de inicio), _Characters_(Personajes) y _Facts_(Curiosidades).
 
 Una vez que se tiene acceso a la página se encuentra a disposición, en la parte superior, un menú desplegable, el cual consta de botones claramente identificados para el fácil acceso a las sub-páginas previamente específicadas; _Home_, _Characters_ y _Facts_, respectivamente.
@@ -217,7 +235,7 @@ A través del boton _Characters_, el usuario tendra para elegir en un submenu de
 
 A través del  boton _Facts_, el usuario podra acceder a un número de curiosidades inesperadas de la serie.
 
-## 6. Tecnología
+## 7. Tecnología
 El proyecto es creado con:
  * HTML5
  * CSS
@@ -225,7 +243,7 @@ El proyecto es creado con:
  * NodeJS
  * Chart.js
 
-  ## 7. Enlace web
+  ## 8. Enlace web
   
 
 
