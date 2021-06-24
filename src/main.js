@@ -203,7 +203,7 @@ sortBy.addEventListener("change", (select) => {
 
 //filter
 /*const filterSelect = (dataArray, property, value) => {//refactorizacion funcion filter general-autobus de filter
-   return dataArray.filter(cardFilter => cardFilter[property] === value)
+   return datfilteraArray.(cardFilter => cardFilter[property] === value)
 };*/ //Export
 
 /*const genderSelect = document.querySelector("#genderSelect");

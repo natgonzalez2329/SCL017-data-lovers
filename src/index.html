@@ -102,6 +102,9 @@
           </div>
         </div>
       <div class="container__characters" id="characters">
+        <div class="characterTitle">
+          <h1>Characters</h1>
+        </div>
     <div class="container__sort-filter  content__sort-filter">
          <div  id="sort"> Sort by
           <select name="sortBy" id="sortBy">
@@ -113,6 +116,7 @@
           </select>
         </div>
         <div id="filter">Filter
+          <div class="filterItems">
           <label for="">Gender</label>
           <select name="gender" id="genderSelect">
             <option value="" active>Select</option>
@@ -121,7 +125,7 @@
             <option value="Male">Male</option>
             <option value="unknown">Unknown</option>
           </select>
-         
+      
             <label for="">Species</label>
           <select name="species" id="speciesSelect">
             <option value="" active>Select</option>
@@ -138,14 +142,15 @@
             <option value="unknown">Unknown</option>
             <option value="Vampire">Vampire</option>
           </select>
-         
+
           <label for="">Status</label>
           <select name="status" id="statusSelect">
             <option value="" active>Select</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>
             <option value="unknown">Unknown</option>
-          </select>          
+          </select>  
+        </div>
           <button id="buttonClear" ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-clockwise" viewbox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
             <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
@@ -153,9 +158,6 @@
         </div>
     </div>
     <h2 id="percentage"></h2>
-    <div class="characterTitle">
-      <h1>Characters</h1>
-    </div>
     <div class="containerFlex"></div>
       </div>
 
