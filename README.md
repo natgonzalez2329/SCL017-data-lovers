@@ -245,7 +245,7 @@ El proyecto es creado con:
  * NodeJS
  * Chart.js
 ## 8. Enlace web
-  
+  https://natgonzalez2329.github.io/SCL017-data-lovers/
 
 
 ***
