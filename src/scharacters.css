@@ -73,6 +73,7 @@
     margin-top: 5%;
 }
 
+
 @media screen and (max-width : 1024px) {
     .container__character-card { 
         max-width: 32%;

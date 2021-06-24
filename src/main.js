@@ -197,8 +197,8 @@ let dataSelectAll = [...dataRickAndMorty];
         percentage.innerHTML = computeStats.percentageFilter(dataSelectAll) + "%";
         cardRickAndMorty(dataSelectAll);
       } else {
-        containerFlex.innerHTML = "<span style='color: white'>Nobody exists on purpose. Nobody belongs anywhere."
-                                  +  "Like what you looking for...Burp<br>Try something else!</span>";
+        containerFlex.innerHTML = "<span style='color: yellow; font-family: monospace; font-size: 2rem'>Nobody exists on purpose. Nobody belongs anywhere."
+                                  +  "Like what you looking for...Burp. Try something else!</span>";
       }
     });
   });
