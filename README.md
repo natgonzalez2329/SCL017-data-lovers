@@ -1,6 +1,6 @@
 # Data Lovers
 
-# RICK AND MORTY
+# RICK AND MORTY LAND
 
 ## Índice
 
@@ -15,9 +15,9 @@
 ***
 
 ## 1. Descripción general
-Rick and Morty Land es una página wed cuyo contenido trata sobre una de las animaciones para adultos más famosas y entretenida con su característico humor negro que fascina a muchos; donde  un científico alcohólico, secuestra a su influenciable nieto, Morty, para vivir peligrosas aventuras a través de diversos cosmos y universos paralelos. El contenido de la página se centra en satisfacer las curiosidades más llamativas de esta grandiosa comedia animada, brindando información relevante de todos los personajes de la serie, curiosidades intrigantes e información actualizada de noticias de último momento. 
+Rick and Morty Land es una página web cuyo contenido trata sobre una de las animaciones para adultos más famosas y entretenida con su característico humor negro que fascina a muchos; donde  un científico alcohólico, secuestra a su influenciable nieto, Morty, para vivir peligrosas aventuras a través de diversos cosmos y universos paralelos. El contenido de la página se centra en satisfacer las curiosidades más llamativas de esta grandiosa comedia animada, brindando información relevante de todos los personajes de la serie, curiosidades intrigantes e información actualizada de noticias de último momento. 
 ## 2. Perfil de usuarios
-El contenido de Rick and Morty Land se encuentra dirigido a usuarios en edad adulta, desde los usuarios ya conocedores y fanáticos de esta comedia para que tengan al alcance información detallada de sus personajes favoritos, asi como las noticias con respecto a Rick and Morty de forma actualizada. También va dirigido a esos usuarios principiante u ocasional que les llama la atención y quieran saber información breve para entrar en contexto y asi decidir ver dicha animación. Entre los perfiles, destacan 3 tipos de usuarios:
+El contenido de Rick and Morty Land se encuentra dirigido a usuarios en edad adulta, desde los usuarios ya conocedores y fanáticos de esta comedia para que tengan al alcance información detallada de sus personajes favoritos, asi como las noticias con respecto a Rick and Morty de forma actualizada. También va dirigido a esos usuarios principiantes u ocasionales que les llama la atención y quieran saber información breve para entrar en contexto y asi decidir ver dicha animación. Entre los perfiles, destacan 3 tipos de usuarios:
 
  - Usuario principiante: conoce superficialmente la serie, por recomendación o por descubrimiento propio, con interés de seguir obteniendo información.
  - Usuario fiel: conoce y consume la serie continuamente, le interesa el contenido y lo relacionado con todo lo que tenga que ver con la animación, la recomienda porque está satisfecho y a la espera de las actualizaciones.
@@ -33,148 +33,165 @@ Quiero: "Saber información de interés general breve y detallada de la serie".
 Para: "Conocer de que se trata y decidir si la continuo viendo o no".
 
 Criterios de aceptación:
+
 -El usuario puede explorar la página a través de un menu desplegable, que tendrá especificado las diferentes sub-páginas de interes del usuario, por el cuál podrá desplazarse fácilmente.
+
 -El usuario podrá encontrar un slider automático, con imágenes de momentos relevantes de la serie.
+
 -El usuario al acceder a la página principal encontrará información detallada que dará a conocer una breve reseña de la serie.
+
 -El usuario puede informarse de las curiosidades mas relevantes y particulares de la serie animada(sub-página _Facts_).
+
 -El usuario podra acceder a las redes sociales de la página.
 
-Tareas:
-* [ ] Definir prototipo.
-* [ ] Definir y plasmar diseño interactivo.
-* [ ] Determinar contenido de sub-páginas(Home, Characters(Cards-Charts), Facts).
-* [ ] Menú interactivo, desplegable, de acceso a contenido detallado y de interés (header).
-* [ ] Slider automático con imágenes que representen momentos relevantes de la serie.
-* [ ] Redes sociales y marca de creación, copyright (footer).
-* [ ] Background de cada sub-página.
-* [ ] Determinar y plasmar diseño y contenido de contenedores de sub-páginas: página principal(Home) y curiosidades(Facts).
+Definición de terminado:
+* [X] Definir prototipo.
+* [X] Definir y plasmar diseño interactivo.
+* [X] Determinar contenido de sub-páginas(Home, Characters(Cards-Charts), Facts).
+* [X] Menú interactivo, desplegable, de acceso a contenido detallado y de interés (header).
+* [X] Slider automático con imágenes que representen momentos relevantes de la serie.
+* [X] Redes sociales y marca de creación, copyright (footer).
+* [X] Background de cada sub-página.
+* [X] Determinar y plasmar diseño y contenido de contenedores de sub-páginas: página principal(Home) y curiosidades(Facts).
 
 - Historia de usuario 2
+
 Yo: Fanático(Usuario fiel).
+
 Quiero: "Encontrar información relevante de mis personajes favoritos y los anuncios nuevos de la serie, como noticias".
+
 Para: "Saber más sobre la serie y estar al día".
 
 Criterios de aceptación:
 
 -El usuario puede informarse sobre los ultimos acontecimientos de la serie animada en la seccion de noticias, situada en la página principal(_Home_).
+
 -El usuario en cada noticia tendra acceso para ampliar la información.
+
 -El usuario puede acceder a sus personajes favoritos en la seccion de personajes(_Characters-Cards_), con informacion detallada y de interes de cada uno, en formato de cartas.
+
 -El usuario puede ordenar a los personajes, por: orden alfabetico(_A-Z_), por orden inverso del alfabeto(_Z-A_), por el menos popular(_Less Popular_).
+
 -El usuario puede filtrar a los personajes, por: Género(_Gender_), Especie(_Species_) y Estatus(_Status_).
+
 -El usuario para volver a filtrar debe limpiar los campos de selección, a través del boton limpiar(_Clear_).
+
 -El usuario al explorar las cartas de los personajes puede volver al inicio de la página por un boton que le regresara al comienzo(_scroll to top_).
+
 -El usuario al seleccionar opciones que no concuerda con ninguna propiedad de algun personaje, no mostrandose ningun resultado coincidente, se le notificara por un texto informativo invitandolo a que intente otra busqueda a través del filtro.
 
 
-Tareas:
-* [ ] Crear sección de noticias en página principal.
-* [ ] Obtener la data de Rick and Morty.
-* [ ] Aplicar método map-Determinar las propiedades del objeto a trabajar y desestructurar.
-* [ ] Crear las cartas de los personajes a través de la creación de nodos por la manipulación dinámica del DOM.
-* [ ] Aplicar método filter y sort.
-* [ ] Hacer menú filtrar y ordenar.
-* [ ] Asignar eventos al menú de filtrar y ordenar.
-* [ ] Crear boton para limpiar los cambios de selección.
-* [ ] Crear boton de desplazamiento hacia el inicio de la página(_scroll to top_).
+Definición de terminado:
+* [X] Crear sección de noticias en página principal.
+* [X] Obtener la data de Rick and Morty.
+* [X] Aplicar método map-Determinar las propiedades del objeto a trabajar y desestructurar.
+* [X] Crear las cartas de los personajes a través de la creación de nodos por la manipulación dinámica del DOM.
+* [X] Aplicar método filter y sort.
+* [X] Hacer menú filtrar y ordenar.
+* [X] Asignar eventos al menú de filtrar y ordenar.
+* [X] Crear boton para limpiar los cambios de selección.
+* [X] Crear boton de desplazamiento hacia el inicio de la página(_scroll to top_).
 
 
 - Historia de usuario 3
+
 Yo: Curioso.
+
 Quiero: "Conseguir información de la serie".
+
 Para: "Analizar, comparar e informarme a profundidad de la serie".
 
 Criterios de aceptación
+
 -El usuario puede filtrar por multiseleccion de propiedades, para así ver cuales personajes poseen ciertas propiedades especificas.
+
 -El usuario al filtrar podrá ver de forma interactiva la representación porcentual de los personajes en base a las propiedades seleccionadas del filtrado.
+
 -El usuario puede tener acceso a estadísticas globales de los personajes en base a las propiedades del filtro(_Characters-Charts_).
 
-Tareas:
-* [ ] Filtrado multiselección.
-* [ ] Representación porcentual de los filtros.
-* [ ] Crear sub-página charts.
-* [ ] Determinar calculos estadísticos(computeStats).
-* [ ] Crear graficos.
+Definición de terminado:
+* [X] Filtrado multiselección.
+* [X] Representación porcentual de los filtros.
+* [X] Crear sub-página charts.
+* [X] Determinar calculos estadísticos(computeStats).
+* [X] Crear graficos.
 
 ## 4. Prototipo y diseño
 ### Prototipo inicial
 
-El diseño del prototipo se baso en lo recopilado en las historias de usuarios, inspiradas en la tematica de la animación. En base a la primera historia, se plasmo información relevante de la serie, la cual esta constituida por:
+Se realizo un prototipo inicial en papel para plasmar la distribución de los elementos de toda la página. El diseño del prototipo se baso en lo recopilado en las historias de usuarios, inspiradas en la temática de la animación. 
 
-Una pagina inicial donde muestra, novedades, lanzamientos y un pequeño resumen de la serie. Con un menú en la parte superior siendo de fácil desplazamiento para las otras sub-paginas. 
+La página esta integrada por un menú principal desplegable para acceder a las sub-páginas correspondientes, este se encuentra en la parte superior de la misma, que constituye el header.
+
+La página principal(_Home_) en la parte superior esta constituida por un pequeño resumen de la serie, acompañado de una sección de noticias y lanzamientos.
 
 ![Prototipo-inicial](./src/images/prototipo-inicial1.jpeg)
 
-Una pagina inicial donde muestra, novedades, lanzamientos y un pequeño resumen de la serie. Con un menú en la parte superior siendo de fácil desplazamiento para las otras sub-paginas. 
+A través del boton _Characters_ se accede a la página _Cards_ y a _Charts_.
+En la sub-página _Cards_ los usuarios tendran a disposición la visualización de todos los personajes de la serie en formato de cartas. También esta constituido por un menú para ordenar(_Sort by_) y filtrar(_Filter_) a los personajes, acompañado de un boton para limpiar los campor de seccion, que se encuenttra a la derecha de la seleccion de filtrado.
+Debajo de los filtros, se reflaría el porcentaje que representa a los personajes que poseen las propiedades que el usurio haya seleccionado. Para facilitar la exploración del usuario se le añadio un boton para retonar hacia el comienzo de la página, el cual está ubicado en la parte inferior en el lado derecho.
 
-Una de nuestras primeras sub paginas fue crear una seccion de curiosidades donde el usuario encuentre documentacion mas alla de lo que se observa en la serie
 ![Prototipo-inicial](./src/images/prototipo-inicial2.jpeg) 
 
-Lo visualizamos en forma de tarjeta donde los personajes principales estan de fondo visualizando la informacion (Ricktastick). 
-
-Luego adentrandonos mas a nuestras siguentes historias, creamos una sub-pagina donde se encuentran todos los personajes de la serie. Dando importancia a que el usuario pueda visualizar personajes especificos y estadisticas de ellos 
+Y a través de la sub-página _Charts_ se muestra los gráficos globales que representa a cada propiedad del filtrado.
 
 ![Prototipo-inicial](./src/images/prototipo-inicial3.jpeg) 
+
+La sub-página _Facts_ se da conocer varias curiosidades intrigantes y particulares que caracterizan a esta animación cómica, para que el usuario encuentre documentación más alla de lo que se observa en la serie. Dicha información va acompañada de una imagen representativa del dato curioso.
+
 ![Prototipo-inicial](./src/images/prototipo-inicial4.jpeg)
+
+Una vez definido el prototipo inicial, se define la paleta de colores y se diseña un prototipo de alta fidelidad en Figma.
 
 ### -Diseño final
 
 * Paleta de colores.
 
-Basados en nuestros scketh y historias, creamos una paleta de colores de acuerdo a la tematica del usario .
+Basados en el sketh e historias, se utiliza una paleta de colores de acuerdo a la temática del usuario.
 
-Nuestro color principal es el negro ⚫️. Refleja el universo y lo desconocido que es, al mismo tiempo la profundidad y el conocimiento. En la aunsencia del color permitimos resaltar la informacion y crear un contraste con la realidad. 
+El color principal es el negro ⚫️: Refleja el universo y lo desconocido que es, al mismo tiempo la profundidad y el conocimiento. En la aunsencia del color permite resaltar la informacion y crear un contraste con la realidad. Los fondos son de este color, alusivo al vacio del espacio.
 
-Como secundario es el verde 🟢.  Conocemos por asociacion a los alienigenas por este color pero tambien la tierra,  así que la perfecta combinacion para el tema que estamos representando. 
+Color secundario es el verde 🟢: como representación y asociacion a los alienígenas por este color pero tambien la tierra,  así que es la perfecta combinación que le hace alusión a esta serie. Este color predomina en el menú y en los botones que te permiten acceder a otras sub-páginas, haciendo alusion al portal verde de Rick and Morty.
 
-Y el tercero es el amarillo🟡. Nos refleja poder e iluminacion, y es una parte importante de nuestros usarios al consumir este .... 
+Colores complementarios:
 
-Rosado y blanco son nuestros colores complementarios💗🤍, donde deicidimos guiarnos mas por la paleta de colores de la serie. Creando en consecuencia una paleta de colores en sincronia.
+Amarillo🟡: que refleja poder e iluminacion, además que resalta el elemento que lo posee. Este color esta presente en los subtítulos y botones con funciones específicas(boton de limpiar los campos de seleccion y scroll to top).
 
-Se puede visualizar de esta manera 
+Rosado 💗: Tipo neón para resaltar a los cuadros de textos. Sombra de los cuadros de textos.
 
-![Figma](src\images\Desktop.png) 
+Blanco🤍: En la tipografía para que esta resalte y neutralice en contraste con el fondo negro.
 
-* Animacion 
+Esta paleta de colores inspirada en esta animación entre cosmos y multiversos, en donde resulta una paleta de colores en sincronia.
 
-Estamos viajando a travez de muchas dimensiones y universos. Exactamente fue lo que quisimos reflejar, unos detalles de sombras ue asemejan que la informacion esta flotando.
 
-Una secuencia en cada pagina que permite al usuario sentir afinidad y curiosidad por el contenido 
+* Animación 
 
-Sub-Pagina de Characteres
- ![Figma](src\images\DesktopTwo.png)
+Siguiendo la temática de viajes a otras dimensiones y multiversos, se quiere reflejar con el diseño esa ilusión de estar en el espacio, se puede observar que las sombras de los cuadros de texto asemejan  como si estos flotaran.
 
- Sub-Pagina Ricktastick
- ![Figma](src\images\DesktopThree.png)
+Una secuencia en cada pagina que permite al usuario sentir afinidad y curiosidad por el contenido.
 
-Sub-Pagina Estadisticas
- ![Figma](src\images\DesktopFord.png)
-Visualizacion de todas las pantallas
-![Desktop todas las pantallas](src/images/PrototipoRickandMortyDesktop.png)
+Página principal - Home
+![Figma](./src/images/figma-desktop1.jpeg) 
 
-Visualizacion de los prototipos en desktop
- (https://www.figma.com/proto/jQpY3xVMseb1vcHocvU1MC/Prototipo-Rick-and-Morty?node-id=10%3A4&scaling=min-zoom&page-id=0%3A1)
+Sub-Página de Characteres
+ ![Figma](./src/images/figma-desktop2menuc.jpeg)
+ Las cartas de los personajes sobresalen cuando el cursor del mouse se posiciona encima de la misma, para una mejor visualizacion e interacción.
+
+ Sub-Página Estadísticas
+ ![Figma](./src/images/figma-desktop2chart.jpeg)
+
+ Sub-Página Ricktastick
+ ![Figma](./src/images/figma-desktop3.jpeg)
+
+
+Visualizacion de prototipo en desktop en Figma
+[Link](https://www.figma.com/proto/jQpY3xVMseb1vcHocvU1MC/Prototipo-Rick-and-Morty?node-id=10%3A4&scaling=min-zoom&page-id=0%3A1).
 
 
 ### Diseño para Smartphone 
-![Smartphone todos](src\images\PrototipoRickandMortySmartphone.png)
+![Smartphone todos](./src/images/figma-mobile.jpeg)
+Visualización de prototipo en smartphone en Figma
 [Link](https://www.figma.com/proto/jQpY3xVMseb1vcHocvU1MC/Prototipo-Rick-and-Morty?node-id=18%3A824&scaling=min-zoom&page-id=1%3A2)
-
-Posterior al diseño del prototipo de baja fidelidad, solicite feedback a mis compañeras, con respecto al diseño e interacción, obtuve como resultado:
-- Mejorar el diseño a que sea mas llamativo, que no fuera tan plano.
-- Agregar colores mas vivos.
-- Estilizar diseño de botones y cuadros de texto.
-- Cambiar tipo de letra de los cuadros de texto a tipo terminal y aumentar tamaño.
-- Agregar favicon.
-- Agregar imagen referente al tema del proyecto.
-
-Todas estas sugerencias las lleve a cabo, en el proyecto final, implemente como objetivo principal mejorar el estilo y diseño de la página a mas minimalista y en ese sentido:
-
-* Elegí una imagen de un candado que me represento cifrar, encriptado, tecnología, actual. Manteniendo el color azul como referente pero esta vez de una forma más llamativa. Esta imagen decidí ponerla de fondo en cada sección, la cual estiliza y genera una sensación de profesionalismo, seguridad y actualidad, resaltando los elementos de interés y agradable a la vista.
-* Estilice los cuadros de texto redondeando los bordes, cambie el tipo de letra de aspecto fuente de Terminal, para darle más sentido y tenga concordancia a mi idea inicial. También el color y tipo de letra del cuadro de texto original es diferente al cuadro de texto del criptograma.
-* Estilice también los botones redondeando los botones, y puse iconos simbólicos de cifrar/descifrar a candados cerrado/abierto, respectivamente. Dichos iconos guardan concordancia con la imagen de fondo de la página, siguiendo la tematica principal de cifrado. 
-* Finalmente, para mayor interactividad, agregue botón de copiar, limpiar e informativo, con sus respectivos iconos simbólicos.
-
-
 
 
 ## 5. Modo de usuarios
@@ -209,7 +226,7 @@ El proyecto es creado con:
  * Chart.js
 
   ## 7. Enlace web
-  //gh-pages 
+  
 
 
 ***
