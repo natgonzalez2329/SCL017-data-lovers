@@ -41,6 +41,9 @@ label{
 #filter {
   color: white;
 }
+.filterIcon {
+  color: violet;
+}
 #buttonClear {
   border: none;
   background: none;

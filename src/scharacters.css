@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
 
 .container__characters {
@@ -12,9 +13,13 @@
     flex-direction: column; 
 }
 .characterTitle {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 1.8rem;
     color: white;
     text-align: center;
-    margin-top: 5%;    
+}
+.characterTitle h1{
+    padding: 0;
 }
 .containerFlex {
     width: 100%;
@@ -67,6 +72,8 @@
 .speciesCharacter{
     margin-top: 5%;
 }
+
+
 @media screen and (max-width : 1024px) {
     .container__character-card { 
         max-width: 32%;

@@ -21,20 +21,14 @@ const computeStats = {
   },
   getDataProperty: (dataArray, propertyParam) => {
     let propertyDataChart = {};
-    //console.log(propertyDataChart)
     dataArray.forEach((character) =>  {
       const property = character[propertyParam];
       propertyDataChart[property] = (propertyDataChart[property] || 0) + 1;
-      //console.log(propertyDataChart);
     });
-    //console.log(propertyDataChart);
-    const propertyKeys = Object.keys(propertyDataChart); // array de las llaves
-    const propertyValues = Object.values(propertyDataChart); // array de los valores
-    // console.log(statusKeys);
-    // console.log(statusValues);
+    const propertyKeys = Object.keys(propertyDataChart);
+    const propertyValues = Object.values(propertyDataChart);
     return { propertyKeys, propertyValues };
   } 
- 
 }
 
 export { filterSelect, sortData, computeStats };
